@@ -16,18 +16,20 @@ generate one.
 Let us take benchmark *cav18/bench/multiprodcon.c*  for example.
 * We run *multiprodcon.c* with *Optimal algorithm (k = 0)* and *valgrind* option:
 
-. . . dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind
+. . .dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind
 
 * Option *--callgrind* will put performance information in a file of the format *callgrind.out...*
 In our case, we changed their names for better readability, for example *callgrind.out.mpc* for
 benchmark *multiprodcon.c*.
 * Open the file with kcachegrind from your terminal by the command:
 
-. . . kcachegrind callgrind.out.mpc
+. . .kcachegrind callgrind.out.mpc
 
 we will get the screen as follows:
 
-![alt text] (https://github.com/cesaro/dpu-cav18-exp/section-6.4/main-screen.png)
+![alt text][screen]
+
+[screen]: https://github.com/cesaro/dpu-cav18-exp/section-6.4/main-screen.png "Main screen"
 
 Performance information could be found as follows:
 * In left panel, you will see the performance of major functions in descendant order where you are highlighted
