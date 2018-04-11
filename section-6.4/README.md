@@ -16,14 +16,14 @@ generate one.
 Let us take benchmark *cav18/bench/multiprodcon.c*  for example.
 * We run *multiprodcon.c* with *Optimal algorithm (k = 0)* and *valgrind* option:
 
-> dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind
+```dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind```
 
 * Option *--callgrind* will put performance information in a file of the format *callgrind.out...*
 In our case, we changed their names for better readability, for example *callgrind.out.mpc* for
 benchmark *multiprodcon.c*.
 * Open the file with kcachegrind from your terminal by the command:
 
-> kcachegrind callgrind.out.mpc
+```kcachegrind callgrind.out.mpc```
 
 we will get the screen as follows:
 
@@ -39,7 +39,7 @@ two parts: upper one for callers and the lower for callees.
 
 We here concern the callees. Look at the graph in the *Call Graph* tab, we can see the hierachy of calls from
 main while its performance details are shown in *All Calles* tab. Among the major callees, `dpu::get_por_analysis()`
-counts for 62.73%, while `dpu::opts::parse(...) ` does 15.27%, totally take 78% of the run time of `dpu::main(...)`
+counts for 62.73%, while `dpu::opts::parse(...)` does 15.27%, totally take 78% of the run time of `dpu::main(...)`
 for executing the program *multiprodcon.c*.
 
 You can easily do the same analysis for the rest of benchmarks. We find about the other benchmarks:
