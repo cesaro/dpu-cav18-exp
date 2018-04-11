@@ -37,9 +37,9 @@ at main function by default.
 * The details of selected function (in this case, it is main) are displayed in the right panel which is devided in
 two parts: upper one for callers and the lower for callees.
 
-![alt text][screen]
+![alt text][detail]
 
-[screen]: https://github.com/cesaro/dpu-cav18-exp/blob/master/section-6.4/callee-screen.png "Detail screen"
+[detail]: https://github.com/cesaro/dpu-cav18-exp/blob/master/section-6.4/callee-screen.png "Detail screen"
 
 We here concern the callees. Look at the graph in the *Call Graph* tab, we can see the hierachy of calls from
 main while its performance details are shown in *All Calles* tab. Among the major callees, `dpu::get_por_analysis()`
@@ -48,9 +48,8 @@ for executing the program *multiprodcon.c*.
 
 You can easily do the same analysis for the rest of benchmarks. We find about the other benchmarks:
 
-| Benchmarks  |  Program executing time (%)  |
-|                       | get_por_analysis | opts::parse|
-| --------------- | --------------------------- ------|
+| Benchmarks  |  get_por_analysis | opts::parse |
+| --------------- | --------------------------------|
 | DISP (5,3)      | 62.74                 |    15.28 |
 | DISP (5,4)      | 62.7415             |    15.28 |
 | MPC()            | 64.55                 |    14.85 |
