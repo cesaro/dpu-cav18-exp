@@ -49,7 +49,7 @@ for executing the program *multiprodcon.c*.
 You can easily do the same analysis for the rest of benchmarks. We find about the other benchmarks:
 
 | Benchmarks  |  get_por_analysis | opts::parse |
-| --------------- | --------------------------------|
+| --------------- | ------------------ | -------------  |
 | DISP (5,3)      | 62.74                 |    15.28 |
 | DISP (5,4)      | 62.7415             |    15.28 |
 | MPC()            | 64.55                 |    14.85 |
