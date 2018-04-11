@@ -29,7 +29,7 @@ we will get the screen as follows:
 
 ![alt text][screen]
 
-[screen]: https://github.com/cesaro/dpu-cav18-exp/section-6.4/main-screen.png "Main screen"
+[screen]: https://github.com/cesaro/dpu-cav18-exp/blob/master/section-6.4/main-screen.png "Main screen"
 
 Performance information could be found as follows:
 * In left panel, you will see the performance of major functions in descendant order where you are highlighted
