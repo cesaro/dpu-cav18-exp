@@ -15,12 +15,14 @@ generate one.
 
 Let us take benchmark `cav18/bench/multiprodcon.c` for example.
 * We run *multiprodcon.c* with *Optimal algorithm (k = 0)* and *valgrind* option:
+
 ```dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind```
 
 * Option `--callgrind` will put performance information in a file of the format *callgrind.out...*
 In our case, we changed their names for better readability, for example *callgrind.out.mpc* for
 benchmark *multiprodcon.c*.
 * Open the file with kcachegrind from your terminal by the command:
+
 ```kcachegrind callgrind.out.mpc```
 
 we will get the screen as follows:
@@ -46,14 +48,15 @@ for executing the program *multiprodcon.c*.
 
 You can easily do the same analysis for the rest of benchmarks. We find about the other benchmarks:
 
-| benchmarks  | Program executing time (%) |
-| --------------- | ----------------------------|
-| DISP (5,3)      | 78%
-| DISP (5,4)      |
-| MPC()            |
-| PI(5)               |
-| MPAT()           |
-| SPAT             |
+| Benchmarks  |  Program executing time (%)  |
+|                       | get_por_analysis | opts::parse|
+| --------------- | --------------------------- ------|
+| DISP (5,3)      | 62.74                 |    15.28 |
+| DISP (5,4)      | 62.7415             |    15.28 |
+| MPC()            | 64.55                 |    14.85 |
+| PI(5)               | 64.55                 |    14.85 |
+| MPAT()           | 64.55                 |     14.85 |
+| SPAT             |  ....
 
 This supports what we mention in Section 6.4 of the paper about program executing time.
 
