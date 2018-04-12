@@ -2,7 +2,7 @@ Replicability Package: CAV'18 Experiments with DPU
 ==================================================
 
 This folder contains all the necessary information to repeat the experiments of
-our CAV'18 paper:
+our [CAV'18](http://cavconference.org/2018/) paper:
 
 ```
 Quasi-Optimal Partial Order Reduction.
@@ -12,17 +12,14 @@ Proceedings of Computer Aided Verification.  To appear.
 
 Specifically we include:
 
-* The sources of all verification tools used in the paper.
-* The binaries of those tools (x64)
-* Documentation providing guided steps to repeat the experiments.
+* The [sources](tools/) of all verification tools used in the paper.
+* The [binary distribution](dist/) of those tools (x64)
+* Documentation providing [guided steps](doc/1-intro.md) to repeat the experiments.
 
 
-Please continue reading here to repeat the experiments.
+Please continue reading the [guided steps](doc/1-intro.md) to repeat the experiments.
 
-
-FIXME
-
-
+<!--
 Makefile
 - build the tools
 - compute a copy of the file SHA1SUMS and run a diff
@@ -50,3 +47,4 @@ sec6.4-profiling
 
 benchmarks/paper
 benchmarks/debian
+-->
