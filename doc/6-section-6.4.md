@@ -30,8 +30,7 @@ dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind
 [KCachegrind]: http://kcachegrind.sourceforge.net/
 
 ### Callgrind + KCachegrind Premiere
-10-line tutorial evaluating the performance of the program `ls`.
-After running**dpu** on benchmarks with *--callgrind*, you can read `callgrind.out` profiling
+After running **dpu** on benchmarks with *--callgrind*, you can read `callgrind.out` profiling
 files using a text editor, but **KCacheGrind** will be more useful to view them visually.
 You can launch **KCacheGrind** using command line, providing your system installed it.
 Here is the command to view the profilling file for the benchmark *multiprodcon.c*
