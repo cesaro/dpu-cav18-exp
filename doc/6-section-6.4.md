@@ -1,12 +1,13 @@
 ## Section 6.4: Profiling DPU
 
-Section 6.4 states a number of experimental conclusions about the percentage of
-the run time spent in the most important sub-procedures implemented by DPU.
+Section 6.4 of the paper states a number of experimental conclusions about
+the percentage of the run time spent in the most important sub-procedures
+implemented by DPU.
 In the sections below we address each of the claims made in paper.
 
 We use [Callgrind] and [KCachegrind] to validate our statements. DPU comes with
-a handy commandline option `--callgrind` that will run DPU under `callgrind`
-when DPU is invoked with the option.
+a handy commandline option `--callgrind` which, when passed to DPU, will run DPU
+under `callgrind`.
 
 The benchmarks used for these experiments are as follows:
 
@@ -26,7 +27,7 @@ COMMANDS to generate all files
 ```
 
 [Callgrind]: http://valgrind.org/docs/manual/cl-manual.html
-[KCKCachegrind]: http://kcachegrind.sourceforge.net/
+[KCachegrind]: http://kcachegrind.sourceforge.net/
 
 ### Callgrind + KCachegrind Premiere
 
@@ -49,13 +50,13 @@ In our case, we changed their names for better readability, for example *callgri
 benchmark *multiprodcon.c*.
 * Open the file with kcachegrind from your terminal by the command:
 
-```
+```sh
 kcachegrind callgrind.out.mpc
 ```
 
 we will get the screen as follows:
 
-![] img/main-screen.png
+![](img/main-screen.png)
 
 Performance information could be found as follows:
 * In left panel, you will see the performance of major functions in descendant
@@ -64,7 +65,7 @@ Performance information could be found as follows:
   the right panel which is devided in two parts: upper one for callers and the
   lower for callees.
 
-![] img/callee-screen.png
+![](img/callee-screen.png)
 
 We here concern the callees. Look at the graph in the *Call Graph* tab, we can
 see the hierachy of calls from main while its performance details are shown in
