@@ -14,10 +14,11 @@ Specifically we include:
 
 * The [sources](tools/) of all verification tools used in the paper.
 * The [binary distribution](dist/) of those tools (x64)
+* The [benchmarks](benchmarks/) used in the paper.
 * Documentation providing [guided steps](doc/1-intro.md) to repeat the experiments.
 
-
-Please continue reading the [guided steps](doc/1-intro.md) to repeat the experiments.
+If you want to repeat the experiments, please continue reading the
+[guided steps](doc/1-intro.md).
 
 <!--
 Makefile
