@@ -1,8 +1,7 @@
 
-
 DIST=$(PWD)/dist
 NIDHUGG=tools/nidhugg/nidhugg-375c554fdb208e2c50f35c618ed22cb2096ce4da
-NIDHUGG=tools/dpu/dpu-375c554fdb208e2c50f35c618ed22cb2096ce4da
+DPU=tools/dpu/dpu-0.5.2
 
 install-dependencies:
 	# llvm apt sources
@@ -31,9 +30,15 @@ compile-nidhugg:
 	cd $(NIDHUGG); ./configure --with-llvm=/usr/lib/llvm-4.0/ --prefix=$(DIST)
 	cd $(NIDHUGG); make -j 6
 
+compile-dpu:
+	rm -Rf $(DPU)
+	cd tools/dpu/; unzip dpu-*.zip
+	# FIXME patch
+	cd $(DPU); make dist -j 6 MAKEFLAGS=
+
 install-nidhugg:
 	cd $(NIDHUGG); make install
 
-compile-dpu:
 install-dpu:
+	cp -R $(DPU)/dist/* $(DIST)
 
