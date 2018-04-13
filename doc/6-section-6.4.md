@@ -33,10 +33,17 @@ dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind
 After running **dpu** on benchmarks with *--callgrind*, you can read `callgrind.out` profiling
 files using a text editor, but **KCacheGrind** will be more useful to view them visually.
 You can launch **KCacheGrind** using command line, providing your system installed it.
-Here is the command to view the profilling file for the benchmark *multiprodcon.c*
+Here is the command to view the profilling file `callgrind.out.mpc`  achieved by the command
+running DPU on the benchmark *multiprodcon.c*
 ```sh
 kcachegrind callgrind.out.mpc
 ```
+Note that to be able to launch GUI of **kcachegrind** in your local, you should log in our virtual machine
+with:
+˜˜˜sh
+ssh - X 
+```
+
 The first screen presents a list of all the profiled procedures as the image below
 ![](img/main-screen.png)
 
@@ -55,6 +62,7 @@ see the hierachy of calls from main while its performance details are shown in
 Many other minor functions are inlined.
 
 ### Claim 1: Program executing time
+
 DPU spends between 30% and 90% (average 65%) of the run time executing the program
 To execute a program, *dpu* first loads bitcode
 Profiling the benchmarks, we get the table below on program executing time:
@@ -73,9 +81,26 @@ The time to configure the analysis by `get_por_analysis` and parse arguments did
 We cannot say: "This supports what we mention in Section 6.4 of the paper about program executing time."
 
 ### Claim 2:  Computing alternatives
-No information is found on kcachegrind
-FIXME
+| Benchmarks  |  Add events | Compute conflicting extension |
+| --------------- | -------------- | ------------------------------------|
+| DISP (5,2)      |        |
+| DISP (5,3)      |         |
+| DISP (5,4)      |         |
+| MPC()            |         |
+| PI(5)               |        |
+| MPAT()           |        |
+| SPAT              |      |
 
-### Claim 3: Bla
 
-FIXME
+
+### Claim 3: Building and Exploring combs.
+| Benchmarks  |  Buidl comb | Explore comb |
+| --------------- | -------------- | --------------------|
+| DISP (5,2)      |        |
+| DISP (5,3)      |         |
+| DISP (5,4)      |         |
+| MPC()            |         |
+| PI(5)               |        |
+| MPAT()           |        |
+| SPAT              | |
+
