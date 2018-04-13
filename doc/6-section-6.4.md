@@ -74,32 +74,29 @@ DPU spends between 30% and 90% (average 65%) of the run time executing the progr
 To execute a program, *dpu* first loads bitcode
 Profiling the benchmarks, we get the table below on program executing time:
 
-**Cesar**: Huyen, please fix this table so that it's readable in the editor, the
-columns are messed up.
+| Benchmarks  |  stid::Executor::run() (%)|
+| ------------| --------|
+| DISP (5,3)  |  4.33   |
+| DISP (5,4)  |  6.76   |
+| MPC(3,5)    |  7      |
+| PI(5)       |  0.15   |
+| MPAT()      |  1.54   |
+| SPAT        |  1.3    |
+| POL(10,3)   |	5.33 	|
 
-| Benchmarks  |  Configure POR analysis |
-| --------------- | ------------------------       |
-| DISP (5,2)      |  62.74       |
-| DISP (5,3)      |  62.74       |
-| DISP (5,4)      |  62.74       |
-| MPC()            |  64.55       |
-| PI(5)               | 64.55        |
-| MPAT()           | 64.55        |
-| SPAT              | 64.55        |
-
-The time to configure the analysis by `get_por_analysis` and parse arguments didn't vary a lot. The most important information is about run() function is not found anywhere.
+What's the problem???
 We cannot say: "This supports what we mention in Section 6.4 of the paper about program executing time."
 
 ### Claim 2:  Computing alternatives
+
 | Benchmarks  |  Add events | Compute conflicting extension |
-| --------------- | -------------- | ------------------------------------|
-| DISP (5,2)      |                      |                  |
-| DISP (5,3)      |                      |                  |
-| DISP (5,4)      |                      |                  |
-| MPC()            |                      |                  |
-| PI(5)               |                      |                  |
-| MPAT()           |                      |
-| SPAT              |                      |
+| ------------| ----------- | ------------------------------|
+| DISP (5,3)  |    13.83    |	1.74             |
+| DISP (5,4)  |    21.61    |	3                |
+| MPC(3,5)    |     5.47    |   1.5		 |
+| PI(5)       |             |                  |
+| MPAT()      |             |
+| SPAT        |             |
 
 
 
