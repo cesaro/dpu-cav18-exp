@@ -14,7 +14,7 @@ Navigation: [Table of contents], [Previous section], [Next section]
 
 - how to run by hand dpu or nidhugg on one of the benchmarks
 
-All the benchmarks for Table 1 is in 
+All the benchmarks for Table 1 is in .... folder
 
 In order to build Table 1 from the paper (shown below), just run::
 
