@@ -1,4 +1,4 @@
-## Section 6.4: Profiling DPU
+## Reproducing Section 6.4: Profiling DPU
 
 Section 6.4 of the paper states a number of experimental conclusions about
 the percentage of the run time spent in the most important sub-procedures
@@ -30,6 +30,7 @@ dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind
 [KCachegrind]: http://kcachegrind.sourceforge.net/
 
 ### Callgrind + KCachegrind Premiere
+
 After running **dpu** on benchmarks with *--callgrind*, you can read `callgrind.out` profiling
 files using a text editor, but **KCacheGrind** will be more useful to view them visually.
 You can launch **KCacheGrind** using command line, providing your system installed it.
@@ -58,6 +59,7 @@ lower for callees.
 We here concern the callees of *main* function. Look at the graph in the *Call Graph* tab, we can
 see the hierachy of calls from main while its performance details are shown in
 *All Calles* tab. Among the major callees, `dpu::get_por_analysis()` counts for
+<<<<<<< Updated upstream
 62.73%, while `dpu::opts::parse(...)` does 15.27% of the run time of `dpu::main(...)`.
 Many other minor functions are inlined.
 
@@ -66,6 +68,9 @@ Many other minor functions are inlined.
 DPU spends between 30% and 90% (average 65%) of the run time executing the program
 To execute a program, *dpu* first loads bitcode
 Profiling the benchmarks, we get the table below on program executing time:
+
+**Cesar**: Huyen, please fix this table so that it's readable in the editor, the
+columns are messed up.
 
 | Benchmarks  |  Configure POR analysis |
 | --------------- | ------------------------|

@@ -1,4 +1,4 @@
-## Section 6.1: Table 1, Comparing QPOR with SDPOR
+## Reproducing Section 6.1: Table 1, Comparing QPOR with SDPOR
 
 - where are the bench
 - how to run the script
