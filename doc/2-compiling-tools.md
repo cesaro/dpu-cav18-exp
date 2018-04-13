@@ -1,5 +1,12 @@
 ## How to Compile the Tools
 
+Navigation: [Table of contents], [Previous section], [Next section]
+
+[Table of contents]: 1-intro.md#index
+[Previous section]: 1-intro.md
+[Next section]: 3-section-6.1.md
+
+
 FIXME:
 - comment on patch for DPU
 - Maple
