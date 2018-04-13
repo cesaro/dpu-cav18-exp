@@ -1,5 +1,10 @@
 ## Reproducing Section 6.4: Profiling DPU
 
+Navigation: [Table of contents], [Previous section]
+
+[Table of contents]: 1-intro.md#index
+[Previous section]: 5-section-6.3.md
+
 Section 6.4 of the paper states a number of experimental conclusions about
 the percentage of the run time spent in the most important sub-procedures
 implemented by DPU.

@@ -9,7 +9,7 @@ CAV'18 Experiments with DPU: Replicability Guide
   it's easier to read from there
 
 
-## Contents
+## Index
 
 | File                   | Contents
 | ---------------------- | -----------------------------------------------------
