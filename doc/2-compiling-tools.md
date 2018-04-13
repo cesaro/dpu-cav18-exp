@@ -1,4 +1,4 @@
-## Compiling the Tools
+## How to Compile the Tools
 
 FIXME:
 - comment on patch for DPU
