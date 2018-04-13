@@ -41,8 +41,8 @@ kcachegrind callgrind.out.mpc
 ```
 Note that to be able to launch GUI of **kcachegrind** in your local, you should log in our virtual machine
 with:
-˜˜˜sh
-ssh - X 
+```sh
+ssh - X  our link
 ```
 
 The first screen presents a list of all the profiled procedures as the image below
@@ -73,14 +73,14 @@ Profiling the benchmarks, we get the table below on program executing time:
 columns are messed up.
 
 | Benchmarks  |  Configure POR analysis |
-| --------------- | ------------------------|
+| --------------- | ------------------------       |
 | DISP (5,2)      |  62.74       |
-| DISP (5,3)      |  62.74        |
-| DISP (5,4)      |  62.74        |
-| MPC()            |  64.55         |
-| PI(5)               | 64.55          |
-| MPAT()           | 64.55         |
-| SPAT              | 64.55 |
+| DISP (5,3)      |  62.74       |
+| DISP (5,4)      |  62.74       |
+| MPC()            |  64.55       |
+| PI(5)               | 64.55        |
+| MPAT()           | 64.55        |
+| SPAT              | 64.55        |
 
 The time to configure the analysis by `get_por_analysis` and parse arguments didn't vary a lot. The most important information is about run() function is not found anywhere.
 We cannot say: "This supports what we mention in Section 6.4 of the paper about program executing time."
@@ -88,24 +88,24 @@ We cannot say: "This supports what we mention in Section 6.4 of the paper about 
 ### Claim 2:  Computing alternatives
 | Benchmarks  |  Add events | Compute conflicting extension |
 | --------------- | -------------- | ------------------------------------|
-| DISP (5,2)      |        |
-| DISP (5,3)      |         |
-| DISP (5,4)      |         |
-| MPC()            |         |
-| PI(5)               |        |
-| MPAT()           |        |
-| SPAT              |      |
+| DISP (5,2)      |                      |                  |
+| DISP (5,3)      |                      |                  |
+| DISP (5,4)      |                      |                  |
+| MPC()            |                      |                  |
+| PI(5)               |                      |                  |
+| MPAT()           |                      |
+| SPAT              |                      |
 
 
 
 ### Claim 3: Building and Exploring combs.
 | Benchmarks  |  Buidl comb | Explore comb |
 | --------------- | -------------- | --------------------|
-| DISP (5,2)      |        |
-| DISP (5,3)      |         |
-| DISP (5,4)      |         |
-| MPC()            |         |
-| PI(5)               |        |
-| MPAT()           |        |
-| SPAT              | |
+| DISP (5,2)      |                      |
+| DISP (5,3)      |                       |
+| DISP (5,4)      |                        |
+| MPC()            |                        |
+| PI(5)               |                      |
+| MPAT()           |                     |
+| SPAT              |                       |
 
