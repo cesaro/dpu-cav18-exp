@@ -11,7 +11,7 @@ import time
 # Default Configuration #
 #########################
 
-NIDHUGG='/home/cesar/x/devel/dpu-cav18-exp/dist/bin/nidhugg'
+NIDHUGG='/home/ubuntu/camille/git/dpu-cav18-exp/dist/bin/nidhugg'
 CLANG='/usr/bin/clang-4.0'
 CLANGXX='/usr/bin/clang++-4.0'
 
