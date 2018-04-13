@@ -442,21 +442,8 @@ dry_run ()
 
 get_tool_binaries ()
 {
-   h2 "Getting Tool Binaries"
-
-   echo ::
-   echo
-   (
-      mkdir tools
-      #make -C $R/../../ dist
-      #cp -Rv $R/../../dist/ tools/dpu
-      #cp $HOME/x/devel/nidhugg/src/{nidhugg,nidhuggc} tools
-      wget 'https://www.dropbox.com/s/p8leb9f9vkv3crr/cav18-tool-binaries.tar.gz'
-      tar xzvf cav18-tool-binaries.tar.gz -C tools
-   ) 2>&1 | quote
-
-   DPU="tools/dpu/bin/dpu"
-   NIDHUGG="tools/nidhuggc --nidhugg=tools/nidhugg"
+   DPU="../../../dist/bin/dpu"
+   NIDHUGG="../../../dist/bin/nidhuggc --nidhugg=../../../dist/bin/nidhugg"
 }
 
 main ()

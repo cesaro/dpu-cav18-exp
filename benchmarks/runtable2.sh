@@ -10,14 +10,9 @@ TIMEOUT=8m
 
 # select the right installation depending on the machine
 
-if test $(hostname) = polaris; then
-   DPU=dpu
-   NIDHUGG=mynidhugg
-else
-   DPU=../../../dist/bin/dpu
-   NIDHUGGBIN=`which nidhugg`
-   NIDHUGG="${NIDHUGGBIN} --c -sc -extfun-no-race=printf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow"
-fi
+DPU=../../../dist/bin/dpu
+NIDHUGGBIN=../../../dist/bin/nidhugg
+NIDHUGG="${NIDHUGGBIN} --c -sc -extfun-no-race=printf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow"
 
 # utilitary functions to run benchmarks
 source runlib.sh
