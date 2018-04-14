@@ -7,15 +7,6 @@
 # 1s = 1 second; 2m = 2 minutes; 3h = 3 hours
 TIMEOUT=8m
 
-WANT_DPU_ALT_SDPOR=n
-WANT_DPU_ALT0=y
-WANT_DPU_ALT1=n
-WANT_DPU_ALT2=n
-WANT_DPU_ALT3=n
-WANT_DPU_ALT4=n
-
-DPU_OPTS="--mem 128M --stack 6M -O1 -v"
-
 # ==== END CONFIGURATION VARIABLES ====
 
 # utilitary functions to run benchmarks
@@ -43,38 +34,13 @@ runall_dpu ()
    for i in *.i; do
       N=`echo "$i" | sed s/.i$//`
 
-      if test $WANT_DPU_ALT_SDPOR = y; then
-         # -k-1
-         LOG=${N}_dpu_alt-1.txt
-         CMD="$DPU $i -k-1 $DPU_OPTS"
-         run_dpu
-      fi
+      # -k0
+      LOG=${N}_dpu_alt0.txt
+      CMD="$DPU $i -k0 --mem 128M --stack 6M -O1 -v"
+      run_dpu
 
-      if test $WANT_DPU_ALT0 = y; then
-         # -k0
-         LOG=${N}_dpu_alt0.txt
-         CMD="$DPU $i -k0 $DPU_OPTS"
-         run_dpu
-
-         # if we got TO on -k0, surely we will also get it on -kX with X!=0
-         if test "$WALLTIME" == "TO"; then continue; fi
-      fi
-
-      # k-partial
-      for a in 1 2 3 4; do
-         case $a in
-         1) if test $WANT_DPU_ALT1 = n; then continue; fi;;
-         2) if test $WANT_DPU_ALT2 = n; then continue; fi;;
-         3) if test $WANT_DPU_ALT3 = n; then continue; fi;;
-         4) if test $WANT_DPU_ALT4 = n; then continue; fi;;
-         esac
-         LOG=${N}_dpu_alt${a}.txt
-         CMD="$DPU $i -k$a $DPU_OPTS"
-         run_dpu
-
-         # if we got 0 SSBs we skip higher -k
-         if test "$SSBS" = 0; then break; fi
-      done
+      # if we got TO on -k0, surely we will also get it on -kX with X!=0
+      if test "$WALLTIME" == "TO"; then continue; fi
    done
 }
 
@@ -194,7 +160,6 @@ main ()
 {
    h1_date "Generation of the logs for Section 6.2"
 
-   echo "All outputs of this script are in: $LOGS"
    echo 'This is the output of the script ``scripts/run-sec6.1-gen-logs.sh``.'
    echo
 
@@ -227,6 +192,14 @@ main ()
    echo
    generate_histogram_conflict_diff 2>&1 | quote
 
+   echo
+   echo
+   echo ""
+   echo "You can view all the outputs of this script this way::"
+   echo
+   echo "cd $LOGS" | quote
+   echo "ls -l *.csv" | quote
+   ls -l "$LOGS" | quote
    echo
    echo
    echo End of the log.
