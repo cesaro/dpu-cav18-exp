@@ -199,7 +199,7 @@ main ()
    echo
    echo "cd $LOGS" | quote
    echo "ls -l *.csv" | quote
-   ls -l "$LOGS" | quote
+   ls -l $LOGS/*.csv | quote
    echo
    echo
    echo End of the log.
