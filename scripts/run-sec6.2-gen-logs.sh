@@ -27,13 +27,11 @@ generate_bench_skiplist ()
    # trees. These are roughly a subset of those in generate_bench_selection
    # (Table 1) representative of the overall set of Table 1.
 
-   #preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "4" "reqs" "`seq -w 3 5`"
-   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "4" "reqs" "`seq -w 3 3`"
-   #preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 4 6`"
-   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 4 4`"
-   #preprocess_family $R/benchmarks/multiprodcon.c multipc  "prods" "3 4" "workers" "4"
-   #preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "`seq -w 6 8`" "iters" "2000"
-   #preprocess_family $R/benchmarks/poke.c       poke       "threads" "`seq -w 10 13`" "iters" "3"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "4" "reqs" "`seq -w 3 5`"
+   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 4 6`"
+   preprocess_family $R/benchmarks/multiprodcon.c multipc  "prods" "3 4" "workers" "4"
+   preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "`seq -w 6 8`" "iters" "2000"
+   preprocess_family $R/benchmarks/poke.c       poke       "threads" "`seq -w 10 13`" "iters" "3"
 }
 
 runall_dpu ()
