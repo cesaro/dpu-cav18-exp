@@ -9,7 +9,7 @@ TIMEOUT=8m
 
 # select the right installation depending on the machine
 
-DPU=../dist/bin/dpu
+DPU=../dist/dpu/bin/dpu
 B=../benchmarks
 O=obj-dpu
 

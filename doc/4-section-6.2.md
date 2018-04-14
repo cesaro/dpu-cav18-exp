@@ -11,6 +11,8 @@ data structure based on trees. These allow the efficient implementation of all
 operations of Algorithm 1 in the paper, including, mainly, queries to determine
 if two events are related by a relation of **causality** or **conflict**.
 
+### The Claims to Verify
+
 For every POSIX mutex and every thread of the program under analysis, the data
 structure maintains one tree. In Section 6.2 of the paper we evaluate these
 trees and make the following claims:
@@ -25,16 +27,13 @@ trees and make the following claims:
 Additionally, Figure 3 of the paper contains:
 
 7. Plots of the average-node-depth and the maximal-tree-depth.
-8. Two histograms showing the frequency (axe Y) at which queries are made to the
-   trees for nodes with a given depth (axe X).
-
-Here we provide the data that supports these claims/figures as well as
-instructions how to generate the data.
+8. Two histograms showing the frequency (axe Y) at which queries are made to
+   the trees for nodes whose depths differ by a given number (axe X).
 
 ### Benchmarks
 
-We have used the following instances of the benchmarks used in Table 1 of the
-paper. All files are available in the folder `benchmarks/`.
+We have used the following benchmark instances. The benchmarks are the same as
+in Table 1 of the paper. All files are available in the folder `benchmarks/`.
 
 | Instance   | Benchmark                      | Parameters
 | -----------|--------------------------------| ------------------------
@@ -55,14 +54,17 @@ paper. All files are available in the folder `benchmarks/`.
 | Pol(13,3)  | `benchmarks/poke.c`            | `PARAM1=13 PARAM2=3`
 
 
-### The Supporting Data
+### The Data Supporting our Claims
 
-We executed DPU on the benchmarks above. We then parsed the output logs and
-generated a spreadsheet which allowed us to make the six claims above and
-construct the plots and histograms of Fig. 3.
+We ran DPU on the benchmarks above. We then parsed the output logs and
+generated a spreadsheet which allowed us to make the 8 claims above.
+The spreadsheet is located in
 
-The spreadsheet is located in `sec6.2-fig3-trees/tree-stats.xlsx`,
-or [here](../sec6.2-fig3-trees/tree-stats.xlsx).
+```
+sec6.2-fig3-trees/tree-stats.xlsx
+```
+
+and is also [available here](../sec6.2-fig3-trees/tree-stats.xlsx).
 
 The spreadsheet contains four tabs. We now explain how the data in these tabs
 proves our claims. In the sections **below we show** how to generate this data.
@@ -76,15 +78,11 @@ the average depth of the nodes in the tree (5th column).  From these columns we
 compute the data that supports our *claims 1, 2, and 3*, marked in red in the
 spreadsheet:
 
-FIXME pic
-
 **Tab 2: Tree-depth plots (plots in Fig. 3a and 3b)**:
 This tab contains _two_ separate tables. The data in each table originates from
 the previous tab. We have just separated the rows that describe a tree for mutex
 (1st table) and a tree for a thread (2nd table). The reviewer can check that the
 plots in Fig. 3 (a) and 3(b) in the paper are identical to those in the right:
-
-FIXME pic.
 
 **Tab 3: Causality queries (Fig. 3c and claims 4, 5)**:
 DPU access the mutex and thread trees explained above to determine if two events
@@ -97,8 +95,6 @@ column is a computed percentage.
 This table produces the plot on the right (Fig. 3c of the paper) and provides
 our evidence for the *claims 4 and 5*:
 
-FIXME pic.
-
 **Tab 4: Conflict queries (Fig. 3d and claim 6)**:
 Similarly, DPU queries the data structure to determine if two events are in conflict.
 The table in this tab indicates how distant the accessed nodes are and is
@@ -109,8 +105,8 @@ for the *claim 6*.
 
 ### Generating the Data of the Spreadsheet
 
-This section guides you to re-generate the data in the spreadsheet. All you need
-to do is running:
+This section shows how to generate the data in the spreadsheet. All you need to
+do is running:
 
 ```sh
 $ make sec6.2-gen-csv
@@ -118,8 +114,8 @@ $ make sec6.2-gen-csv
 
 at the root of the repository.
 
-This will call the script `scripts/run-sec6.2-gen-csv.sh`, which generates logs
-and CSV files in the folder `sec6.2-fig3-trees/logs/`. We provide a copy of
+This calls the script `scripts/run-sec6.2-gen-csv.sh`, which generates logs and
+CSV files in the folder `sec6.2-fig3-trees/logs/`. We provide a copy of
 pre-generated logs at the folder `sec6.2-fig3-trees/logs.provided/`, accessible
 [here](sec6.2-fig3-trees/logs.provided/) as well.
 
@@ -136,12 +132,12 @@ The script uses a pre-compiled version of DPU (available at
 
 3. Parse the logs and **generate CSV** files containing statistical data about
    the depths of nodes in the trees (function `parse_logs_into_tree_depth_csv`).
-   This is done in the function. Three files will be generated:
+   Three files will be generated:
 
    * File `tree-stats.csv`:
-     This contains the data shown in the Tab 1 of the spreadsheet (we have
-     manually copied it). The reviewer can check that the contents of the file
-     and the spreadsheet are the same. These are the first 10 lines:
+     This contains the data shown in the Tab 1 of the spreadsheet (we manually
+     copied it). The reviewer can check that the contents of the file and the
+     spreadsheet are the same. These are the first 10 lines:
 
      ```csv
      Log file                            Tree id within the log   Nr of nodes   Depth   Avg. depth
@@ -181,13 +177,13 @@ The script uses a pre-compiled version of DPU (available at
    * File `tree-thread-stats.csv`:
      This contains the rows that describe trees for threads (those with id `t0`, `t1`, etc).
 
-4. Finally the script generates histograms for causality and conflict queries.
-   This is done in the functions `generate_histogram_causality_diff` and
+4. Finally the script **generates histograms** for causality and conflict
+   queries, in the functions `generate_histogram_causality_diff` and
    `generate_histogram_conflict_diff`. These function parse the logs again,
    generate an intermediate file `/tmp/pairs.txt` and aggregates the counters
    from multiple benchmarks using a python sript.
 
    Two files are generated, `histogram-conflict.csv` and
    `histogram-conflict.csv`, which are the data present in the Tab 3 and Tab 4
-   of the which is the contents of the Tab 3 of the spreadsheet.
+   of spreadsheet.
 
