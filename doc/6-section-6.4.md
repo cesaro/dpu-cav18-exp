@@ -90,25 +90,24 @@ or just do a search in the left panel. For example, we found in this image below
 
 ![](img/explore-allcalles.png)
 
-## Claims
 ### DPU jobs and corresponding functions
 In the sections below, we will mentions the following functions in DPU code corresponding to jobs:
-* Main procedure of DPU: corresponds to function `dpu::C15unfolder::explore()`.  It directly works on
-the program under analysis including executing programs, building event structure, computing alternatives, etc.
-* Running the program under analysis: corresponds to `stid::Executor::run()`. It calls the front end Steroids
+* _Main procedure of DPU_: corresponds to function `dpu::C15unfolder::explore()`.  It directly works on
+the program under analysis including executing the program, building event structure, computing alternatives, etc.
+* _Running the program under analysis_: corresponds to function `stid::Executor::run()` which calls the front end Steroids
 to execute the target program as a C multithreaded program and produces a stream of actions.
-* Adding events to event structure: corresponds to `dpu::C15unfolder::stream_to_events()` which converts the
+* _Adding events to event structure_: corresponds to function `dpu::C15unfolder::stream_to_events()` which converts the
 stream of actions achieved from `stid::Executor::run()` into events in event structure called a _maximal configuration_.
-* Adding spikes to the comb: corresponds to `Comb::add_spike()` which build the comb by adding appropriate
-events in spike.
-* Checking conflict: `dpu::Primecon::in_cfl_with()`  will check the conflict between each event in spikes with
+* _Adding spikes to the comb_: corresponds to `Comb::add_spike()` which builds the comb by adding appropriate
+events in spikes.
+* _Checking conflict_: Function `dpu::Primecon::in_cfl_with()`  checks the conflict between each event in spikes with
 events in another set.
-* Computing conflicting extensions: Function `dpu::C15unfolder::compute_cex()` add a set of events called
-conflicting extensions to event structure.
-* Exploring the comb: `dpu::C15unfolder::enumerate_combination()` enumerates all possible combinations
+* _Computing conflicting extensions_: Function `dpu::C15unfolder::compute_cex()` adds a set of events called
+conflicting extensions to event structure when it finds.
+* _Exploring the comb_: corresponds to `dpu::C15unfolder::enumerate_combination()` which enumerates all possible combinations
 over a comb to find out a qualified one.
-* Reset the comb: `Comb::clear()` sets the comb to empty.
-* Taking out event from spike: `Spike::pop_back()` pops out one event from a spike.
+* _Reset the comb_: `Comb::clear()` sets the comb to empty.
+* _Taking out event from spike_: `Spike::pop_back()` pops out one event from a spike.
 
 ### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
 
