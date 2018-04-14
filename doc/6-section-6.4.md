@@ -90,14 +90,32 @@ or just do a search in the left panel. For example, we found in this image below
 
 ![](img/explore-allcalles.png)
 
+## Claims
+### DPU jobs and corresponding functions
+In the sections below, we will mentions the following functions in DPU code corresponding to jobs:
+* Main procedure of DPU: corresponds to function `dpu::C15unfolder::explore()`.  It directly works on
+the program under analysis including executing programs, building event structure, computing alternatives, etc.
+* Running the program under analysis: corresponds to `stid::Executor::run()`. It calls the front end Steroids
+to execute the target program as a C multithreaded program and produces a stream of actions.
+* Adding events to event structure: corresponds to `dpu::C15unfolder::stream_to_events()` which converts the
+stream of actions achieved from `stid::Executor::run()` into events in event structure called a _maximal configuration_.
+* Adding spikes to the comb: corresponds to `Comb::add_spike()` which build the comb by adding appropriate
+events in spike.
+* Checking conflict: `dpu::Primecon::in_cfl_with()`  will check the conflict between each event in spikes with
+events in another set.
+* Computing conflicting extensions: Function `dpu::C15unfolder::compute_cex()` add a set of events called
+conflicting extensions to event structure.
+* Exploring the comb: `dpu::C15unfolder::enumerate_combination()` enumerates all possible combinations
+over a comb to find out a qualified one.
+* Reset the comb: `Comb::clear()` sets the comb to empty.
+* Taking out event from spike: `Spike::pop_back()` pops out one event from a spike.
+
 ### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
-The main procedure of DPU is the function `dpu::explore()` responsible for running program
-to get a maximal configuration, then compute alternatives for exploring another branch of the unfolding.
-To run program under analysis, DPU calls front end Steroids function `stid::Executor::run()` to \
-execute the benchmarks ( as C multithreaded programs) to get a *stream of actions*. This function counts
+
+Steroids function `stid::Executor::run()` . This function counts
 for 30% to 90% (65% in average) of the DPU run time.
 
-| Benchmarks  | Executing C program (%) |
+| Benchmarks  | Run program (%) |
 | ------------     | --------  |
 | DISP (5,3)      |  47.08   |
 | MPC(3,5)       |  60.10   |
@@ -188,7 +206,7 @@ To find an alternative, we exploit the *comb* whose spikes are sets of events im
 events in disable set. To evaluate the alternative finding performance, we look for functions:
 * Building the comb: reseting the comb `Comb::clear()`, adding spikes `Comb::add_spike()`, checking if each
 element in a spike is in conflict with some event in the configuration `dpu::Primecon::in_cfl_with()` and
-poping up events from spikes`pop_back()` . Among them,  `Comb::clear()` and `pop_back()`are usually tiny,
+poping up events from spikes `pop_back()` . Among them,  `Comb::clear()` and `pop_back()`are usually tiny,
 so often inlined in **Kcachegrind** view.
 * Searching for solutions in the comb  by the function `dpu::C15unfolder::enumerate_combination()`.
 
