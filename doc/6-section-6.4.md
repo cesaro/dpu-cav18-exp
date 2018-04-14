@@ -100,7 +100,8 @@ are converted into events, then added to the unfolding. This work corresponds to
 to do that work which usually takes a tiny amount of time to finish.
 
 | Benchmarks  |  Add events (%) | Compute conflicting extension (%) |
-| ----------------| -------------- ----| -----------------------------------------|
+| ----------------| -------------- ----| ----------------------------------------|
+
 | DISP (5,3)      |    23.00               |    3.9               |
 | MPC(3,5)       |    13.54               |    3.55             |
 | PI(5)               |    21.63               |    3.31             |
