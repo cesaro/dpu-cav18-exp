@@ -46,7 +46,7 @@ runall_dpu ()
 
 get_tool_binaries ()
 {
-   DPU="$R/sec6.2-fig3-trees/dpu-stats-dist/bin/dpu"
+   DPU="$R/dist/dpu-tree-stats/bin/dpu"
 }
 
 parse_logs_into_tree_depth_csv()
