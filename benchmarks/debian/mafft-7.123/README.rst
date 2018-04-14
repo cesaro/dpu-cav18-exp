@@ -19,6 +19,9 @@ https://molevol.mbl.edu/index.php/Alignment_tutorial
 
 The tool ``seaview`` is available as an Ubuntu package ;)
 
+We have introduced bugs in these benchmarks to assess whether
+testing tools were able to discover them.
+
 All programs
 ------------
 

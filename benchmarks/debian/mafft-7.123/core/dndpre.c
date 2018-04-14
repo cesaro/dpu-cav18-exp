@@ -1,4 +1,5 @@
 #include "mltaln.h"
+#include <assert.h>
 
 #define TEST 0
 
@@ -45,6 +46,16 @@ void *athread( void *arg )
 		pthread_mutex_lock( targ->mutex );
 		j = jobpospt->j;
 		i = jobpospt->i;
+        //        printf ( "thread %d: i = %d     j = %d     njob = %d\n", thread_no, i, j, njob); 
+                if ( targ->thread_no == (nthread - 1) )
+                {
+                  if ( (i == (njob - 3)) && (j == (njob - 2)) )
+                  { 
+        //            printf ( "thread %d out of %d is going to crash, %d!\n", thread_no, nthread, njob); 
+		    pthread_mutex_unlock( targ->mutex );
+                    assert (0);
+                  }
+                }
 		j++;
 //		fprintf( stderr, "\n i=%d, j=%d before check\n", i, j );
 		if( j == njob )

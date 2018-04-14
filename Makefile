@@ -2,6 +2,7 @@
 DIST=$(PWD)/dist
 NIDHUGG=tools/nidhugg/nidhugg-375c554fdb208e2c50f35c618ed22cb2096ce4da
 DPU=tools/dpu/dpu-0.5.2
+MAPLE=tools/maple/sctbench
 
 install-dependencies:
 	# llvm apt sources
@@ -22,6 +23,14 @@ install-dependencies:
 	# valgrind (profiling experiments)
 	sudo apt-get install valgrind
 	sudo apt-get install kcachegrind
+	# maple dependencies
+	sudo apt-get install libprotobuf-dev 
+	sudo apt-get install protobuf-compiler
+	sudo apt-get install python-protobuf 
+	sudo apt-get install build-essential 
+	sudo apt-get install ipython 
+	sudo apt-get install m4 
+	sudo apt-get install cmake 
 
 compile-nidhugg:
 	rm -Rf $(NIDHUGG)
