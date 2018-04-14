@@ -1,0 +1,167 @@
+name      poke-threads11_iters3
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/dpu poke-threads11_iters3.i -k0 --mem 128M --stack 6M -O1 -v
+
+exitcode  0
+defects   0
+walltime  10.073
+maxrss    207M
+maxconfs  9904
+SSBs      0
+events    263617
+
+
+stdout:
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.tSAz.poke-threads11_iters3.i.opt.bc -- 'poke-threads11_iters3.i'
+llvm-link-6.0 /tmp/dpu.tSAz.poke-threads11_iters3.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/../lib/dpu/rt.bc -o /tmp/dpu.tSAz.poke-threads11_iters3.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/../lib/dpu/dpu-backend /tmp/dpu.tSAz.poke-threads11_iters3.i.bc -k0 --mem 128M --stack 6M -O1 -v
+dpu v0.5.2 running, pid 16263
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: command-line arguments:
+dpu: argc = 1
+dpu: argv = ["/tmp/dpu.tSAz.poke-threads11_iters3.i.bc"]
+dpu: unf: loading bitcode
+dpu: unf: O1-optimization + jitting...
+stid: executor: ready, 128M total memory, 36K data, 121M heap, 6M default stack size
+dpu: environment variables:
+dpu: |environ| = 34
+dpu: por: starting POR analysis ...
+dpu: por: finished POR analysis
+dpu: por: stats: unfolding: 9904 max-configs
+dpu: por: stats: unfolding: 18 threads created
+dpu: por: stats: unfolding: 14 process slots used
+dpu: por: stats: unfolding: 263617 events (aprox. 52M of memory)
+dpu: por: stats: unfolding: t0: 135707 events (26M, 51.3%)
+dpu: por: stats: unfolding: t1: 7 events (1496B, 0.0%)
+dpu: por: stats: unfolding: t2: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t3: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t4: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t5: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t6: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t7: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t8: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t9: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t10: 1363 events (280K, 0.5%)
+dpu: por: stats: unfolding: t11: 2599 events (534K, 1.0%)
+dpu: por: stats: unfolding: t12: 69233 events (13M, 26.2%)
+dpu: por: stats: unfolding: t13: 43804 events (8M, 16.8%)
+dpu: por: stats: unfolding: 100M total allocated memory (401.6 bytes/event)
+dpu: por: stats: trees: depths: t0: min/max/avg=0/35/28.61 {depth=count/mass}={24=9904/7.3%; 23=9904/7.3%; 26=9904/7.3%; 25=9904/7.3%; (rest)=96091/70.8%}
+dpu: por: stats: trees: depths: t1: min/max/avg=0/3/1.71 {depth=count/mass}={1=2/28.6%; 3=2/28.6%; 2=2/28.6%; 0=1/14.3%}
+dpu: por: stats: trees: depths: t2: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t3: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t4: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t5: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t6: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t7: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t8: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t9: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t10: min/max/avg=0/3/2.00 {depth=count/mass}={1=454/33.3%; 3=454/33.3%; 2=454/33.3%; 0=1/0.1%}
+dpu: por: stats: trees: depths: t11: min/max/avg=0/3/2.00 {depth=count/mass}={1=866/33.3%; 3=866/33.3%; 2=866/33.3%; 0=1/0.0%}
+dpu: por: stats: trees: depths: t12: min/max/avg=0/49/41.05 {depth=count/mass}={49=5203/7.5%; 47=5203/7.5%; 48=5203/7.5%; 45=4730/6.8%; (rest)=48894/70.6%}
+dpu: por: stats: trees: depths: t13: min/max/avg=0/33/30.42 {depth=count/mass}={33=9904/22.6%; 32=9904/22.6%; 31=9904/22.6%; 30=5203/11.9%; (rest)=8889/20.3%}
+dpu: por: stats: trees: depths: 0x2ab73e9186f0: min/max/avg=0/3/1.50 {depth=count/mass}={1=2/25.0%; 3=2/25.0%; 0=2/25.0%; 2=2/25.0%}
+dpu: por: stats: trees: depths: 0x2ab73e918718: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e918740: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e918768: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e918790: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e9187b8: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e9187e0: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e918808: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e918830: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e918858: min/max/avg=0/7/2.10 {depth=count/mass}={2=863/30.8%; 3=863/30.8%; 0=412/14.7%; 1=412/14.7%; (rest)=256/9.1%}
+dpu: por: stats: trees: depths: 0x2ab73e918880: min/max/avg=0/7/2.24 {depth=count/mass}={2=1604/29.5%; 3=1604/29.5%; 0=744/13.7%; 1=744/13.7%; (rest)=748/13.7%}
+dpu: por: stats: trees: depths: 0x2ab73e9188a8: min/max/avg=0/65/56.20 {depth=count/mass}={64=5203/6.9%; 62=5203/6.9%; 65=5203/6.9%; 63=5203/6.9%; (rest)=54580/72.4%}
+dpu: por: stats: trees: branch-out: t0: size/nc=135707/4; min/max/avg=0/11/1.00; {factor=count/mass}={1=120364/88.7%; 0=9904/7.3%; 2=4943/3.6%; 11=496/0.4%}
+dpu: por: stats: trees: branch-out: t1: size/nc=7/3; min/max/avg=0/2/0.86; {factor=count/mass}={1=4/57.1%; 0=2/28.6%; 2=1/14.3%}
+dpu: por: stats: trees: branch-out: t2: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t3: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t4: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t5: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t6: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t7: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t8: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t9: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t10: size/nc=1363/3; min/max/avg=0/454/1.00; {factor=count/mass}={1=908/66.6%; 0=454/33.3%; 454=1/0.1%}
+dpu: por: stats: trees: branch-out: t11: size/nc=2599/3; min/max/avg=0/866/1.00; {factor=count/mass}={1=1732/66.6%; 0=866/33.3%; 866=1/0.0%}
+dpu: por: stats: trees: branch-out: t12: size/nc=69233/4; min/max/avg=0/11/1.00; {factor=count/mass}={1=59026/85.3%; 0=5203/7.5%; 2=4982/7.2%; 11=22/0.0%}
+dpu: por: stats: trees: branch-out: t13: size/nc=43804/4; min/max/avg=0/11/1.00; {factor=count/mass}={1=28263/64.5%; 0=9904/22.6%; 2=5163/11.8%; 11=474/1.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e9186f0: size/nc=8/2; min/max/avg=0/1/0.75; {factor=count/mass}={1=6/75.0%; 0=2/25.0%}
+dpu: por: stats: trees: branch-out: 0x2ab73e918718: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e918740: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e918768: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e918790: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e9187b8: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e9187e0: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e918808: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e918830: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e918858: size/nc=2806/6; min/max/avg=0/411/0.85; {factor=count/mass}={1=1877/66.9%; 0=904/32.2%; 2=21/0.7%; 21=2/0.1%; (rest)=2/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e918880: size/nc=5444/7; min/max/avg=0/743/0.86; {factor=count/mass}={1=3544/65.1%; 0=1768/32.5%; 2=86/1.6%; 3=42/0.8%; (rest)=4/0.1%}
+dpu: por: stats: trees: branch-out: 0x2ab73e9188a8: size/nc=75392/4; min/max/avg=0/4/1.00; {factor=count/mass}={1=65472/86.8%; 0=5203/6.9%; 2=4475/5.9%; 4=242/0.3%}
+dpu: por: stats: events: pthread_create: 1003 (0.4%)
+dpu: por: stats: events: pthread_join: 124799 (47.3%)
+dpu: por: stats: events: pthread_mutex_lock: 53049 (20.1%)
+dpu: por: stats: events: pthread_mutex_unlock: 53049 (20.1%)
+dpu: por: stats: events: (thread start): 1004 (0.4%)
+dpu: por: stats: events: pthread_exit: 30713 (11.7%)
+dpu: por: stats: <: on events:
+dpu: por: stats: <:   717650 calls
+dpu: por: stats: <:   675854 trivial (94.2%), solved by null/eq/invdep 174286/267408/234160 checks
+dpu: por: stats: <:   41796 non-trivial (5.8%)
+dpu: por: stats: <: on sequential trees:
+dpu: por: stats: <:   max depth: size/nc=41796/25; min/max/avg=5/48/24.05; {depth=count/mass}={27=10032/24.0%; 28=9904/23.7%; 22=9106/21.8%; 21=9042/21.6%; 5=924/2.2%; (rest)=2788/6.7%}
+dpu: por: stats: <:   depth diff: size/nc=41796/14; min/max/avg=1/26/2.43; {diff=count/mass}={1=18252/43.7%; 2=18062/43.2%; 4=1874/4.5%; 3=1746/4.2%; 26=648/1.6%; 22=190/0.5%; 12=128/0.3%; 14=128/0.3%; 16=128/0.3%; 6=128/0.3%; 18=128/0.3%; 8=128/0.3%; 20=128/0.3%; 10=128/0.3%}
+dpu: por: stats: #: on events (e#e):
+dpu: por: stats: #:   131504 calls
+dpu: por: stats: #:   0 trivial (0.0%), solved by eq/empty 0/0 checks
+dpu: por: stats: #:   131504 non-trivial (100.0%)
+dpu: por: stats: #: on event-config (e#C):
+dpu: por: stats: #:   15043261 calls, all non-trivial
+dpu: por: stats: #: on sequential trees:
+dpu: por: stats: #:   24426027 calls
+dpu: por: stats: #:   5258404 trivial (21.5%), solved by eq (depth) checks
+dpu: por: stats: #:   19167623 non-trivial (78.5%)
+dpu: por: stats: #:   max depth: size/nc=19167623/62; min/max/avg=1/65/24.24; {depth=count/mass}={3=9833721/51.3%; 65=858053/4.5%; 57=765681/4.0%; 59=763495/4.0%; 55=758262/4.0%; (rest)=6188411/32.3%}
+dpu: por: stats: #:   depth diff: size/nc=19167623/65; min/max/avg=1/65/6.60; {diff=count/mass}={2=10547588/55.0%; 4=1383482/7.2%; 1=908787/4.7%; 22=805669/4.2%; 6=782220/4.1%; 8=676513/3.5%; 10=591560/3.1%; 12=508206/2.7%; 3=456224/2.4%; 14=444629/2.3%; 16=380963/2.0%; 18=295363/1.5%; 20=269852/1.4%; 24=207284/1.1%; 26=111666/0.6%; 42=105083/0.5%; 28=100139/0.5%; 30=88205/0.5%; 32=79128/0.4%; 34=68139/0.4%; 36=61005/0.3%; 38=53306/0.3%; 40=41439/0.2%; 44=33339/0.2%; 5=29300/0.2%; 46=13501/0.1%; 19=7947/0.0%; 48=7339/0.0%; 17=7229/0.0%; 15=6775/0.0%; 13=5878/0.0%; 52=5840/0.0%; 50=5800/0.0%; 21=5361/0.0%; 11=5357/0.0%; 23=5205/0.0%; 9=4923/0.0%; 7=4611/0.0%; 41=4429/0.0%; 56=4083/0.0%; 45=3553/0.0%; 35=3463/0.0%; 54=3295/0.0%; 39=3072/0.0%; 37=3042/0.0%; 31=2864/0.0%; 33=2732/0.0%; 27=2640/0.0%; 29=2634/0.0%; 25=2627/0.0%; 58=2577/0.0%; 61=2204/0.0%; 60=2033/0.0%; 43=1847/0.0%; 62=1273/0.0%; 64=1020/0.0%; 57=859/0.0%; 55=847/0.0%; 53=511/0.0%; 49=468/0.0%; 51=362/0.0%; 47=239/0.0%; 59=56/0.0%; 63=29/0.0%; 65=9/0.0%}
+dpu: por: stats: </#: steps: size/nc=19209419/14; min/max/avg=0/13/2.40; {steps=count/mass}={1=10594427/55.2%; 3=1987147/10.3%; 5=1244612/6.5%; 6=1107965/5.8%; 4=1106681/5.8%; 2=948877/4.9%; (rest)=2219710/11.6%}
+dpu: por: stats: por: 9904 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 164.0 average ev/trail
+dpu: por: stats: por: alt: 560196 calls
+dpu: por: stats: por: alt: 156459 calls built a comb (27.9%)
+dpu: por: stats: por: alt: 37654 calls explored a comb (6.7%)
+dpu: por: stats: por: |comb|: size/nc=37654/4; min/max/avg=1/4/1.88; {size=count/mass}={2=29891/79.4%; 1=6122/16.3%; 3=1629/4.3%; (rest)=12/0.0%}
+dpu: por: stats: por: |comb.spike| (unfilt): size/nc=234728/593; min/max/avg=0/743/110.78; {size=count/mass}={0=80395/34.3%; 1=51867/22.1%; 2=6485/2.8%; 352=4848/2.1%; 390=4478/1.9%; 316=4219/1.8%; (rest)=82436/35.1%}
+dpu: por: stats: por: |comb.spike| (filtrd): size/nc=70839/191; min/max/avg=1/597/2.39; {size=count/mass}={1=64418/90.9%; 2=959/1.4%; 5=455/0.6%; 9=409/0.6%; 3=341/0.5%; 13=335/0.5%; (rest)=3922/5.5%}
+dpu: por: stats: resources: 9.982 s wall time
+dpu: por: stats: resources: 9.780 s cpu time
+dpu: por: stats: resources: 207M max RSS
+dpu: por: stats: perf: 992 executions/sec
+dpu: por: stats: perf: 26410 ev/sec
+dpu: por: summary: 0 defects, 9904 max-configs, 0 SSBs, 263617 events, 9.982 sec, 207M
+
+stderr:
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/dpu poke-threads11_iters3.i -k0 --mem 128M --stack 6M -O1 -v"
+	User time (seconds): 9.82
+	System time (seconds): 4.86
+	Percent of CPU this job got: 145%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:10.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 212248
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42038
+	Voluntary context switches: 357704
+	Involuntary context switches: 2813
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
