@@ -47,7 +47,7 @@ dpu multiprodcon.c -k0 --callgrind
 ```
 to run DPU on benchmark `multiprodcon.c`. After executing this command, you get
 a callgrind output file named like `callgrind.out.X` with X is a number in the current path.
-For better readabillity, we changed it into `callgrind.out.mpc3_5` (3_5 corresponds
+For better readabillity, we changed it into `callgrind.out.mpc3_5` (3 and 5 correspond
 to two parameters we set in `multiprodcon.c` file) for this benchmark.
 Callgrind output file could be read using a text editor, but **KCacheGrind** will be more useful
 thank to its visual view. **KCacheGrind** is launched using command line, providing it is already installed.
@@ -66,7 +66,7 @@ The first screen presents a list of all the profiled procedures as the image bel
 
 * The left panel displays major functions in order where you are highlighted
 at main function by default. You can search in the top left box for require function.
-* The details of selected function ( Here is `dpu::C15unfolder::explore()` we
+* The details of selected function (Here is `dpu::C15unfolder::explore()` we
 have searched for) are  in the right panel which is devided in two parts: the upper is
 for callers where we can see the `dpu::main(int,char**)` and the lower is for callees
 where we mainly concern Call Graph and All Callees tabs.
@@ -74,8 +74,8 @@ where we mainly concern Call Graph and All Callees tabs.
 ![](img/explore-callgraph.png)
 
 The  *Call Graph* tab shows us  the hierachy of major called functions together with their
-performance in term of percentage or the number of instruction fetch cost ( Click on the icon
-![](img/icon-per.png) to switch the display choice ).  In our example above, you see the functions'
+performance in term of percentage or the number of instruction fetch cost (Click on the icon
+![](img/icon-per.png) to switch the display choice).  In our example above, you see the functions'
 run time in percentage as we chose the icon. We witness three sub-functions : `stid::Executor::run()` takes 60.10%,
 `dpu::C15unfolder::stream_to_events()` takes 13.54% and
 `dpu::C15unfolder::find_alternative()` takes 18.86% the run time of their parent of
@@ -120,8 +120,8 @@ about program executing time.
 The average of program executing time is approximately 60% is drawn from this table. Running
 more benchmarks with various parameter as shown in Table 1 in the paper, we can get the average of 65%.
 
-### Claim 3: DPU spends between 15% and 30% of the time adding events to the
-event structure.
+### Claim 3: DPU spends between 15% and 30% of the time adding events to the event structure.
+
 | Benchmarks  |  Add events (%) |
 | --------------- | ------------------ |
 | DISP (5,3)      |    23.00               |
