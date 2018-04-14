@@ -90,8 +90,9 @@ or just do a search in the left panel. For example, we found in this image below
 
 ![](img/explore-allcalles.png)
 
-### Premilinaries: DPU jobs and corresponding functions
-In the sections below, we will mentions the following functions in DPU code corresponding to jobs:
+### The most relevant C++ functions
+In the sections below, we will refer to various tasks such as executing program under analysis, computing alternatives, etc.
+In this section, we explain the correspondence between these tasks and the C++ functions implementing them in DPU.
 * _Main procedure of DPU_: corresponds to function `dpu::C15unfolder::explore()`.  It directly works on
 the program under analysis including executing the program, building event structure, computing alternatives, etc.
 * _Running the program under analysis_: corresponds to function `stid::Executor::run()` which calls the front end Steroids
@@ -112,7 +113,8 @@ over a comb to find out a qualified one.
 ### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
 Running DPU under `callgrind` for all the benchmarks, we select some representative one for each benchmark
 to show in the table below. The percentage shown is the run time of function  `stid::Executor::run()` compared
-to that of `dpu::C15unfolder::explore()`. The lowest is 34.43% for the benchmark `poke.c` with 7 threads and 3 iterations.
+to that of `dpu::C15unfolder::explore()`. The lowest is 34.43% for the benchmark `poke.c` with 7 threads and 3 iterations
+while the highest is on benchmark `pth_pi_mutex.c` with 5 threads and 40000 iterations.
 
 | Benchmarks  | Run program (%) |
 | ------------     | --------  |
@@ -138,15 +140,19 @@ Based on results of running all benchmark with various parameters as shown in Ta
 | MPAT()           |    24.52              |
 | POL(7,3)        |    27.76              |
 
+To the run time of `dpu::C15unfolder::explore()`, that of `dpu::C15unfolder::stream_to_events()`
+counts for 13.54% at least and 27.76% at most as shown in the table above which means they are in the range
+of 15% and 30% as claimed in the paper. There is only one abnorm with 6.6% for benchmark PI with 5 threads
+and 40000 iterations.
 
 
-### Claim 4: DPU spends between 1% and 50% of the time adding spikes to the comb
+### Claim 4: DPU spends between 1% and 50% of the time building spikes of a new comb
 
 | Benchmarks  |  Add spikes (%) |
 | --------------- | -------------- |
 | DISP (5,3)      |   18.01          |
 | MPC()            |   15.28          |
-| PI(5,40000)        0.2              |
+| PI(5,40000)    |     0.2            |
 | MPAT()           |    13.97         |
 | POL(7,3)        |    35.02         |
 
