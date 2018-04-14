@@ -27,11 +27,13 @@ generate_bench_skiplist ()
    # trees. These are roughly a subset of those in generate_bench_selection
    # (Table 1) representative of the overall set of Table 1.
 
-   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "4" "reqs" "`seq -w 3 5`"
-   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 4 6`"
-   preprocess_family $R/benchmarks/multiprodcon.c multipc  "prods" "3 4" "workers" "4"
-   preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "`seq -w 6 8`" "iters" "2000"
-   preprocess_family $R/benchmarks/poke.c       poke       "threads" "`seq -w 10 13`" "iters" "3"
+   #preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "4" "reqs" "`seq -w 3 5`"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "4" "reqs" "`seq -w 3 3`"
+   #preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 4 6`"
+   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 4 4`"
+   #preprocess_family $R/benchmarks/multiprodcon.c multipc  "prods" "3 4" "workers" "4"
+   #preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "`seq -w 6 8`" "iters" "2000"
+   #preprocess_family $R/benchmarks/poke.c       poke       "threads" "`seq -w 10 13`" "iters" "3"
 }
 
 runall_dpu ()
@@ -83,6 +85,44 @@ get_tool_binaries ()
    DPU="$R/sec6.2-fig3-trees/dpu-stats-dist/bin/dpu"
 }
 
+parse_logs_into_tree_depth_csv()
+{
+   grep 'dpu: por: stats: trees:' *.txt > /tmp/stats.txt
+
+   grep 'stats: trees: depths:' /tmp/stats.txt | awk -F '[ :/]' '{print $1 ", " $12 ", Bdepths, " $17 ", " $18 }' > /tmp/depths.csv
+   grep 'stats: trees: branch-out:' /tmp/stats.txt | awk -F '[ :/=]' '{print $1 ", " $12 ", Asize, " $16 }' > /tmp/sizes.csv
+   sort /tmp/depths.csv /tmp/sizes.csv > /tmp/sorted.csv
+   sed 'N; s/\n/, /' /tmp/sorted.csv | awk -F, '{print $1 ", " $2 ", " $4 ", " $8 ", " $9}' > /tmp/good-columns.csv
+
+   HEADER='Log file, Tree id within the log, Nr of nodes, Depth, Avg. depth'
+   (echo "$HEADER"; cat /tmp/good-columns.csv | sort) >> tree-stats.csv
+
+   #echo xxxxxxxxxxxxxxxxx
+   #cat /tmp/stats.txt
+   #echo xxxxxxxxxxxxxxxxx
+   #cat tree-stats.csv
+
+   (echo "$HEADER"; cat tree-stats.csv | grep 'txt,  0x' | sort -k5 -n) > tree-variable-stats.csv
+   (echo "$HEADER"; cat tree-stats.csv | grep 'txt,  t' | sort -k5 -n) > tree-thread-stats.csv
+
+   echo "Done, here are the fist 15 lines of each CSV file:"
+   echo
+   echo "File tree-stats.csv:"
+   echo
+   cat tree-stats.csv | head -n15 | column -t -s,
+   echo "..."
+   echo
+   echo "File tree-variable-stats.csv:"
+   echo
+   cat tree-variable-stats.csv | head -n15 | column -t -s,
+   echo "..."
+   echo
+   echo "File tree-thread-stats.csv:"
+   echo
+   cat tree-thread-stats.csv | head -n15 | column -t -s,
+   echo "..."
+}
+
 main ()
 {
    h1_date "Generation of the logs for Section 6.2"
@@ -102,6 +142,11 @@ main ()
    echo ::
    echo
    runall_dpu 2>&1 | quote
+
+   h1_date "Extracting data from logs into CSV files"
+   echo ::
+   echo
+   parse_logs_into_tree_depth_csv 2>&1 | quote
 
    echo
    echo
@@ -123,5 +168,5 @@ mkdir -p $LOGS
 ln -s $LOGS $R/sec6.2-fig3-trees/logs
 cd $LOGS
 
-main 2>&1 | tee OUTPUT.rst
+main 2>&1 | tee LOG.rst
 
