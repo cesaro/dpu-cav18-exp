@@ -6,24 +6,30 @@ Navigation: [Table of contents], [Previous section], [Next section]
 [Previous section]: 3-section-6.1.md
 [Next section]: 5-section-6.3.md
 
-Intro: DPU constructs and maintains the unfolding of the program using a
-specialized data structure based on trees. This allows the tool to implement the
-algorithms described in Section 5 of the paper.
+DPU constructs and maintains the unfolding of the program using a
+data structure based on trees. These allow the efficient implementation of all
+operations of Algorithm 1 in the paper, including, mainly, queries to determine
+if two events are related by a relation of **causality** or **conflict**.
 
-For every variable and every thread of the program, the unfolding contains one
-tree. In Section 6.2 of the paper we evaluate the efficiency of this data
-structure, and make the following claims:
+For every POSIX mutex and every thread of the program under analysis, the data
+structure maintains one tree. In Section 6.2 of the paper we evaluate these
+trees and make the following claims:
 
-LIST OF CLAIMS, including the plots and histograms:
+1. The average node depth is 22.7.
+2. 80% of the tree nodes have a maximum depth of less than 8 nodes.
+3. 90% of the tree nodes have a maximum depth of less than 16 nodes.
+4. 92% of the causality queries are for nodes separated by a distance of 1 to 4.
+5. 70% of the causality queries are for nodes separated by a distance of 1 to 2.
+6. 82% of the conflict queries are for nodes separated by a distance of 1 to 4.
 
-Claim: The average node depth is 22.7
-Claim: 80% of the tree nodes have a maximum depth of less than 8 nodes
-Claim: 90% of the tree nodes have a maximum depth of less than 16 nodes
+Additionally, Figure 3 of the paper contains:
 
-Claim: 92% of the causality queries are for nodes separated by a distance of 1 to 4
-Claim: 70% of the causality queries are for nodes separated by a distance of 1 to 2
-Claim: 82% of the conflict queries are for nodes separated by a distance of 1 to 4
+7. Plots of the average-node-depth and the maximal-tree-depth.
+8. Two histograms showing the frequency (axe Y) at which queries are made to the
+   trees for nodes with a given depth (axe X).
 
+Here we provide the data that supports these claims/figures as well as
+instructions how to generate the data.
 
 ### Benchmarks
 
