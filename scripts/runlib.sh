@@ -8,6 +8,19 @@ round() {
     python -c "print '%.3f' % (float ($1) / (1000 * 1000 * 1000))"
 }
 
+print_date()
+{
+  MSG=$1
+
+  echo "======="
+  if test "$MSG"; then
+     echo "$MSG"
+  fi
+  echo -n "Date: "
+  date -R
+  echo "======="
+}
+
 preprocess_family()
 {
    CFILE=$1
