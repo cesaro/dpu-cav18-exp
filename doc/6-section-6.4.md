@@ -36,40 +36,59 @@ dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind
 [KCachegrind]: http://kcachegrind.sourceforge.net/
 
 ### Callgrind + KCachegrind Premiere
-
-After running **dpu** on benchmarks with *--callgrind*, you can read `callgrind.out` profiling
-files using a text editor, but **KCacheGrind** will be more useful thank to visual view.
-You can launch **KCacheGrind** using command line, providing your system installed it.
-Here is the command to view the profilling file `callgrind.out.mpc`  achieved by the command
-running DPU on the benchmark *multiprodcon.c*
+To be able to run DPU under `callgrind` and view its output, you need to get them installed in
+your Linux machine:
 ```sh
-kcachegrind callgrind.out.mpc
+apt-get install valgrind kcachegrind
+```
+Now, suppose that you are in folder `experiments/cav18/bench/`. You type
+```sh
+dpu multiprodcon.c -k0 --callgrind
+```
+to run DPU on benchmark `multiprodcon.c` under `callgrind`. After executing this command, you get
+a callgrind output file named like `callgrind.out.X` with X is a number in the current path.
+For better readabillity, we changed it into `callgrind.out.mpc3_5` (3 and 5 correspond
+to two parameters we set in `multiprodcon.c` file) for this benchmark.
+Callgrind output file could be read using a text editor, but **KCacheGrind** will be more useful
+thank to its visual view. **KCacheGrind** is launched using command line, providing it is already installed.
+Here is the command to view the profilling file `callgrind.out.mpc3_5`
+```sh
+kcachegrind callgrind.out.mpc3_5
 ```
 Note that to be able to launch GUI of **kcachegrind** in your local Linux machine while working on
-a virtual machine (here is our cloud virtual machine), you should connect to it with:
+a virtual machine, you should connect to it with:
 ```sh
 ssh - X  VM-link
 ```
-The first screen presents a list of all the profiled procedures as the image below
+The first screen presents a list of all the profiled procedures as the image below:
+
 ![](img/main-screen.png)
 
 * The left panel displays major functions in order where you are highlighted
 at main function by default. You can search in the top left box for require function.
-* The details of selected function ( Here is `dpu::C15unfolder::explore()` we
-have searched for) are  in the right panel which is devided in two parts: upper one
-for callers where we can see the `dpu::main(int,char**)` as caller of `dpu::C15unfolder::explore()`
-and the lower for callees where we concern for Call Graph and All Callees.
+* The details of selected function (Here is `dpu::C15unfolder::explore()` we
+have searched for) are  in the right panel which is devided in two parts: the upper is
+for callers where we can see the `dpu::main(int,char**)` and the lower is for callees
+where we mainly concern Call Graph and All Callees tabs.
 
 ![](img/explore-callgraph.png)
 
 The  *Call Graph* tab shows us  the hierachy of major called functions together with their
-performance in term of percentage (relative to parent) or  the number of instruction fetch cost.
-In this example, we see three sub-functions of `dpu::C15unfolder::explore()`:
-`stid::Executor::run()` takes 60.10%, `dpu::C15unfolder::stream_to_events()`
-takes 13.54% and `dpu::C15unfolder::find_alternative()` takes 18.86% the run time of
-their parent.
-Other minor functions are skipped, but you can find some of them in the list in *All Callees* tab
-or just do a search in the left panel.
+performance in term of percentage or the number of instruction fetch cost (Click on the icon
+![](img/icon-per.png) to switch the display choice).  In our example above, you see the functions'
+run time in percentage as we chose the icon. We witness three sub-functions : `stid::Executor::run()` takes 60.10%,
+`dpu::C15unfolder::stream_to_events()` takes 13.54% and
+`dpu::C15unfolder::find_alternative()` takes 18.86% the run time of their parent of
+`dpu::C15unfolder::explore()`.
+In Call Graph, you can choose to display the percentage of a function relative to its parent or relative
+to overall run time by click or unclick on the icon ![](img/icon-rel.png) in the tool bar.  In this example,
+it is relative to that of functions' parents.
+Many other minor functions are skipped, but you can find some of them in the list in *All Callees* tab
+or just do a search in the left panel. For example, we found in this image below the function
+`dpu::C15unfolder::enumerate_combination()` with only 0.44% of
+`dpu::C15unfolder::explore()` 's run time which is not displayed in Call Graph.
+
+![](img/explore-allcalles.png)
 
 ### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
 The main procedure of DPU is the function `dpu::explore()` responsible for running program
@@ -82,24 +101,32 @@ for 30% to 90% (65% in average) of the DPU run time.
 | ------------     | --------  |
 | DISP (5,3)      |  47.08   |
 | MPC(3,5)       |  60.10   |
-| PI(5)               |  70.74   |
-| PI(6)               |  64.34   |
+| PI(5,40000)    |  91.07   |
 | MPAT(6)         |  54.97   |
 | POL(7,3)        |  34.43   |
 
 Some representative results in the above table support what we mention in Section 6.4 of the paper
 about program executing time.
+
 ### Claim 2: DPU spends in average 65% of the time running the program under anlaysis
+| Benchmarks  | Executing C program (%) |
+| ------------     | --------  |
+| DISP (5,3)      |  47.08   |
+| MPC(3,5)       |  60.10   |
+| PI(5,40000)    |  91.07   |
+| MPAT(6)         |  54.97   |
+| POL(7,3)        |  34.43   |
 
+The average of program executing time is approximately 60% is drawn from this table. Running
+more benchmarks with various parameter as shown in Table 1 in the paper, we can get the average of 65%.
 
-### Claim 3: DPU spends between 15% and 30% of the time adding events to the
-event structure.
+### Claim 3: DPU spends between 15% and 30% of the time adding events to the event structure.
+
 | Benchmarks  |  Add events (%) |
-| ----------------| ------------------|
+| --------------- | ------------------ |
 | DISP (5,3)      |    23.00               |
 | MPC(3,5)       |    13.54               |
-| PI(5)               |    21.63               |
-| PI(6)               |    22.58               |
+| PI(5,40000)    |    6.60               |
 | MPAT()           |    24.52               |
 | POL(7,3)        |    27.76               |
 
@@ -109,34 +136,31 @@ event structure.
 | --------------- | -------------- |
 | DISP (5,3)      |   18.01          |
 | MPC()            |   15.28          |
-| PI(5)               |    0.75           |
-| PI(6)               |    1.62           |
+| PI(5,40000)               |    0.2           |
 | MPAT()           |    13.97         |
 | POL(7,3)        |    35.02         |
 
 ### Claim 5: DPU spends less than 5% of the time solving the comb
 
 Benchmarks  |   Explore comb (%) |
-| --------------|  --------------- |
+| -------------- |  --------------- |
 | DISP (5,3)    |    1                 |
 | MPC()          |     0.5             |
-| PI(5)             |     0.5             |
-| PI(6)             |     0.5             |
+| PI(5,40000)  |     0.2             |
 | MPAT()         |     0.74           |
 | POL(7,3)      |     1                |
 
 ### Claim 6: DPU spends less than 5% of the time computing conflicting extensions
 
 | Benchmarks  |  Compute conflicting extension (%) |
-| ----------------| ---------------------------------------|
+| ---------------- | --------------------------------------- |
 | DISP (5,3)      |    3.9              |
 | MPC(3,5)       |   3.55             |
-| PI(5)               |   3.31             |
-| PI(6)               |   8.94             |
+| PI(5,40000)    |   0.97             |
 | MPAT()           |   3.4               |
 | POL(7,3)        |   2.67             |
 
-
+---------------------------------------
 ### Claim 2:  Computing alternatives
 The seconde major procedure of DPU is computing alternatives including two sub main procesures:
 prepare the event structure (maximal configuration and conflicting extension)  and find an alternative.
