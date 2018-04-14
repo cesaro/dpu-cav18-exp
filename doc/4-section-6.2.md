@@ -34,7 +34,7 @@ instructions how to generate the data.
 ### Benchmarks
 
 We have used the following instances of the benchmarks used in Table 1 of the
-paper. All files are available in the [benchmarks](../benchmarks/) folder.
+paper. All files are available in the folder `benchmarks/`.
 
 | Instance   | Benchmark                      | Parameters
 | -----------|--------------------------------| ------------------------
@@ -55,49 +55,80 @@ paper. All files are available in the [benchmarks](../benchmarks/) folder.
 | Pol(13,3)  | `benchmarks/poke.c`            | `PARAM1=13 PARAM2=3`
 
 
-### The Data
+### The Supporting Data
 
 We executed DPU on the benchmarks above. We then parsed the output logs and
-generated a spreadsheet that allowed us to make the six claims above and
+generated a spreadsheet which allowed us to make the six claims above and
 construct the plots and histograms of Fig. 3.
 
-The data: [tree-stats.xlsx](../sec6.2-fig3-trees/tree-stats.xlsx).
+The spreadsheet is located in `sec6.2-fig3-trees/tree-stats.xlsx`,
+or [here](../sec6.2-fig3-trees/tree-stats.xlsx).
 
 The spreadsheet contains four tabs. We now explain how the data in these tabs
-proves our claims. Later we will show how to generate the data in these tabs.
+proves our claims. In the sections **below we show** how to generate this data.
 
-#### Tab 1: Tree-depth raw data (claims 1, 2, 3)
-
+**Tab 1: Tree-depth raw data (claims 1, 2, 3)**:
 For each of the benchmarks above we ran DPU and generate a log file (1st column).
 DPU built an unfolding with multiple trees. Each tree in that unfolding
 corresponded to a mutex or a thread (2nd column). For that tree the table
 reports the number of nodes (3th column), the depth of the tree (4th column) and
-the average depth of the nodes in the tree (5th column).
-
-From these columns we compute the data that supports our **claims 1, 2, and 3**,
-marked in red in the spreadsheet:
+the average depth of the nodes in the tree (5th column).  From these columns we
+compute the data that supports our *claims 1, 2, and 3*, marked in red in the
+spreadsheet:
 
 FIXME pic
 
-#### Tab 2: Tree-depth plots
+**Tab 2: Tree-depth plots (plots in Fig. 3a and 3b)**:
+This tab contains _two_ separate tables. The data in each table originates from
+the previous tab. We have just separated the rows that describe a tree for mutex
+(1st table) and a tree for a thread (2nd table). The reviewer can check that the
+plots in Fig. 3 (a) and 3(b) in the paper are identical to those in the right:
 
-Bla
+FIXME pic.
 
-#### Tab 3: Causality queries
+**Tab 3: Causality queries (Fig. 3c and claims 4, 5)**:
+DPU access the mutex and thread trees explained above to determine if two events
+in the unfolding are causally related. This table indicates how distant in the
+tree the accessed nodes are. For each distance (depth difference, 1st column) we
+give the total number of queries (2nd column) that DPU made (during the
+unfolding of the benchmarks above) for nodes separated by that distance. The 3rd
+column is a computed percentage.
 
-Bla
+This table produces the plot on the right (Fig. 3c of the paper) and provides
+our evidence for the *claims 4 and 5*:
 
-#### Tab 4: Conflict queries
+FIXME pic.
 
-Bla
+**Tab 4: Conflict queries (Fig. 3d and claim 6)**:
+Similarly, DPU queries the data structure to determine if two events are in conflict.
+The table in this tab indicates how distant the accessed nodes are and is
+analogous to the table in the previous tab.
 
-### Generating the Data Above
+The plot on the right is Fig. 3d in the paper.  The table also provides evidence
+for the *claim 6*.
 
-- DPU needs to be compiled with an special option XXX to output additional data.
+### Generating the Data of the Spreadsheet
+
+We now guide the user to re-generate the data in the spreadsheet.
+
+DPU needs to be compiled with the option `CONFIG_DETAILED_STATS` enabled to
+produce additional statistics about the trees discussed in this section. This is
+enabled in the file `config.mk` of the sources. We provide an example file with
+the option already enabled:
+
+```sh
+grep CONFIG_STATS_DETAILED sec6.2-fig3-trees/config.mk 
+CONFIG_STATS_DETAILED = 1
+```
+
+an special option XXX to output additional data.
   A config.mk is provided, and also the binaries, available HERE.
   The binaries are available in `sec6.2*/dpu-stats-dist`. They ha bee obtained
   using the `config.mk` in that folder. The difference is that we compiled
-  the tool with `CONFIG_DETAILED_STATS` enabled.
+  the tool with `` enabled.
+
+
+  Just make make compile-bla and you get it
 - making sure we have a good compilation:
 
 ```sh
