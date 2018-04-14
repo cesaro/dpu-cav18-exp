@@ -43,10 +43,10 @@ apt-get install valgrind kcachegrind
 ```
 Now, suppose that you are in folder `experiments/cav18/bench/`. You type
 ```sh
-    dpu multiprodcon.c -k0 --callgrind
+dpu multiprodcon.c -k0 --callgrind
 ```
 to run DPU on benchmark `multiprodcon.c`. After executing this command, you get
-a callgrind output file named like `callgrind.out.XXXXX` with X is a number in the current path.
+a callgrind output file named like `callgrind.out.X` with X is a number in the current path.
 For better readabillity, we changed it into `callgrind.out.mpc3_5` (3_5 corresponds
 to two parameters we set in `multiprodcon.c` file) for this benchmark.
 Callgrind output file could be read using a text editor, but **KCacheGrind** will be more useful
@@ -56,32 +56,33 @@ Here is the command to view the profilling file `callgrind.out.mpc3_5`
 kcachegrind callgrind.out.mpc3_5
 ```
 Note that to be able to launch GUI of **kcachegrind** in your local Linux machine while working on
-a virtual machine (here is our cloud virtual machine), you should connect to it with:
+a virtual machine, you should connect to it with:
 ```sh
 ssh - X  VM-link
 ```
-The first screen presents a list of all the profiled procedures as the image below
+The first screen presents a list of all the profiled procedures as the image below:
+
 ![](img/main-screen.png)
 
 * The left panel displays major functions in order where you are highlighted
 at main function by default. You can search in the top left box for require function.
 * The details of selected function ( Here is `dpu::C15unfolder::explore()` we
-have searched for) are  in the right panel which is devided in two parts: upper one
-for callers where we can see the `dpu::main(int,char**)` and the lower for callees
-where we concern for Call Graph and All Callees.
+have searched for) are  in the right panel which is devided in two parts: the upper is
+for callers where we can see the `dpu::main(int,char**)` and the lower is for callees
+where we mainly concern Call Graph and All Callees tabs.
 
 ![](img/explore-callgraph.png)
 
 The  *Call Graph* tab shows us  the hierachy of major called functions together with their
 performance in term of percentage or the number of instruction fetch cost ( Click on the icon
-![] (img/icon-per.png) to change the display choice ).
-In this example, we see three sub-functions : `stid::Executor::run()` takes 60.10%,
+![](img/icon-per.png) to switch the display choice ).  In our example above, you see the functions'
+run time in percentage as we chose the icon. We witness three sub-functions : `stid::Executor::run()` takes 60.10%,
 `dpu::C15unfolder::stream_to_events()` takes 13.54% and
-`dpu::C15unfolder::find_alternative()` takes 18.86% the run time of
-their parent of `dpu::C15unfolder::explore()`.
+`dpu::C15unfolder::find_alternative()` takes 18.86% the run time of their parent of
+`dpu::C15unfolder::explore()`.
 In Call Graph, you can choose to display the percentage of a function relative to its parent or relative
-to overall run time by click or unclick on the icon ![] (img/icon-rel.png) at top left corner. In our example
-in the above image, you see the functions in percentage relative to their parents.
+to overall run time by click or unclick on the icon ![](img/icon-rel.png) in the tool bar.  In this example,
+it is relative to that of functions' parents.
 Many other minor functions are skipped, but you can find some of them in the list in *All Callees* tab
 or just do a search in the left panel. For example, we found in this image below the function
 `dpu::C15unfolder::enumerate_combination()` with only 0.44% of
