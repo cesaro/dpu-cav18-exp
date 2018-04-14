@@ -105,7 +105,7 @@ parse_logs_into_tree_depth_csv()
    (echo "$HEADER"; cat tree-stats.csv | grep 'txt,  0x' | sort -k5 -n) > tree-variable-stats.csv
    (echo "$HEADER"; cat tree-stats.csv | grep 'txt,  t' | sort -k5 -n) > tree-thread-stats.csv
 
-   echo "Done, here are the fist 15 lines of each CSV file:"
+   echo "Done, the output is in three files:"
    echo
    echo "File tree-stats.csv:"
    echo
@@ -123,11 +123,82 @@ parse_logs_into_tree_depth_csv()
    echo "..."
 }
 
+histogram_aggregate ()
+{
+   cat <<< "
+import sys
+
+d = {}
+for l in sys.stdin :
+   if len (l) <= 1 or '#' in l : continue
+   ll = l.split()
+   if len (ll) != 2 : exit(1)
+   diff = int (ll[0])
+   count = int (ll[1])
+   if diff not in d : d[diff] = 0
+   d[diff] += count
+
+print '%s, %s' % ('Difference', 'Count')
+for k in range (min(list(d)), 1 + max(list(d))) :
+   v = 0 if k not in d else d[k]
+   print '%d, %d' % (k, v)
+" > /tmp/script.py
+
+   python /tmp/script.py < $1
+}
+
+generate_histogram_causality_diff ()
+{
+   for i in *.txt; do
+      N=`echo "$i" | sed s/.txt$//`
+      echo
+      echo "# $i:"
+      echo '# diff count'
+      grep 'dpu: por: stats: <:  *depth diff: ' $i | \
+         sed 's/.*diff=count.mass..//' | \
+         sed 's!/[^;]*[;}]!!g; s/{//; s/ /\n/g' | \
+         sed 's/=/ /' | \
+         sed 's/}$//'
+   done > /tmp/pairs.txt
+
+   histogram_aggregate /tmp/pairs.txt > histogram-causality.csv
+
+   echo "Done, output is in histogram-causality.csv"
+   echo "Fist 15 lines:"
+   cat histogram-causality.csv | head -n15 | column -t -s,
+   echo ...
+}
+
+generate_histogram_conflict_diff ()
+{
+   for i in *.txt; do
+      N=`echo "$i" | sed s/.txt$//`
+      echo
+      echo "# $i:"
+      echo '# diff count'
+      grep 'dpu: por: stats: #:  *depth diff' $i | \
+         sed 's/.*diff=count.mass...//' | \
+         sed 's!/[^;]*[;}]!!g; s/ /\n/g' | \
+         sed 's/=/ /' | \
+         sed 's/}$//'
+   done > /tmp/pairs.txt
+
+   histogram_aggregate /tmp/pairs.txt > histogram-conflict.csv
+
+   echo "Done, output is in histogram-conflict.csv"
+   echo "Fist 15 lines:"
+   cat histogram-conflict.csv | head -n15 | column -t -s,
+   echo ...
+}
+
+
 main ()
 {
    h1_date "Generation of the logs for Section 6.2"
 
+   echo "All outputs of this script are in: $LOGS"
    echo 'This is the output of the script ``scripts/run-sec6.1-gen-logs.sh``.'
+   echo
 
    #print_machine_infos
    get_tool_binaries
@@ -147,6 +218,16 @@ main ()
    echo ::
    echo
    parse_logs_into_tree_depth_csv 2>&1 | quote
+
+   h1_date "Generating the histogram of depth differences on causality queries"
+   echo ::
+   echo
+   generate_histogram_causality_diff 2>&1 | quote
+
+   h1_date "Generation the histogram of depth differences on conflcit queries"
+   echo ::
+   echo
+   generate_histogram_conflict_diff 2>&1 | quote
 
    echo
    echo
