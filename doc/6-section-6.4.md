@@ -90,7 +90,7 @@ or just do a search in the left panel. For example, we found in this image below
 
 ![](img/explore-allcalles.png)
 
-### DPU jobs and corresponding functions
+### Premilinaries: DPU jobs and corresponding functions
 In the sections below, we will mentions the following functions in DPU code corresponding to jobs:
 * _Main procedure of DPU_: corresponds to function `dpu::C15unfolder::explore()`.  It directly works on
 the program under analysis including executing the program, building event structure, computing alternatives, etc.
@@ -110,9 +110,9 @@ over a comb to find out a qualified one.
 * _Taking out event from spike_: `Spike::pop_back()` pops out one event from a spike.
 
 ### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
-
-Steroids function `stid::Executor::run()` . This function counts
-for 30% to 90% (65% in average) of the DPU run time.
+Running DPU under `callgrind` for all the benchmarks, we select some representative one for each benchmark
+to show in the table below. The percentage shown is the run time of function  `stid::Executor::run()` compared
+to that of `dpu::C15unfolder::explore()`. The lowest is 34.43% for the benchmark `poke.c` with 7 threads and 3 iterations.
 
 | Benchmarks  | Run program (%) |
 | ------------     | --------  |
@@ -122,30 +122,23 @@ for 30% to 90% (65% in average) of the DPU run time.
 | MPAT(6)         |  54.97   |
 | POL(7,3)        |  34.43   |
 
-Some representative results in the above table support what we mention in Section 6.4 of the paper
-about program executing time.
+These representatives support what we mention in Section 6.4 of the paper about program executing time.
 
 ### Claim 2: DPU spends in average 65% of the time running the program under anlaysis
-| Benchmarks  | Executing C program (%) |
-| ------------     | --------  |
-| DISP (5,3)      |  47.08   |
-| MPC(3,5)       |  60.10   |
-| PI(5,40000)    |  91.07   |
-| MPAT(6)         |  54.97   |
-| POL(7,3)        |  34.43   |
-
-The average of program executing time is approximately 60% is drawn from this table. Running
-more benchmarks with various parameter as shown in Table 1 in the paper, we can get the average of 65%.
+Look at the table above, we can trivially compute the average of program executing time is approximately 60%.
+Based on results of running all benchmark with various parameters as shown in Table 1 in the paper, we get the average of 65%.
 
 ### Claim 3: DPU spends between 15% and 30% of the time adding events to the event structure.
 
 | Benchmarks  |  Add events (%) |
 | --------------- | ------------------ |
-| DISP (5,3)      |    23.00               |
-| MPC(3,5)       |    13.54               |
-| PI(5,40000)    |    6.60               |
-| MPAT()           |    24.52               |
-| POL(7,3)        |    27.76               |
+| DISP (5,3)      |    23.00              |
+| MPC(3,5)       |    13.54              |
+| PI(5,40000)    |    6.60                |
+| MPAT()           |    24.52              |
+| POL(7,3)        |    27.76              |
+
+
 
 ### Claim 4: DPU spends between 1% and 50% of the time adding spikes to the comb
 
@@ -153,7 +146,7 @@ more benchmarks with various parameter as shown in Table 1 in the paper, we can 
 | --------------- | -------------- |
 | DISP (5,3)      |   18.01          |
 | MPC()            |   15.28          |
-| PI(5,40000)               |    0.2           |
+| PI(5,40000)        0.2              |
 | MPAT()           |    13.97         |
 | POL(7,3)        |    35.02         |
 
