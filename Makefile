@@ -38,7 +38,7 @@ compile-nidhugg:
 	rm -Rf $(NIDHUGG)
 	cd tools/nidhugg/; unzip nidhugg-*.zip
 	cd $(NIDHUGG); autoreconf --install
-	cd $(NIDHUGG); ./configure --with-llvm=/usr/lib/llvm-4.0/ --prefix=dist/nidhugg
+	cd $(NIDHUGG); ./configure --with-llvm=/usr/lib/llvm-4.0/ --prefix=$(PWD)/dist/nidhugg
 	cd $(NIDHUGG); make -j 10
 	cd $(NIDHUGG); make install
 
