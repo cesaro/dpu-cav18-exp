@@ -1,4 +1,5 @@
 #include "mltaln.h"
+#include <assert.h>
 
 #define DEBUG 0
 #define IODEBUG 0
@@ -348,12 +349,19 @@ static void	*directionthread( void *arg )
 		{
 			pthread_mutex_lock( targ->mutex_counter );
 			j = *jshare;
+                        // printf ("thread_no=%d     j=%d      iend=%d    njob=%d\n",targ->thread_no, j, iend, njob); 
 			if( j == iend )
 			{
 				fprintf( stderr, "\r %d / %d (thread %d)   \r", iq, njob, thread_no );
 				pthread_mutex_unlock( targ->mutex_counter );
 				break;
 			}
+                        if ( (targ->thread_no == nthread - 1) && (iend == njob - 1) && (j == iend - 1) )
+                        {
+                         // printf ("thread_no=%d  going to crash!\n",targ->thread_no);
+			  pthread_mutex_unlock( targ->mutex_counter );
+                          assert (0);
+                        }
 			++(*jshare);
 			pthread_mutex_unlock( targ->mutex_counter );
 		}

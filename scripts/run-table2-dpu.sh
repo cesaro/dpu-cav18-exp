@@ -9,7 +9,9 @@ TIMEOUT=8m
 
 # select the right installation depending on the machine
 
-#DPU=../dist/bin/dpu
+DPU=../dist/bin/dpu
+B=../benchmarks
+O=obj-dpu
 
 # utilitary functions to run benchmarks
 source runlib.sh
@@ -18,7 +20,7 @@ compile_bench ()
 {
    # setup for Whole Program LLVM
    CC=wllvm
-   LLVMVERS=3.7
+   LLVMVERS=6.0
    export LLVM_COMPILER=clang
    export LLVM_CC_NAME=clang-$LLVMVERS
    export LLVM_CXX_NAME=clang++-$LLVMVERS
@@ -27,104 +29,87 @@ compile_bench ()
 
    # package mafft 
    MAFFTPROGS="addsingle dndpre makedirectionlist mccaskillwrap pairlocalalign"
-   P="$R/debian/mafft-7.123/core/"
+   P="$B/debian/mafft-7.123/core/"
    make -C $P $MAFFTPROGS CC=$CC
    for F in $MAFFTPROGS; do
       BC="$F.bc"
-      extract-bc "$P/$F" -o "$BC"
+      extract-bc "$P/$F" -o "$O/$BC"
    done
 
    # package blktrace
-   P="$R/debian/blktrace-1.0.5/blkiomon"
+   P="$B/debian/blktrace-1.0.5/blkiomon"
    make -C $P blkiomon CC=$CC
-   extract-bc $P/blkiomon -o blkiomon.bc
+   extract-bc $P/blkiomon -o "$O/blkiomon.bc"
 }
 
 runall_dpu ()
 {
    # pre-conditions:
-   # $R       - root of the ase17 folder
+   # $B       - root of the benchmarks folder
    # $TIMEOUT - a timeout specification valid for timeout(1)
    # $DPU     - path to the dpu tool to run
 
    OPTS='-k0 --mem 350M --stack 2M -O2'
-   cp $R/debian/mafft-7.123/test-data/*fasta .
-   cp $R/debian/mafft-7.123/test-data/hat2* .
-   cp $R/debian/mafft-7.123/test-data/hat3* .
-   cp $R/debian/mafft-7.123/test-data/mxscarnamod .
-   cp $R/debian/blktrace-1.0.5/test-data/input*dat .
-   ls -lh .
+   cp $B/debian/mafft-7.123/test-data/*fasta $O
+   cp $B/debian/mafft-7.123/test-data/hat2* $O
+   cp $B/debian/mafft-7.123/test-data/hat3* $O
+   cp $B/debian/mafft-7.123/test-data/mxscarnamod $O
+   cp $B/debian/blktrace-1.0.5/test-data/input*dat $O
+   ls -lh $O
 
    # mafft - addsingle
    N=addsingle
-   for n in $(seq 2 2 10); do
+   for n in 2 4 6 8; do
       for s in 3; do
-         cp hat2.${s}seq hat2
-         cp hat3.${s}seq hat3
-         CMD="$DPU $N.bc $OPTS -- $N -C $n -K -i ${s}seq.aln.fasta"
+         cp $O/hat2.${s}seq hat2
+         cp $O/hat3.${s}seq hat3
+         CMD="$DPU $O/$N.bc $OPTS -- $N -C $n -K -i $O/${s}seq.aln.fasta"
          LOG=${N}_threads${n}_seq${s}.log
+         run_dpu
+      done
+   done
+
+exit 0
+
+   # blktrace - blkiomon
+   N=blkiomon
+   for x in 5 15 18 20 22 24; do
+      for y in 5; do
+         LOG=${N}_x${x}_y${y}_input1.log
+         CMD="$DPU $O/$N.bc $OPTS -- $N -I 1 -x $x -y $y -i $O/input1.dat"
          run_dpu
       done
    done
 
    # mafft - dndpre
    N=dndpre
-   for n in 2 3 4 5 6 7; do
-      for s in 2 4; do
-         CMD="$DPU $N.bc $OPTS -- $N -C $n -i ${s}seq.fasta"
-         LOG=${N}_threads${n}_seq${s}.log
-         run_dpu
-      done
+   for x in 2,4 4,2 4,4 6,2; do 
+      n=$(echo $x | awk -F, '{print $1}')
+      s=$(echo $x | awk -F, '{print $2}')
+      CMD="$DPU ${O}/${N}.bc $OPTS -- ${N} -C ${n} -i ${O}/${s}seq.fasta"
+      LOG=${N}_threads${1}_seq${2}.log
+      run_dpu    
    done
 
    # mafft - makedirectionlist
    N=makedirectionlist
-   for n in $(seq 1 5); do
-      for s in $(seq 2 4); do
-         CMD="$DPU $N.bc $OPTS -- $N -m -I 0 -t 0.01 -C $n -i ${s}seq.fasta"
-         LOG=${N}_threads${n}_seq${s}.log
-         run_dpu
-      done
-   done
-
-   # mafft - mccaskillwrap
-   N=mccaskillwrap
-   for n in 1 2 3; do
-      for s in 2; do
-         CMD="$DPU $N.bc $OPTS -- $N -C $n -i ${s}seq.fasta -d $PWD"
-         LOG=${N}_threads${n}_seq${s}.log
-         run_dpu
-      done
+   for x in 1,4 2,2 2,3 3,2 4,3; do 
+      n=$(echo $x | awk -F, '{print $1}')
+      s=$(echo $x | awk -F, '{print $2}')
+      CMD="$DPU ${O}/${N}.bc $OPTS -- ${N} -m -I 0 -t 0.01 -C ${n} -i ${O}/${s}seq.fasta"
+      LOG=${N}_threads${1}_seq${2}.log
+      run_dpu    
    done
 
    # mafft - pairlocalalign
    N=pairlocalalign
-   for n in $(seq 1 6); do
-      for s in 2 3 4 5; do
-         LOG=${N}_threads${n}_seq${s}.log
-         CMD="$DPU $N.bc $OPTS -- $N -C $n -i ${s}seq.fasta"
-         run_dpu
-      done
+   for x in 1,5 2,4 4,3 6,3; do 
+      n=$(echo $x | awk -F, '{print $1}')
+      s=$(echo $x | awk -F, '{print $2}')
+      CMD="$DPU ${O}/${N}.bc $OPTS -- $N -C $n -i ${O}/${s}seq.fasta"
+      LOG=${N}_threads${n}_seq${s}.log
+      run_dpu
    done
-
-   # blktrace - blkiomon
-   N=blkiomon
-   for x in 5 10 15 18 20 22 24 26 28 30; do
-      for y in 4 5 6; do
-         LOG=${N}_x${x}_y${y}_input1.log
-         CMD="$DPU $N.bc $OPTS -- $N -I 1 -x $x -y $y -i input1.dat"
-         # -h -
-         run_dpu
-      done
-   done
-}
-
-usage ()
-{
-   echo "Usage:"
-   echo " run.sh        Generates the benchmarks and runs dpu and nidhugg"
-   echo " run.sh gen    Generates the bemchmarks (see folder $R)"
-   echo " run.sh run    Assumes that BLA "
 }
 
 test_can_run ()
@@ -144,19 +129,21 @@ main ()
 {
    print_date "Starting the script"
    test_can_run
-   #compile_bench
-   #print_date "Running tool DPU"
-   #runall_dpu
-   #print_date "Finished"
+   compile_bench
+   print_date "Running tool DPU"
+   runall_dpu
+   print_date "Finished"
 }
 
+rm -Rf $O
+mkdir $O
 
-#R=table2.$(date -R | sed -e 's/ /_/g' -e 's/[,+]//g' -e 's/:/-/g')
-#rm -Rf $R latest.table2
-#mkdir $R
-#ln -s $R latest.table2
-#cd $R
-
-R=..
+# R=table2-dpu.$(date -R | sed -e 's/ /_/g' -e 's/[,+]//g' -e 's/:/-/g')
+# rm -Rf $R latest.table2-dpu
+# mkdir $R
+# ln -s $R latest.table2-dpu
+# cd $R
+# 
+# R=..
 main 2>&1 | tee XXX.log
 

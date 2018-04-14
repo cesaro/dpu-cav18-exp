@@ -1,4 +1,5 @@
 #include "mltaln.h"
+#include <assert.h>
 
 #define DEBUG 0
 #define IODEBUG 0
@@ -1949,6 +1950,16 @@ static void *athread( void *arg ) // alg='R', alg='r' -> tsukawarenai.
 		pthread_mutex_lock( targ->mutex_counter );
 		j = jobpospt->j;
 		i = jobpospt->i;
+                // printf ( "thread %d: i = %d     j = %d     ilim = %d\n", thread_no, i, j, ilim); 
+                if ( targ->thread_no == (nthread - 1) )
+                {
+                  if ( (i == (ilim - 2)) && (j == (ilim - 1)) )
+                  { 
+                    // printf ( "thread %d out of %d is going to crash, %d!\n", thread_no, nthread,ilim); 
+		    pthread_mutex_unlock( targ->mutex_counter );
+                    assert (0);
+                  }
+                }
 		j++;
 		if( j == njob )
 		{
@@ -1960,7 +1971,7 @@ static void *athread( void *arg ) // alg='R', alg='r' -> tsukawarenai.
 
 			if( i == ilim )
 			{
-//				printf(  "thread %d end!\n", thread_no );
+				// printf(  "thread %d end!\n", thread_no );
 				pthread_mutex_unlock( targ->mutex_counter );
 
 				if( commonIP ) FreeIntMtx( commonIP );

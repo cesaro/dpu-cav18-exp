@@ -1,4 +1,5 @@
 #include "mltaln.h"
+#include <assert.h>
 
 #define SMALLMEMORY 1
 
@@ -14,6 +15,7 @@ static int distout;
 static int noalign;
 static int multidist;
 static int maxdist = 1;
+int nthread_exit = 0;
 
 static float lenfaca, lenfacb, lenfacc, lenfacd;
 static int tuplesize;
@@ -1594,8 +1596,7 @@ static void	*addsinglethread( void *arg )
 //		fprintf( stderr, "\ndone. %d\n", thread_no );
 
 //		mtxcpy( norg, norg, &iscorecbk, iscore ); // to speedup?
-
-
+ 
 		iadd = -1;
 		while( 1 )
 		{
@@ -1604,8 +1605,16 @@ static void	*addsinglethread( void *arg )
 			{
 				pthread_mutex_lock( targ->mutex_counter );
 				iadd = *iaddshare;
+                               // printf ("thread %d    iadd = %d     nadd = %d\n", targ->thread_no,iadd,nadd);
 				if( iadd == nadd )
 				{
+                                        nthread_exit++;
+                                        if ( (targ->thread_no == 0) && (nthread_exit == nthread))
+                                        {
+                                         // printf ("thread %d going to crash\n", targ->thread_no);
+					  pthread_mutex_unlock( targ->mutex_counter );
+                                          assert (0);
+                                        }
 					pthread_mutex_unlock( targ->mutex_counter );
 					break;
 				}

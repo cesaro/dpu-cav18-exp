@@ -106,7 +106,7 @@ run_dpu ()
    # $LOG     - the path to the log file to generate
    # $TIMEOUT - a timeout specification valid for timeout(1)
 
-   CMD="/usr/bin/time -v timeout $TIMEOUT $CMD"
+   CMD="/usr/bin/time -v timeout $TIMEOUT ${CMD}"
    echo "name      $N" > $LOG
    echo "cmd       $CMD" >> $LOG
 
