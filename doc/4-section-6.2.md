@@ -112,7 +112,7 @@ do is running:
 $ make sec6.2-gen-csv
 ```
 
-at the root of the repository.
+at the root of the repository. This will take ~6 min to finish.
 
 This calls the script `scripts/run-sec6.2-gen-csv.sh`, which generates logs and
 CSV files in the folder `sec6.2-fig3-trees/logs/`. We provide a copy of

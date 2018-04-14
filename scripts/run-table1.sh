@@ -18,7 +18,7 @@ DPU_OPTS="-O1"
 # ==== END CONFIGURATION VARIABLES ====
 
 # utilitary functions to run benchmarks
-source runlib.sh
+source scripts/runlib.sh
 
 generate_bench_all ()
 {
@@ -221,50 +221,6 @@ generate_bench_morethan1sec()
 
 }
 
-generate_bench_cesar ()
-{
-   # pre-conditions:
-   # $R       - root of the cav18 folder
-
-   #preprocess_family $R/bench/dispatcher.c dispatch   "serv" "4" "reqs" "`seq -w 1 7`"
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "3" "reqs" "`seq -w 2 3`"
-
-   #preprocess_family $R/bench/dispatcher.c dispatch   "serv" "3" "reqs" "4"
-   preprocess_family $R/bench/mpat.c       mpat       "k" "2"
-   #preprocess_family $R/bench/spat.c       spat       "threads" "2 3" "mut" "2"
-
-   #preprocess_family $R/bench/dispatcher.c dispatcher   "serv" "1 2 3 4 5 6 8" "reqs" "2 3"
-   preprocess_family $R/bench/mpat.c       mpat         "k" "4 5"
-
-   #preprocess_family $R/bench/poke.c       poke         "threads" "2 3 4" "iters" "2 3 4 5 6"
-   #preprocess_family $R/bench/poke.c       poke         "threads" "5 6 7 8" "iters" "1 2 3 4"
-
-   #preprocess_family $R/bench/poke.c       poke         "threads" "4" "iters" "4 6"
-   #preprocess_family $R/bench/poke.c       poke         "threads" "5" "iters" "4"
-   #preprocess_family $R/bench/poke.c       poke         "threads" "6" "iters" "4"
-   #preprocess_family $R/bench/poke.c       poke         "threads" "7" "iters" "4"
-   #preprocess_family $R/bench/poke.c       poke         "threads" "8" "iters" "4"
-
-   #preprocess_family $R/bench/multiprodcon.c multipc     "workers" "3 4 5 6 7" "prods" "1 2 3 4 5"
-
-   #preprocess_family $R/bench/ssb3.c       ssb3         "writers" "`seq -w 1 9`" "seqlen" "2 4 6 8"
-   #preprocess_family $R/bench/ssbexp.c     ssbexp       "writers" "`seq -w 1 18`"
-   #preprocess_family $R/bench/pi/pth_pi_mutex.c pi      "threads" "`seq -w 1 6`" "iters" "`seq -w 1000 2000 9000`"
-}
-
-generate_bench_skiplist ()
-{
-   # Selection of benchmarks for analyzing the performance of the sequential
-   # trees. These are roughly a subset of those in generate_bench_selection
-   # (Table 1) representative of the overall set of Table 1.
-
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "4" "reqs" "`seq -w 3 5`"
-   preprocess_family $R/bench/mpat.c       mpat       "k" "`seq -w 4 6`"
-   preprocess_family $R/bench/multiprodcon.c multipc  "prods" "3 4" "workers" "4"
-   preprocess_family $R/bench/pi/pth_pi_mutex.c pi    "threads" "`seq -w 6 8`" "iters" "2000"
-   preprocess_family $R/bench/poke.c       poke       "threads" "`seq -w 10 13`" "iters" "3"
-}
-
 runall_dpu ()
 {
    # pre-conditions:
@@ -430,9 +386,9 @@ dry_run ()
    $NIDHUGG --version 2>&1 | quote
 
    echo
-   echo Running '``'clang-3.4 --version'`` (required by nidhugg)::'
+   echo Running '``'clang-4.0 --version'`` (required by nidhugg)::'
    echo
-   clang-3.4 --version 2>&1 | quote
+   clang-4.0 --version 2>&1 | quote
 
    echo
    echo **WARNING**:
@@ -442,33 +398,27 @@ dry_run ()
 
 get_tool_binaries ()
 {
-   DPU="../../../dist/bin/dpu"
-   NIDHUGG="../../../dist/bin/nidhuggc --nidhugg=../../../dist/bin/nidhugg"
+   DPU="$R/dist/dpu/bin/dpu"
+   NIDHUGG="$R/dist/nidhugg/bin/nidhuggc --nidhugg=../../../dist/bin/nidhugg"
 }
 
 main ()
 {
    h1_date "Generation of Table 1"
 
-   echo 'This is the output of the script ``runtable1.sh``.'
-   echo 'It has been produced during the generation of the data for'
-   echo 'Table 1 in the paper.'
+   echo 'This is the output of the script ``run-table1.sh``.'
 
    print_machine_infos
    get_tool_binaries
    dry_run
 
+   exit 0
+
    h1_date "Preprocessing benchmark"
    echo ::
    echo
-   #generate_bench_all 2>&1 | quote
-   generate_bench_selection 2>&1 | quote #xxxxxxxxxxxxxxxxxxxxxxxxxxx
-   #generate_bench_selection_below10s 2>&1 | quote
+   generate_bench_selection 2>&1 | quote
    #generate_bench_smallest 2>&1 | quote
-   #generate_bench_cesar 2>&1 | quote
-   #generate_bench_smallruntime 2>&1 | quote
-   #generate_bench_morethan1sec 2>&1 | quote
-   #generate_bench_skiplist 2>&1 | quote
 
    h1_date "Running tool DPU"
    echo ::
@@ -493,14 +443,16 @@ main ()
    date -R
 }
 
-R=logs.$(date +%F_%a_%T)
-rm -Rf table1/logs table1/$R
+# root of the dpu-cav18-ae repository
+R=$PWD
 
-mkdir -p table1/$R
-cd table1
-ln -s $R logs
-cd $R
+rm  -f $R/sec6.1-table1/logs
+rm -Rf $R/sec6.1-table1/logs.$(date +%F_%a_%T)
 
-R=../.. # root of the cav18/ folder
-main 2>&1 | tee OUTPUT.rst
+LOGS=$R/sec6.1-table1/logs.$(date +%F_%a_%T)
 
+mkdir -p $LOGS
+ln -s $LOGS $R/sec6.1-table1/logs
+cd $LOGS
+
+main 2>&1 | tee LOG.rst
