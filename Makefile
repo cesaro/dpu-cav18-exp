@@ -28,12 +28,13 @@ compile-nidhugg:
 	cd tools/nidhugg/; unzip nidhugg-*.zip
 	cd $(NIDHUGG); autoreconf --install
 	cd $(NIDHUGG); ./configure --with-llvm=/usr/lib/llvm-4.0/ --prefix=$(DIST)
-	cd $(NIDHUGG); make -j 6
+	cd $(NIDHUGG); make -j 10
 
 compile-dpu:
 	rm -Rf $(DPU)
 	cd tools/dpu/; unzip dpu-*.zip
-	cd $(DPU); make dist -j 6 MAKEFLAGS=
+	cd $(DPU); make dist -j 10
+	$(DPU)/dist/bin/dpu --version | head -n1
 
 install-nidhugg:
 	cd $(NIDHUGG); make install
@@ -45,7 +46,7 @@ sec6.2-compile-dpu:
 	rm -Rf $(DPU)
 	cd tools/dpu/; unzip dpu-*.zip
 	cp sec6.2-fig3-trees/config.mk $(DPU)
-	cd $(DPU); make dist -j 6
+	cd $(DPU); make dist -j 10
 	$(DPU)/dist/bin/dpu -V | grep detailed-stats
 	cp -Rv $(DPU)/dist sec6.2-fig3-trees/dpu-stats-dist
 
