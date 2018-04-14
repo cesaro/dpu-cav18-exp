@@ -25,7 +25,7 @@ CAV'18 Experiments with DPU: Replicability Guide
 [3-section-6.1.md]:     3-section-6.1.md
 [4-section-6.2.md]:     4-section-6.2.md
 [5-section-6.3.md]:     5-section-6.3.md
-[6-section-6.4.md]:     6-section-6.4.md]
+[6-section-6.4.md]:     6-section-6.4.md
 
 ## SHA1 Sums
 

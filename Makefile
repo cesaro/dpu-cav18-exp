@@ -33,7 +33,6 @@ compile-nidhugg:
 compile-dpu:
 	rm -Rf $(DPU)
 	cd tools/dpu/; unzip dpu-*.zip
-	# FIXME patch
 	cd $(DPU); make dist -j 6 MAKEFLAGS=
 
 install-nidhugg:
@@ -42,3 +41,13 @@ install-nidhugg:
 install-dpu:
 	cp -R $(DPU)/dist/* $(DIST)
 
+sec6.2-compile-dpu:
+	rm -Rf $(DPU)
+	cd tools/dpu/; unzip dpu-*.zip
+	cp sec6.2-fig3-trees/config.mk $(DPU)
+	cd $(DPU); make dist -j 6
+	$(DPU)/dist/bin/dpu -V | grep detailed-stats
+	cp -Rv $(DPU)/dist sec6.2-fig3-trees/dpu-stats-dist
+
+sec6.2-gen-logs:
+	./scripts/run-sec6.2-gen-logs.sh
