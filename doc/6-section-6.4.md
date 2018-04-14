@@ -161,7 +161,7 @@ Unclick on ![](img/icon-rel.png) to display the time of functions relative to ov
 the image above. `dpu::Primecon::in_cfl_with()` takes 2.74% while  `dpu::C15unfolder::explore()` takes 24.53%
 of the overall run time that means `dpu::Primecon::in_cfl_with()`  counts for `2.74/24.53 = 11.17% ` the time of
 `dpu::C15unfolder::explore()`. Similarly, we can compute that `Comb::add_spike()` takes `1.04/24.53 = 4.24%`.
-Building a comb totally takes around 15.41%.
+Hence, building a comb takes around 15.41% in total.
 
 Do the same for the rest, we get the table below:
 
@@ -177,6 +177,9 @@ Except benchmark PI, all the others gives us the time of building a new comb in 
 
 ### Claim 5: DPU spends less than 5% of the time solving the comb
 
+The time of solving the comb is the time of `dpu::C15unfolder::enumerate_combination()` which is really small
+as shown in the table below. They are even not greater than 1% in this representative selection of benchmarks.
+
 Benchmarks  |   Explore comb (%) |
 | -------------- |  --------------- |
 | DISP (5,3)    |    1                 |
@@ -187,6 +190,9 @@ Benchmarks  |   Explore comb (%) |
 
 ### Claim 6: DPU spends less than 5% of the time computing conflicting extensions
 
+The run time of `dpu::C15unfolder::compute_cex()` is also small, conforming to the claim we made in the paper.
+See the table below for more details
+
 | Benchmarks  |  Compute conflicting extension (%) |
 | ---------------- | --------------------------------------- |
 | DISP (5,3)      |    3.9              |
@@ -194,53 +200,5 @@ Benchmarks  |   Explore comb (%) |
 | PI(5,40000)    |   0.97             |
 | MPAT()           |   3.4               |
 | POL(7,3)        |   2.67             |
-
----------------------------------------
-### Claim 2:  Computing alternatives
-The seconde major procedure of DPU is computing alternatives including two sub main procesures:
-prepare the event structure (maximal configuration and conflicting extension)  and find an alternative.
-Preparing event structure does:
-* Adding events to the event structure: stream of actions achieved from `stid::Executor::run()`
-are converted into events, then added to the unfolding. This work corresponds to the  function
-`dpu::C15unfolder::stream_to_events()` , a callee of `dpu::C15unfolder::explore()`
-* Computing conflicting extensions: We have function `dpu::C15unfolder::compute_cex()`
-to do that work which usually takes a tiny amount of time to finish.
-
-| Benchmarks  |  Add events (%) | Compute conflicting extension (%) |
-| ----------------| ------------------| ----------------------------------------|
-| DISP (5,3)      |    23.00               |    3.9               |
-| MPC(3,5)       |    13.54               |    3.55             |
-| PI(5)               |    21.63               |    3.31             |
-| PI(6)               |    22.58               |    8.94             |
-| MPAT()           |    24.52               |    3.4               |
-| POL(7,3)        |    27.76               |    2.67             |
-
-The table shows adding events to the event structure  counts for around 15% to 30% while
-computing conflicting extensions normally takes less than 5%, except benchmark PI with 6 threads.
-
-### Claim 3: Find an alternative
-To find an alternative, we exploit the *comb* whose spikes are sets of events immediately conflicts with
-events in disable set. To evaluate the alternative finding performance, we look for functions:
-* Building the comb: reseting the comb `Comb::clear()`, adding spikes `Comb::add_spike()`, checking if each
-element in a spike is in conflict with some event in the configuration `dpu::Primecon::in_cfl_with()` and
-poping up events from spikes `pop_back()` . Among them,  `Comb::clear()` and `pop_back()`are usually tiny,
-so often inlined in **Kcachegrind** view.
-* Searching for solutions in the comb  by the function `dpu::C15unfolder::enumerate_combination()`.
-
-We get some representative results in the table below:
-
-| Benchmarks  |  Build comb (%) | Explore comb (%) |
-| --------------- | -------------- | ---------------- |
-| DISP (5,3)      |   18.01          |  1           |    ok
-| MPC()            |   15.28          |  0.5        | ok
-| PI(5)               |    0.75           |  0.5        | ok
-| PI(6)               |    1.62           |  0.5        | ok
-| MPAT()           |    13.97         |  0.74       ok
-| POL(7,3)        |    35.02         |  1           | ok
-
-The results conforms to the conclusion in Section 6.4 that building the spikes of a new
-comb varies from 1% to 50% and searching for solutions in the comb is less than 5%
-(They are here even less than 1%).
-
 
 
