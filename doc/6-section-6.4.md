@@ -37,76 +37,103 @@ dpu ./cav18/bench/multiprodcon.c -k 0 --callgrind
 ### Callgrind + KCachegrind Premiere
 
 After running **dpu** on benchmarks with *--callgrind*, you can read `callgrind.out` profiling
-files using a text editor, but **KCacheGrind** will be more useful to view them visually.
+files using a text editor, but **KCacheGrind** will be more useful thank to visual view.
 You can launch **KCacheGrind** using command line, providing your system installed it.
 Here is the command to view the profilling file `callgrind.out.mpc`  achieved by the command
 running DPU on the benchmark *multiprodcon.c*
 ```sh
 kcachegrind callgrind.out.mpc
 ```
-Note that to be able to launch GUI of **kcachegrind** in your local, you should log in our virtual machine
-with:
+Note that to be able to launch GUI of **kcachegrind** in your local Linux machine while working on
+a virtual machine (here is our cloud virtual machine), you should connect to it with:
 ```sh
-ssh - X  our link
+ssh - X  VM-link
 ```
-
 The first screen presents a list of all the profiled procedures as the image below
 ![](img/main-screen.png)
 
-* The left panel displays major functions in descendant order where you are highlighted
-at main function by default.
-* The details of selected function (in this case, it is main) are  in
-the right panel which is devided in two parts: upper one for callers and the
-lower for callees.
+* The left panel displays major functions in order where you are highlighted
+at main function by default. You can search in the top left box for require function.
+* The details of selected function ( Here is `dpu::C15unfolder::explore()` we
+have searched for) are  in the right panel which is devided in two parts: upper one
+for callers where we can see the `dpu::main(int,char**)` as caller of `dpu::C15unfolder::explore()`
+and the lower for callees where we concern for Call Graph and All Callees.
 
-![](img/callee-screen.png)
+![](img/explore-callgraph.png)
 
-We here concern the callees of *main* function. Look at the graph in the *Call Graph* tab, we can
-see the hierachy of calls from main while its performance details are shown in
-*All Calles* tab. Among the major callees, `dpu::get_por_analysis()` counts for
-<<<<<<< Updated upstream
-62.73%, while `dpu::opts::parse(...)` does 15.27% of the run time of `dpu::main(...)`.
-Many other minor functions are inlined.
+The  *Call Graph* tab shows us  the hierachy of major called functions together with their
+performance in term of percentage (relative to parent) or  the number of instruction fetch cost.
+In this example, we see three sub-functions of `dpu::C15unfolder::explore()`:
+`stid::Executor::run()` takes 60.10%, `dpu::C15unfolder::stream_to_events()`
+takes 13.54% and `dpu::C15unfolder::find_alternative()` takes 18.86% the run time of
+their parent.
+Other minor functions are skipped, but you can find some of them in the list in *All Callees* tab
+or just do a search in the left panel.
 
 ### Claim 1: Program executing time
+The main procedure of DPU is the function `dpu::explore()` responsible for running program
+to get a maximal configuration, then compute alternatives for exploring another branch of the unfolding.
+To run program under analysis, DPU calls front end Steroids function `stid::Executor::run()` to \
+execute the benchmarks ( as C multithreaded programs) to get a *stream of actions*. This function counts
+for 30% to 90% (65% in average) of the DPU run time.
 
-DPU spends between 30% and 90% (average 65%) of the run time executing the program
+| Benchmarks  | Executing C program (%) |
+| ------------     | --------  |
+| DISP (5,3)      |  47.08   |
+| MPC(3,5)       |  60.10   |
+| PI(5)               |  70.74   |
+| PI(6)               |  64.34   |
+| MPAT(6)         |  54.97   |
+| POL(7,3)        |  34.43   |
 
-| Benchmarks  |  stid::Executor::run() (%)|
-| ------------ | --------  |
-| DISP (5,3)  |  47.09   |
-| MPC(3,5)   |  60.10   |
-| PI(6)           |  64.34   |
-| MPAT(6)     |  54.97   |
-| POL(7,3)    |	34.4	     |
-
-
-We cannot say: "This supports what we mention in Section 6.4 of the paper about program executing time."
+Some representative results in the above table support what we mention in Section 6.4 of the paper
+about program executing time.
 
 ### Claim 2:  Computing alternatives
+The seconde major procedure of DPU is computing alternatives including two sub main procesures:
+prepare the event structure (maximal configuration and conflicting extension)  and find an alternative.
+Preparing event structure does:
+* Adding events to the event structure: stream of actions achieved from `stid::Executor::run()`
+are converted into events, then added to the unfolding. This work corresponds to the  function
+`dpu::C15unfolder::stream_to_events()` , a callee of `dpu::C15unfolder::explore()`
+* Computing conflicting extensions: We have function `dpu::C15unfolder::compute_cex()`
+to do that work which usually takes a tiny amount of time to finish.
 
-Add events to event structure (15% - 30%)
-Computing conicting extensions (less than 5%).
+| Benchmarks  |  Add events (%) | Compute conflicting extension (%) |
+| ----------------| -------------- ----| -----------------------------------------|
+| DISP (5,3)      |    23.00               |    3.9               |
+| MPC(3,5)       |    13.54               |    3.55             |
+| PI(5)               |    21.63               |    3.31             |
+| PI(6)               |    22.58               |    8.94             |
+| MPAT()           |    24.52               |    3.4               |
+| POL(7,3)        |    27.76               |    2.67             |
 
-| Benchmarks  |  Add events | Compute conflicting extension |
-| ----------------| -------------- | ------------------------------------|
-| DISP (5,3)  |    13.83         |	    < 5%          |
-| MPC(3,5)   |     5.47          |      1.5	        |
-| PI(5)           |       20.56      |      8.94           |
-| MPAT()       |    14.21         |      2.94           |
-| POL(7,3)    |        61.88     |      02.16         |
+The table shows adding events to the event structure  counts for around 15% to 30% while
+computing conflicting extensions normally takes less than 5%, except benchmark PI with 6 threads.
+
+### Claim 3: Find an alternative
+To find an alternative, we exploit the *comb* whose spikes are sets of events immediately conflicts with
+events in disable set. To evaluate the alternative finding performance, we look for functions:
+* Building the comb: reseting the comb `Comb::clear()`, adding spikes `Comb::add_spike()`, checking if each
+element in a spike is in conflict with some event in the configuration `dpu::Primecon::in_cfl_with()` and
+poping up events from spikes`pop_back()` . Among them,  `Comb::clear()` and `pop_back()`are usually tiny,
+so often inlined in **Kcachegrind** view.
+* Searching for solutions in the comb  by the function `dpu::C15unfolder::enumerate_combination()`.
+
+We get some representative results in the table below:
+
+| Benchmarks  |  Build comb (%) | Explore comb (%) |
+| --------------- | -------------- | ---------------- |
+| DISP (5,3)      |   18.01          |  1           |    ok
+| MPC()            |   15.28          |  0.5        | ok
+| PI(5)               |    0.75           |  0.5        | ok
+| PI(6)               |    1.62           |  0.5        | ok
+| MPAT()           |    13.97         |  0.74       ok
+| POL(7,3)        |    35.02         |  1           | ok
+
+The results conforms to the conclusion in Section 6.4 that building the spikes of a new
+comb varies from 1% to 50% and searching for solutions in the comb is less than 5%
+(They are here even less than 1%).
 
 
-
-### Claim 3: Building and Exploring combs.
-Building the spikes of a new comb (1% to 50%)
-Searching for solutions in the comb (less than 5%),
-
-| Benchmarks  |  Buidl comb | Explore comb |
-| --------------- | -------------- | --------------------|
-| DISP (5,3)      |   19.28          |  < 1%       |
-| MPC()            |      1.04         |  < 1%       |
-| PI(5)               |      0.36         |  <1%        |
-| MPAT()           |     5.95          |  <5%        |
-| POL(7,3)        |  24.02            |  < 5%      |
 
