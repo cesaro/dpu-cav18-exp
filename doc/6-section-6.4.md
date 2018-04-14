@@ -90,14 +90,31 @@ or just do a search in the left panel. For example, we found in this image below
 
 ![](img/explore-allcalles.png)
 
-### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
-The main procedure of DPU is the function `dpu::explore()` responsible for running program
-to get a maximal configuration, then compute alternatives for exploring another branch of the unfolding.
-To run program under analysis, DPU calls front end Steroids function `stid::Executor::run()` to \
-execute the benchmarks ( as C multithreaded programs) to get a *stream of actions*. This function counts
-for 30% to 90% (65% in average) of the DPU run time.
+### Premilinaries: DPU jobs and corresponding functions
+In the sections below, we will mentions the following functions in DPU code corresponding to jobs:
+* _Main procedure of DPU_: corresponds to function `dpu::C15unfolder::explore()`.  It directly works on
+the program under analysis including executing the program, building event structure, computing alternatives, etc.
+* _Running the program under analysis_: corresponds to function `stid::Executor::run()` which calls the front end Steroids
+to execute the target program as a C multithreaded program and produces a stream of actions.
+* _Adding events to event structure_: corresponds to function `dpu::C15unfolder::stream_to_events()` which converts the
+stream of actions achieved from `stid::Executor::run()` into events in event structure called a _maximal configuration_.
+* _Adding spikes to the comb_: corresponds to `Comb::add_spike()` which builds the comb by adding appropriate
+events in spikes.
+* _Checking conflict_: Function `dpu::Primecon::in_cfl_with()`  checks the conflict between each event in spikes with
+events in another set.
+* _Computing conflicting extensions_: Function `dpu::C15unfolder::compute_cex()` adds a set of events called
+conflicting extensions to event structure when it finds.
+* _Exploring the comb_: corresponds to `dpu::C15unfolder::enumerate_combination()` which enumerates all possible combinations
+over a comb to find out a qualified one.
+* _Reset the comb_: `Comb::clear()` sets the comb to empty.
+* _Taking out event from spike_: `Spike::pop_back()` pops out one event from a spike.
 
-| Benchmarks  | Executing C program (%) |
+### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
+Running DPU under `callgrind` for all the benchmarks, we select some representative one for each benchmark
+to show in the table below. The percentage shown is the run time of function  `stid::Executor::run()` compared
+to that of `dpu::C15unfolder::explore()`. The lowest is 34.43% for the benchmark `poke.c` with 7 threads and 3 iterations.
+
+| Benchmarks  | Run program (%) |
 | ------------     | --------  |
 | DISP (5,3)      |  47.08   |
 | MPC(3,5)       |  60.10   |
@@ -105,30 +122,23 @@ for 30% to 90% (65% in average) of the DPU run time.
 | MPAT(6)         |  54.97   |
 | POL(7,3)        |  34.43   |
 
-Some representative results in the above table support what we mention in Section 6.4 of the paper
-about program executing time.
+These representatives support what we mention in Section 6.4 of the paper about program executing time.
 
 ### Claim 2: DPU spends in average 65% of the time running the program under anlaysis
-| Benchmarks  | Executing C program (%) |
-| ------------     | --------  |
-| DISP (5,3)      |  47.08   |
-| MPC(3,5)       |  60.10   |
-| PI(5,40000)    |  91.07   |
-| MPAT(6)         |  54.97   |
-| POL(7,3)        |  34.43   |
-
-The average of program executing time is approximately 60% is drawn from this table. Running
-more benchmarks with various parameter as shown in Table 1 in the paper, we can get the average of 65%.
+Look at the table above, we can trivially compute the average of program executing time is approximately 60%.
+Based on results of running all benchmark with various parameters as shown in Table 1 in the paper, we get the average of 65%.
 
 ### Claim 3: DPU spends between 15% and 30% of the time adding events to the event structure.
 
 | Benchmarks  |  Add events (%) |
 | --------------- | ------------------ |
-| DISP (5,3)      |    23.00               |
-| MPC(3,5)       |    13.54               |
-| PI(5,40000)    |    6.60               |
-| MPAT()           |    24.52               |
-| POL(7,3)        |    27.76               |
+| DISP (5,3)      |    23.00              |
+| MPC(3,5)       |    13.54              |
+| PI(5,40000)    |    6.60                |
+| MPAT()           |    24.52              |
+| POL(7,3)        |    27.76              |
+
+
 
 ### Claim 4: DPU spends between 1% and 50% of the time adding spikes to the comb
 
@@ -136,7 +146,7 @@ more benchmarks with various parameter as shown in Table 1 in the paper, we can 
 | --------------- | -------------- |
 | DISP (5,3)      |   18.01          |
 | MPC()            |   15.28          |
-| PI(5,40000)               |    0.2           |
+| PI(5,40000)        0.2              |
 | MPAT()           |    13.97         |
 | POL(7,3)        |    35.02         |
 
@@ -188,7 +198,7 @@ To find an alternative, we exploit the *comb* whose spikes are sets of events im
 events in disable set. To evaluate the alternative finding performance, we look for functions:
 * Building the comb: reseting the comb `Comb::clear()`, adding spikes `Comb::add_spike()`, checking if each
 element in a spike is in conflict with some event in the configuration `dpu::Primecon::in_cfl_with()` and
-poping up events from spikes`pop_back()` . Among them,  `Comb::clear()` and `pop_back()`are usually tiny,
+poping up events from spikes `pop_back()` . Among them,  `Comb::clear()` and `pop_back()`are usually tiny,
 so often inlined in **Kcachegrind** view.
 * Searching for solutions in the comb  by the function `dpu::C15unfolder::enumerate_combination()`.
 
