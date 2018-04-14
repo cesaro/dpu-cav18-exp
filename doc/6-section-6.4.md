@@ -45,7 +45,7 @@ Now, suppose that you are in folder `experiments/cav18/bench/`. You type
 ```sh
 dpu multiprodcon.c -k0 --callgrind
 ```
-to run DPU on benchmark `multiprodcon.c`. After executing this command, you get
+to run DPU on benchmark `multiprodcon.c` under `callgrind`. After executing this command, you get
 a callgrind output file named like `callgrind.out.X` with X is a number in the current path.
 For better readabillity, we changed it into `callgrind.out.mpc3_5` (3 and 5 correspond
 to two parameters we set in `multiprodcon.c` file) for this benchmark.
@@ -136,7 +136,7 @@ more benchmarks with various parameter as shown in Table 1 in the paper, we can 
 | --------------- | -------------- |
 | DISP (5,3)      |   18.01          |
 | MPC()            |   15.28          |
-| PI(5)               |    0.2           |
+| PI(5,40000)               |    0.2           |
 | MPAT()           |    13.97         |
 | POL(7,3)        |    35.02         |
 
@@ -146,7 +146,7 @@ Benchmarks  |   Explore comb (%) |
 | -------------- |  --------------- |
 | DISP (5,3)    |    1                 |
 | MPC()          |     0.5             |
-| PI(5)             |     0.2             |
+| PI(5,40000)  |     0.2             |
 | MPAT()         |     0.74           |
 | POL(7,3)      |     1                |
 
@@ -156,11 +156,11 @@ Benchmarks  |   Explore comb (%) |
 | ---------------- | --------------------------------------- |
 | DISP (5,3)      |    3.9              |
 | MPC(3,5)       |   3.55             |
-| PI(5)               |   0.97             |
+| PI(5,40000)    |   0.97             |
 | MPAT()           |   3.4               |
 | POL(7,3)        |   2.67             |
 
-
+---------------------------------------
 ### Claim 2:  Computing alternatives
 The seconde major procedure of DPU is computing alternatives including two sub main procesures:
 prepare the event structure (maximal configuration and conflicting extension)  and find an alternative.
