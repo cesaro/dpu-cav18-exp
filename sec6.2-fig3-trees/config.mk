@@ -38,7 +38,7 @@ CONFIG_MAX_DEFECT_REPETITION = 5
 
 # define this to compile support to visualize statistics about causality/conflict
 # checks
-CONFIG_STATS_DETAILED =
+CONFIG_STATS_DETAILED = 1
 
 # maximum verbosity level at which the tool produces output when requested to be
 # verbose with --verb=N; touch these lines only if you know what you are doing
