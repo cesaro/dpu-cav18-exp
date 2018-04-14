@@ -150,7 +150,7 @@ main ()
    get_tool_binaries
    dry_run
 
-   h1_date "Preprocessing benchmark"
+   h1_date "Preprocessing benchmarks"
    echo ::
    echo
    generate_bench_selection 2>&1 | quote

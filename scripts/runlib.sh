@@ -8,6 +8,19 @@ round() {
     python -c "print '%.3f' % (float ($1) / (1000 * 1000 * 1000))"
 }
 
+print_date()
+{
+  MSG=$1
+
+  echo "======="
+  if test "$MSG"; then
+     echo "$MSG"
+  fi
+  echo -n "Date: "
+  date -R
+  echo "======="
+}
+
 preprocess_family()
 {
    CFILE=$1
@@ -39,6 +52,50 @@ preprocess_family()
          $CMD
       done
    done
+}
+
+dry_run_dpu ()
+{
+   h2 "Dry running DPU"
+
+   echo Running '``'$DPU --help'``'::
+   echo
+   $DPU --help 2>&1 | quote
+
+   echo
+   echo Running '``'$DPU --version'``'::
+   echo
+   $DPU --version 2>&1 | quote
+
+   echo
+   echo **NOTE**:
+   echo If you see error messages above this line,
+   echo then check that you understand what you are doing!!
+}
+
+dry_run_nidhugg ()
+{
+   h2 "Dry running NIDHUGG"
+
+   echo
+   echo Running '``'$NIDHUGG --help'``'::
+   echo
+   $NIDHUGG --help 2>&1 | quote
+
+   echo
+   echo Running '``'$NIDHUGG --version'``'::
+   echo
+   $NIDHUGG --version 2>&1 | quote
+
+   echo
+   echo Running '``'clang-4.0 --version'`` (required by nidhugg)::'
+   echo
+   clang-4.0 --version 2>&1 | quote
+
+   echo
+   echo **WARNING**:
+   echo If you see error messages above this line,
+   echo then check that you understand what you are doing!!
 }
 
 run_dpu ()
