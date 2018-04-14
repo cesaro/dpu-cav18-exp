@@ -6,6 +6,17 @@ Navigation: [Table of contents], [Previous section], [Next section]
 [Previous section]: 2-compiling-tools.md
 [Next section]: 4-section-6.2.md
 
+DPU is a testing tool that explores the state space of the program by building a
+so-called **Prime-Event Structure** (PES), also known as Unfolding of the program.
+Each "test" corresponds to a different scheduling, or **interleaving** of the
+threads in the program. When the interleaving is viewed as a partially-ordered
+set of events we call it **configuration**.
+
+A **maximal configuration** is a maximal execution, that is, one that runs the
+program beginning to end.
+
+A **Sleep-Set Blocked** (SSB) execution is BLA. FIXME.
+
 
 - where are the bench
 - how to run the script

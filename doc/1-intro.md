@@ -33,10 +33,16 @@ CAV'18 Experiments with DPU: Replicability Guide
 
 ### Dependencies
 
+This is for the image provided, Ubuntu 14
+
 - for the artiact evaluation of cav18 this section is irrelevat, as all
   dependencies are satisfied in the virtual machine that we provide
 - These experiments can be repeated with Ubuntu 16 or Debian 9.4
 - make install-dependencies
+
+This replicacbility package can also be used with minor modifications in Debian
+9.4 or Ubuntu 16, with the exception of the experiments with Maple, which depend
+on kernel 3.x.
 
 apt-get install valgrind kcachegrind
 
