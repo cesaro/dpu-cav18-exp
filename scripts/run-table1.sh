@@ -25,17 +25,17 @@ generate_bench_all ()
    # pre-conditions:
    # $R       - root of the cav18 folder
 
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "1 2 3 4 5 6 8 10 12 14" "reqs" "1 2 3 4"
-   preprocess_family $R/bench/mpat.c       mpat       "k" "`seq -w 1 8`"
-   preprocess_family $R/bench/poke.c       poke       "threads" "2 3 4" "iters" "2 3 4 5 6"
-   preprocess_family $R/bench/poke.c       poke       "threads" "5 6 7 8" "iters" "1 2 3 4"
-   preprocess_family $R/bench/multiprodcon.c multipc  "prods" "1 2 3 4 5" "workers" "3 4 5 6 7"
-   preprocess_family $R/bench/pi/pth_pi_mutex.c pi    "threads" "1 2 3 4 5 6" "iters" "`seq -w 1000 2000 9000`"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "1 2 3 4 5 6 8 10 12 14" "reqs" "1 2 3 4"
+   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 1 8`"
+   preprocess_family $R/benchmarks/poke.c       poke       "threads" "2 3 4" "iters" "2 3 4 5 6"
+   preprocess_family $R/benchmarks/poke.c       poke       "threads" "5 6 7 8" "iters" "1 2 3 4"
+   preprocess_family $R/benchmarks/multiprodcon.c multipc  "prods" "1 2 3 4 5" "workers" "3 4 5 6 7"
+   preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "1 2 3 4 5 6" "iters" "`seq -w 1000 2000 9000`"
 
    # these are deemed to be not realistic:
-   preprocess_family $R/bench/spat.c       spat         "threads" "1 2 3 4 5 6" "mut" "1 2 3 4 5"
-   preprocess_family $R/bench/ssb3.c       ssb3         "writers" "`seq -w 1 9`" "seqlen" "2 4 6 8"
-   preprocess_family $R/bench/ssbexp.c     ssbexp       "writers" "`seq -w 1 18`"
+   preprocess_family $R/benchmarks/spat.c       spat         "threads" "1 2 3 4 5 6" "mut" "1 2 3 4 5"
+   preprocess_family $R/benchmarks/ssb3.c       ssb3         "writers" "`seq -w 1 9`" "seqlen" "2 4 6 8"
+   preprocess_family $R/benchmarks/ssbexp.c     ssbexp       "writers" "`seq -w 1 18`"
 }
 
 generate_bench_selection ()
@@ -45,11 +45,11 @@ generate_bench_selection ()
    # pre-conditions:
    # $R       - root of the cav18 folder
 
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "5" "reqs" "`seq -w 2 6`"
-   preprocess_family $R/bench/mpat.c       mpat       "k" "`seq -w 4 8`"
-   preprocess_family $R/bench/multiprodcon.c multipc  "prods" "2 3 4 5" "workers" "5"
-   preprocess_family $R/bench/pi/pth_pi_mutex.c pi    "threads" "`seq -w 5 8`" "iters" "5000"
-   preprocess_family $R/bench/poke.c       poke       "threads" "`seq -w 7 12`" "iters" "3"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "5" "reqs" "`seq -w 2 6`"
+   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 4 8`"
+   preprocess_family $R/benchmarks/multiprodcon.c multipc  "prods" "2 3 4 5" "workers" "5"
+   preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "`seq -w 5 8`" "iters" "5000"
+   preprocess_family $R/benchmarks/poke.c       poke       "threads" "`seq -w 7 12`" "iters" "3"
 }
 
 generate_bench_selection_below10s ()
@@ -60,29 +60,27 @@ generate_bench_selection_below10s ()
    # pre-conditions:
    # $R       - root of the cav18 folder
 
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "5" "reqs" "`seq -w 2 4`"
-   preprocess_family $R/bench/mpat.c       mpat       "k" "`seq -w 4 5`"
-   preprocess_family $R/bench/multiprodcon.c multipc  "prods" "2 3" "workers" "5"
-   preprocess_family $R/bench/pi/pth_pi_mutex.c pi    "threads" "`seq -w 5 7`" "iters" "5000"
-   preprocess_family $R/bench/poke.c       poke       "threads" "`seq -w 7 12`" "iters" "3"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "5" "reqs" "`seq -w 2 4`"
+   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 4 5`"
+   preprocess_family $R/benchmarks/multiprodcon.c multipc  "prods" "2 3" "workers" "5"
+   preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "`seq -w 5 7`" "iters" "5000"
+   preprocess_family $R/benchmarks/poke.c       poke       "threads" "`seq -w 7 12`" "iters" "3"
 }
-
-
 
 generate_bench_smallest ()
 {
    # pre-conditions:
    # $R       - root of the cav18 folder
 
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "3 4" "reqs" "2 3"
-   preprocess_family $R/bench/mpat.c       mpat       "k" "`seq -w 2 6`"
-   preprocess_family $R/bench/poke.c       poke       "th" "1 2 3" "iters" "`seq -w 1 2 6`"
-   preprocess_family $R/bench/multiprodcon.c multipc  "workers" "3 4 5" "prods" "2 3"
-   preprocess_family $R/bench/pi/pth_pi_mutex.c pi    "threads" "`seq -w 1 3`" "iters" "`seq -w 1000 2000 9000`"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "3 4" "reqs" "2 3"
+   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "`seq -w 2 5`"
+   preprocess_family $R/benchmarks/multiprodcon.c multipc  "workers" "3" "prods" "2 3"
+   preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "`seq -w 1 3`" "iters" "`seq -w 1000 2000 9000`"
+   preprocess_family $R/benchmarks/poke.c       poke       "th" "1 2 3" "iters" "`seq -w 1 2 6`"
 
-   preprocess_family $R/bench/spat.c       spat       "threads" "2 3 4" "mut" "2 3"
-   preprocess_family $R/bench/ssb3.c       ssb3       "writers" "`seq -w 2 5`" "seqlen" "4 6"
-   preprocess_family $R/bench/ssbexp.c     ssbexp     "writers" "`seq -w 2 5`"
+   #preprocess_family $R/benchmarks/spat.c       spat       "threads" "2 3 4" "mut" "2 3"
+   #preprocess_family $R/benchmarks/ssb3.c       ssb3       "writers" "`seq -w 2 5`" "seqlen" "4 6"
+   #preprocess_family $R/benchmarks/ssbexp.c     ssbexp     "writers" "`seq -w 2 5`"
 }
 
 generate_bench_smallruntime ()
@@ -126,23 +124,23 @@ generate_bench_smallruntime ()
    #poke-threads7_iters4_dpu_alt0.log,       32.278,  286,     30239,   0,       643982,  0,
    #poke-threads8_iters3_dpu_alt0.log,       2.687,   52,      3700,    0,       82819,   0,
 
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "1"       "reqs" "4"
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "2 3 6"   "reqs" "3 4"
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "4 5"     "reqs" "4"
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "8 10 12" "reqs" "3"
-   preprocess_family $R/bench/dispatcher.c dispatch   "serv" "14"      "reqs" "2"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "1"       "reqs" "4"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "2 3 6"   "reqs" "3 4"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "4 5"     "reqs" "4"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "8 10 12" "reqs" "3"
+   preprocess_family $R/benchmarks/dispatcher.c dispatch   "serv" "14"      "reqs" "2"
 
-   preprocess_family $R/bench/mpat.c       mpat       "k" "4 5 6"
+   preprocess_family $R/benchmarks/mpat.c       mpat       "k" "4 5 6"
 
-   preprocess_family $R/bench/multiprodcon.c multipc  "workers" "3 4"  "prods" "2 3"
-   preprocess_family $R/bench/multiprodcon.c multipc  "workers" "5 7"  "prods" "3"
+   preprocess_family $R/benchmarks/multiprodcon.c multipc  "workers" "3 4"  "prods" "2 3"
+   preprocess_family $R/benchmarks/multiprodcon.c multipc  "workers" "5 7"  "prods" "3"
 
-   preprocess_family $R/bench/pi/pth_pi_mutex.c pi    "threads" "6"    "iters" "1000"
+   preprocess_family $R/benchmarks/pi/pth_pi_mutex.c pi    "threads" "6"    "iters" "1000"
 
-   preprocess_family $R/bench/poke.c       poke       "th" "3"     "iters" "4 5 6"
-   preprocess_family $R/bench/poke.c       poke       "th" "4"     "iters" "5"
-   preprocess_family $R/bench/poke.c       poke       "th" "5 6 7" "iters" "4"
-   preprocess_family $R/bench/poke.c       poke       "th" "5 7 8" "iters" "3"
+   preprocess_family $R/benchmarks/poke.c       poke       "th" "3"     "iters" "4 5 6"
+   preprocess_family $R/benchmarks/poke.c       poke       "th" "4"     "iters" "5"
+   preprocess_family $R/benchmarks/poke.c       poke       "th" "5 6 7" "iters" "4"
+   preprocess_family $R/benchmarks/poke.c       poke       "th" "5 7 8" "iters" "3"
 }
 
 generate_bench_morethan1sec()
@@ -184,40 +182,40 @@ generate_bench_morethan1sec()
    # multipc-workers7_prods4_dpu_alt0.log,    282.783, 121,     261261,  0,       254267,  0,  
 
 
-   preprocess_family $R/bench/dispatcher.c      dispatch serv 10  reqs 3
-   preprocess_family $R/bench/dispatcher.c      dispatch serv 12  reqs 3
-   preprocess_family $R/bench/dispatcher.c      dispatch serv 14  reqs 3
-   #preprocess_family $R/bench/dispatcher.c      dispatch serv 3   reqs 4
-   preprocess_family $R/bench/dispatcher.c      dispatch serv 4   reqs 4
-   preprocess_family $R/bench/dispatcher.c      dispatch serv 5   reqs 4
-   #preprocess_family $R/bench/dispatcher.c      dispatch serv 6   reqs 3
-   preprocess_family $R/bench/dispatcher.c      dispatch serv 6   reqs 4
-   preprocess_family $R/bench/dispatcher.c      dispatch serv 8   reqs 3
-   preprocess_family $R/bench/dispatcher.c      dispatch serv 8   reqs 4
-   preprocess_family $R/bench/mpat.c      mpat  k 5
-   preprocess_family $R/bench/mpat.c      mpat  k 6
-   #preprocess_family $R/bench/multiprodcon.c      multipc  workers 3   prods 3
-   preprocess_family $R/bench/multiprodcon.c      multipc  workers 3   prods 4
-   #preprocess_family $R/bench/multiprodcon.c      multipc  workers 4   prods 3
-   preprocess_family $R/bench/multiprodcon.c      multipc  workers 4   prods 4
-   #preprocess_family $R/bench/multiprodcon.c      multipc  workers 5   prods 3
-   preprocess_family $R/bench/multiprodcon.c      multipc  workers 5   prods 4
-   #preprocess_family $R/bench/multiprodcon.c      multipc  workers 6   prods 3
-   preprocess_family $R/bench/multiprodcon.c      multipc  workers 6   prods 4
-   #preprocess_family $R/bench/multiprodcon.c      multipc  workers 7   prods 3
-   preprocess_family $R/bench/multiprodcon.c      multipc  workers 7   prods 4
-   preprocess_family $R/bench/poke.c      poke  threads 3   iters 5
-   preprocess_family $R/bench/poke.c      poke  threads 3   iters 6
-   preprocess_family $R/bench/poke.c      poke  threads 4   iters 4
-   preprocess_family $R/bench/poke.c      poke  threads 4   iters 5
-   preprocess_family $R/bench/poke.c      poke  threads 4   iters 6
-   preprocess_family $R/bench/poke.c      poke  threads 5   iters 4
-   #preprocess_family $R/bench/poke.c      poke  threads 6   iters 3
-   preprocess_family $R/bench/poke.c      poke  threads 6   iters 4
-   preprocess_family $R/bench/poke.c      poke  threads 7   iters 3
-   preprocess_family $R/bench/poke.c      poke  threads 7   iters 4
-   preprocess_family $R/bench/poke.c      poke  threads 8   iters 3
-   preprocess_family $R/bench/poke.c      poke  threads 8   iters 4
+   preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 10  reqs 3
+   preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 12  reqs 3
+   preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 14  reqs 3
+   #preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 3   reqs 4
+   preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 4   reqs 4
+   preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 5   reqs 4
+   #preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 6   reqs 3
+   preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 6   reqs 4
+   preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 8   reqs 3
+   preprocess_family $R/benchmarks/dispatcher.c      dispatch serv 8   reqs 4
+   preprocess_family $R/benchmarks/mpat.c      mpat  k 5
+   preprocess_family $R/benchmarks/mpat.c      mpat  k 6
+   #preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 3   prods 3
+   preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 3   prods 4
+   #preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 4   prods 3
+   preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 4   prods 4
+   #preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 5   prods 3
+   preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 5   prods 4
+   #preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 6   prods 3
+   preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 6   prods 4
+   #preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 7   prods 3
+   preprocess_family $R/benchmarks/multiprodcon.c      multipc  workers 7   prods 4
+   preprocess_family $R/benchmarks/poke.c      poke  threads 3   iters 5
+   preprocess_family $R/benchmarks/poke.c      poke  threads 3   iters 6
+   preprocess_family $R/benchmarks/poke.c      poke  threads 4   iters 4
+   preprocess_family $R/benchmarks/poke.c      poke  threads 4   iters 5
+   preprocess_family $R/benchmarks/poke.c      poke  threads 4   iters 6
+   preprocess_family $R/benchmarks/poke.c      poke  threads 5   iters 4
+   #preprocess_family $R/benchmarks/poke.c      poke  threads 6   iters 3
+   preprocess_family $R/benchmarks/poke.c      poke  threads 6   iters 4
+   preprocess_family $R/benchmarks/poke.c      poke  threads 7   iters 3
+   preprocess_family $R/benchmarks/poke.c      poke  threads 7   iters 4
+   preprocess_family $R/benchmarks/poke.c      poke  threads 8   iters 3
+   preprocess_family $R/benchmarks/poke.c      poke  threads 8   iters 4
 
 }
 
@@ -298,7 +296,7 @@ dump_latex ()
    T=TABLE.tex
    echo "Generating latex table ..."
 
-   echo "% This table has been automatically generated by runtable1.sh" > $T
+   echo "% This table has been automatically generated by run-table1.sh" > $T
    echo >> $T
    
    echo "% Benchmark                                                        DPU (k=1)              DUP (k=2)             DUP (k=3)             DUP (optimal)         Nidhugg" >> $T
@@ -391,7 +389,7 @@ dry_run ()
    clang-4.0 --version 2>&1 | quote
 
    echo
-   echo **WARNING**:
+   echo **NOTE**:
    echo If you see error messages above this line,
    echo then check that you understand what you are doing!!
 }
@@ -399,7 +397,7 @@ dry_run ()
 get_tool_binaries ()
 {
    DPU="$R/dist/dpu/bin/dpu"
-   NIDHUGG="$R/dist/nidhugg/bin/nidhuggc --nidhugg=../../../dist/bin/nidhugg"
+   NIDHUGG="$R/dist/nidhugg/bin/nidhuggc"
 }
 
 main ()
@@ -411,8 +409,6 @@ main ()
    print_machine_infos
    get_tool_binaries
    dry_run
-
-   exit 0
 
    h1_date "Preprocessing benchmark"
    echo ::
