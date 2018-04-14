@@ -148,13 +148,32 @@ and 40000 iterations.
 
 ### Claim 4: DPU spends between 1% and 50% of the time building spikes of a new comb
 
-| Benchmarks  |  Add spikes (%) |
-| --------------- | -------------- |
-| DISP (5,3)      |   18.01          |
-| MPC()            |   15.28          |
-| PI(5,40000)    |     0.2            |
-| MPAT()           |    13.97         |
-| POL(7,3)        |    35.02         |
+Building a new comb includes reseting it to empty first, then adding spikes, removing those are in conflict
+with some other events. Hence, the time of building a new comb is the sum of the run time of `Comb::add_spike()`,
+`dpu::Primecon::in_cfl_with()`, `Comb::clear()` and `Spike::pop_back()`. Among them, `Comb::clear()`
+and `Spike::pop_back()` normally have tiny run time, so we count the time of building a comb mainly on
+`Comb::add_spike()` and `dpu::Primecon::in_cfl_with()`.
+It is a little bit tricky to compute the percentage of these two functions compared to `dpu::C15unfolder::explore()`.
+
+![](img/comb-build.png)
+
+Unclick on ![](img/icon-rel.png) to display the time of functions relative to overall run time (not to their parents), as you see
+the image above. `dpu::Primecon::in_cfl_with()` takes 2.74% while  `dpu::C15unfolder::explore()` takes 24.53%
+of the overall run time that means `dpu::Primecon::in_cfl_with()`  counts for `2.74/24.53 = 11.17% ` the time of
+`dpu::C15unfolder::explore()`. Similarly, we can compute that `Comb::add_spike()` takes `1.04/24.53 = 4.24%`.
+Building a comb totally takes around 15.41%.
+
+Do the same for the rest, we get the table below:
+
+| Benchmarks  | Add spike (%)| Check conflict (%) | Build comb (%) |
+| --------------- | -------------- | ----------------------- | ----------------- |
+| DISP (5,3)      |    6.94          |      11.22                    |       18.16       |
+| MPC()            |    4.24           |      11.17                  |      15.41           |
+| PI(5,40000)    |     0.16          |       0                        |     0.16           |
+| MPAT()           |    5.94           |        4.6                    |    10.54         |
+| POL(7,3)        |     7.66         |       19.7                   |    27.36         |
+
+Except benchmark PI, all the others gives us the time of building a new comb in the range of 1% to 50%.
 
 ### Claim 5: DPU spends less than 5% of the time solving the comb
 
