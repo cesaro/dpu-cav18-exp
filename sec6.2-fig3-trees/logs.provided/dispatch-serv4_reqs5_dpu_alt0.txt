@@ -1,0 +1,129 @@
+name      dispatch-serv4_reqs5
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/dpu dispatch-serv4_reqs5.i -k0 --mem 128M --stack 6M -O1 -v
+
+exitcode  0
+defects   0
+walltime  40.359
+maxrss    300M
+maxconfs  54170
+SSBs      0
+events    659465
+
+
+stdout:
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.AeDa.dispatch-serv4_reqs5.i.opt.bc -- 'dispatch-serv4_reqs5.i'
+llvm-link-6.0 /tmp/dpu.AeDa.dispatch-serv4_reqs5.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/../lib/dpu/rt.bc -o /tmp/dpu.AeDa.dispatch-serv4_reqs5.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/../lib/dpu/dpu-backend /tmp/dpu.AeDa.dispatch-serv4_reqs5.i.bc -k0 --mem 128M --stack 6M -O1 -v
+dpu v0.5.2 running, pid 29697
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: command-line arguments:
+dpu: argc = 1
+dpu: argv = ["/tmp/dpu.AeDa.dispatch-serv4_reqs5.i.bc"]
+dpu: unf: loading bitcode
+dpu: unf: O1-optimization + jitting...
+stid: executor: ready, 128M total memory, 36K data, 121M heap, 6M default stack size
+dpu: environment variables:
+dpu: |environ| = 34
+dpu: por: starting POR analysis ...
+dpu: por: finished POR analysis
+dpu: por: stats: unfolding: 54170 max-configs
+dpu: por: stats: unfolding: 10 threads created
+dpu: por: stats: unfolding: 6 process slots used
+dpu: por: stats: unfolding: 659465 events (aprox. 131M of memory)
+dpu: por: stats: unfolding: t0: 325672 events (65M, 49.4%)
+dpu: por: stats: unfolding: t1: 14038 events (2M, 2.1%)
+dpu: por: stats: unfolding: t2: 15469 events (3M, 2.4%)
+dpu: por: stats: unfolding: t3: 15469 events (3M, 2.4%)
+dpu: por: stats: unfolding: t4: 24127 events (4M, 3.7%)
+dpu: por: stats: unfolding: t5: 264690 events (52M, 40.0%)
+dpu: por: stats: unfolding: 197M total allocated memory (313.7 bytes/event)
+dpu: por: stats: trees: depths: t0: min/max/avg=0/35/31.94 {depth=count/mass}={34=54170/16.6%; 32=54170/16.6%; 35=54170/16.6%; 33=54170/16.6%; (rest)=108992/33.5%}
+dpu: por: stats: trees: depths: t1: min/max/avg=0/3/2.00 {depth=count/mass}={1=4679/33.3%; 3=4679/33.3%; 2=4679/33.3%; 0=1/0.0%}
+dpu: por: stats: trees: depths: t2: min/max/avg=0/3/2.00 {depth=count/mass}={1=5156/33.3%; 3=5156/33.3%; 2=5156/33.3%; 0=1/0.0%}
+dpu: por: stats: trees: depths: t3: min/max/avg=0/3/2.00 {depth=count/mass}={1=5156/33.3%; 3=5156/33.3%; 2=5156/33.3%; 0=1/0.0%}
+dpu: por: stats: trees: depths: t4: min/max/avg=0/3/2.00 {depth=count/mass}={1=8042/33.3%; 3=8042/33.3%; 2=8042/33.3%; 0=1/0.0%}
+dpu: por: stats: trees: depths: t5: min/max/avg=0/49/44.27 {depth=count/mass}={49=34270/12.9%; 47=34270/12.9%; 48=34270/12.9%; 45=27416/10.4%; (rest)=134464/50.8%}
+dpu: por: stats: trees: depths: 0x2b5925d9d6d0: min/max/avg=0/49/44.00 {depth=count/mass}={48=34270/11.6%; 46=34270/11.6%; 49=34270/11.6%; 47=34270/11.6%; (rest)=158750/53.7%}
+dpu: por: stats: trees: depths: 0x2b5925d9d710: min/max/avg=0/11/3.57 {depth=count/mass}={2=6308/18.4%; 3=6308/18.4%; 5=6196/18.1%; 4=6196/18.1%; (rest)=9278/27.1%}
+dpu: por: stats: trees: depths: 0x2b5925d9d738: min/max/avg=0/11/3.20 {depth=count/mass}={2=7715/21.3%; 3=7715/21.3%; 5=5701/15.8%; 4=5701/15.8%; (rest)=9360/25.9%}
+dpu: por: stats: trees: depths: 0x2b5925d9d760: min/max/avg=0/11/3.20 {depth=count/mass}={2=7715/21.3%; 3=7715/21.3%; 5=5701/15.8%; 4=5701/15.8%; (rest)=9360/25.9%}
+dpu: por: stats: trees: depths: 0x2b5925d9d788: min/max/avg=0/11/4.21 {depth=count/mass}={5=12032/19.0%; 4=12032/19.0%; 3=8866/14.0%; 2=8866/14.0%; (rest)=21508/34.0%}
+dpu: por: stats: trees: branch-out: t0: size/nc=325672/4; min/max/avg=0/5/1.00; {factor=count/mass}={1=240688/73.9%; 0=54170/16.6%; 2=23029/7.1%; 5=7785/2.4%}
+dpu: por: stats: trees: branch-out: t1: size/nc=14038/3; min/max/avg=0/4679/1.00; {factor=count/mass}={1=9358/66.7%; 0=4679/33.3%; 4679=1/0.0%}
+dpu: por: stats: trees: branch-out: t2: size/nc=15469/3; min/max/avg=0/5156/1.00; {factor=count/mass}={1=10312/66.7%; 0=5156/33.3%; 5156=1/0.0%}
+dpu: por: stats: trees: branch-out: t3: size/nc=15469/3; min/max/avg=0/5156/1.00; {factor=count/mass}={1=10312/66.7%; 0=5156/33.3%; 5156=1/0.0%}
+dpu: por: stats: trees: branch-out: t4: size/nc=24127/3; min/max/avg=0/8042/1.00; {factor=count/mass}={1=16084/66.7%; 0=8042/33.3%; 8042=1/0.0%}
+dpu: por: stats: trees: branch-out: t5: size/nc=264690/3; min/max/avg=0/2/1.00; {factor=count/mass}={1=196151/74.1%; 0=34270/12.9%; 2=34269/12.9%}
+dpu: por: stats: trees: branch-out: 0x2b5925d9d6d0: size/nc=295830/4; min/max/avg=0/4/1.00; {factor=count/mass}={1=233550/78.9%; 0=34270/11.6%; 2=24881/8.4%; 4=3129/1.1%}
+dpu: por: stats: trees: branch-out: 0x2b5925d9d710: size/nc=34286/17; min/max/avg=0/2208/0.94; {factor=count/mass}={1=22569/65.8%; 0=10914/31.8%; 2=540/1.6%; 9=85/0.2%; (rest)=178/0.5%}
+dpu: por: stats: trees: branch-out: 0x2b5925d9d738: size/nc=36192/17; min/max/avg=0/2970/0.92; {factor=count/mass}={1=23991/66.3%; 0=11324/31.3%; 2=599/1.7%; 9=85/0.2%; (rest)=193/0.5%}
+dpu: por: stats: trees: branch-out: 0x2b5925d9d760: size/nc=36192/17; min/max/avg=0/2970/0.92; {factor=count/mass}={1=23991/66.3%; 0=11324/31.3%; 2=599/1.7%; 9=85/0.2%; (rest)=193/0.5%}
+dpu: por: stats: trees: branch-out: 0x2b5925d9d788: size/nc=63304/17; min/max/avg=0/2689/0.96; {factor=count/mass}={1=38552/60.9%; 0=20608/32.6%; 2=2638/4.2%; 3=986/1.6%; (rest)=520/0.8%}
+dpu: por: stats: events: pthread_create: 7789 (1.2%)
+dpu: por: stats: events: pthread_join: 61954 (9.4%)
+dpu: por: stats: events: pthread_mutex_lock: 232902 (35.3%)
+dpu: por: stats: events: pthread_mutex_unlock: 232902 (35.3%)
+dpu: por: stats: events: (thread start): 7790 (1.2%)
+dpu: por: stats: events: pthread_exit: 116128 (17.6%)
+dpu: por: stats: <: on events:
+dpu: por: stats: <:   3338412 calls
+dpu: por: stats: <:   2805162 trivial (84.0%), solved by null/eq/invdep 412210/812550/1580402 checks
+dpu: por: stats: <:   533250 non-trivial (16.0%)
+dpu: por: stats: <: on sequential trees:
+dpu: por: stats: <:   max depth: size/nc=533250/14; min/max/avg=9/40/23.80; {depth=count/mass}={19=66044/12.4%; 29=64474/12.1%; 10=44312/8.3%; 9=44312/8.3%; 20=43866/8.2%; (rest)=270242/50.7%}
+dpu: por: stats: <:   depth diff: size/nc=533250/6; min/max/avg=1/22/3.19; {diff=count/mass}={2=175910/33.0%; 1=175910/33.0%; 4=132498/24.8%; 10=28728/5.4%; 16=14540/2.7%; 22=5664/1.1%}
+dpu: por: stats: #: on events (e#e):
+dpu: por: stats: #:   536763 calls
+dpu: por: stats: #:   0 trivial (0.0%), solved by eq/empty 0/0 checks
+dpu: por: stats: #:   536763 non-trivial (100.0%)
+dpu: por: stats: #: on event-config (e#C):
+dpu: por: stats: #:   80727619 calls, all non-trivial
+dpu: por: stats: #: on sequential trees:
+dpu: por: stats: #:   82583801 calls
+dpu: por: stats: #:   2034058 trivial (2.5%), solved by eq (depth) checks
+dpu: por: stats: #:   80549743 non-trivial (97.5%)
+dpu: por: stats: #:   max depth: size/nc=80549743/45; min/max/avg=1/49/44.06; {depth=count/mass}={47=23778164/29.5%; 45=22022957/27.3%; 43=17396986/21.6%; 41=4986930/6.2%; 49=4819212/6.0%; (rest)=7545494/9.4%}
+dpu: por: stats: #:   depth diff: size/nc=80549743/49; min/max/avg=1/49/7.96; {diff=count/mass}={2=18044499/22.4%; 4=16388313/20.3%; 6=11575217/14.4%; 8=8846671/11.0%; 12=5358900/6.7%; 14=4768739/5.9%; 10=4630505/5.7%; 16=3094300/3.8%; 18=2171086/2.7%; 20=1120798/1.4%; 22=1119277/1.4%; 24=960216/1.2%; 26=598983/0.7%; 28=406212/0.5%; 1=309090/0.4%; 30=187705/0.2%; 32=168340/0.2%; 41=161687/0.2%; 34=135947/0.2%; 36=88287/0.1%; 38=61427/0.1%; 31=40501/0.1%; 3=29981/0.0%; 9=22559/0.0%; 40=22002/0.0%; 5=19674/0.0%; 19=18592/0.0%; 7=18405/0.0%; 13=17623/0.0%; 21=16906/0.0%; 23=15827/0.0%; 15=15425/0.0%; 42=14270/0.0%; 17=14175/0.0%; 11=12216/0.0%; 44=12114/0.0%; 29=10710/0.0%; 39=10505/0.0%; 25=9639/0.0%; 27=8474/0.0%; 33=7657/0.0%; 37=3924/0.0%; 46=3783/0.0%; 43=2479/0.0%; 35=1967/0.0%; 45=1808/0.0%; 47=1242/0.0%; 48=738/0.0%; 49=348/0.0%}
+dpu: por: stats: </#: steps: size/nc=81082993/13; min/max/avg=0/12/3.56; {steps=count/mass}={3=19198700/23.7%; 1=18236950/22.5%; 5=11665886/14.4%; 4=11306354/13.9%; 2=6391288/7.9%; 6=5929184/7.3%; (rest)=8354631/10.3%}
+dpu: por: stats: por: 54170 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 102.0 average ev/trail
+dpu: por: stats: por: alt: 1232170 calls
+dpu: por: stats: por: alt: 440130 calls built a comb (35.7%)
+dpu: por: stats: por: alt: 105910 calls explored a comb (8.6%)
+dpu: por: stats: por: |comb|: size/nc=105910/4; min/max/avg=1/4/1.70; {size=count/mass}={2=65044/61.4%; 1=36105/34.1%; 3=4667/4.4%; (rest)=94/0.1%}
+dpu: por: stats: por: |comb.spike| (unfilt): size/nc=672997/886; min/max/avg=0/2970/279.77; {size=count/mass}={0=246451/36.6%; 1=206272/30.6%; 2=44612/6.6%; 2208=19525/2.9%; 2029=11647/1.7%; 8=9498/1.4%; (rest)=134992/20.1%}
+dpu: por: stats: por: |comb.spike| (filtrd): size/nc=180570/117; min/max/avg=1/2207/2.38; {size=count/mass}={1=153501/85.0%; 2=7338/4.1%; 5=3760/2.1%; 3=3099/1.7%; 4=3012/1.7%; 6=1757/1.0%; (rest)=8103/4.5%}
+dpu: por: stats: resources: 40.270 s wall time
+dpu: por: stats: resources: 43.570 s cpu time
+dpu: por: stats: resources: 300M max RSS
+dpu: por: stats: perf: 1345 executions/sec
+dpu: por: stats: perf: 16376 ev/sec
+dpu: por: summary: 0 defects, 54170 max-configs, 0 SSBs, 659465 events, 40.270 sec, 300M
+
+stderr:
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/dpu dispatch-serv4_reqs5.i -k0 --mem 128M --stack 6M -O1 -v"
+	User time (seconds): 43.61
+	System time (seconds): 10.13
+	Percent of CPU this job got: 133%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:40.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 308184
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 53786
+	Voluntary context switches: 1276158
+	Involuntary context switches: 5595
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

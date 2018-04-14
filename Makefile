@@ -8,8 +8,8 @@ install-dependencies:
 	(apt-cache policy | grep 'http://apt.* llvm-toolchain-xenial-6.0/main') || \
 		sudo apt-add-repository 'deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main'
 	sudo apt-get update
-	# wget
-	sudo apt-get install ca-certificates wget
+	# wget and webfs
+	sudo apt-get install ca-certificates wget webfs
 	# devel tools
 	sudo apt-get install bc git time make python
 	# llvm-4.0 (for nidhugg)
@@ -50,5 +50,5 @@ sec6.2-compile-dpu:
 	$(DPU)/dist/bin/dpu -V | grep detailed-stats
 	cp -Rv $(DPU)/dist sec6.2-fig3-trees/dpu-stats-dist
 
-sec6.2-gen-logs:
-	./scripts/run-sec6.2-gen-logs.sh
+sec6.2-gen-csv:
+	./scripts/run-sec6.2-gen-csv.sh

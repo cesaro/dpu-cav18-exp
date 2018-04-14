@@ -1,0 +1,129 @@
+name      dispatch-serv4_reqs3
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/dpu dispatch-serv4_reqs3.i -k0 --mem 128M --stack 6M -O1 -v
+
+exitcode  0
+defects   0
+walltime  0.526
+maxrss    61M
+maxconfs  826
+SSBs      0
+events    9577
+
+
+stdout:
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.Rwi3.dispatch-serv4_reqs3.i.opt.bc -- 'dispatch-serv4_reqs3.i'
+llvm-link-6.0 /tmp/dpu.Rwi3.dispatch-serv4_reqs3.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/../lib/dpu/rt.bc -o /tmp/dpu.Rwi3.dispatch-serv4_reqs3.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/../lib/dpu/dpu-backend /tmp/dpu.Rwi3.dispatch-serv4_reqs3.i.bc -k0 --mem 128M --stack 6M -O1 -v
+dpu v0.5.2 running, pid 1234
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: command-line arguments:
+dpu: argc = 1
+dpu: argv = ["/tmp/dpu.Rwi3.dispatch-serv4_reqs3.i.bc"]
+dpu: unf: loading bitcode
+dpu: unf: O1-optimization + jitting...
+stid: executor: ready, 128M total memory, 36K data, 121M heap, 6M default stack size
+dpu: environment variables:
+dpu: |environ| = 34
+dpu: por: starting POR analysis ...
+dpu: por: finished POR analysis
+dpu: por: stats: unfolding: 826 max-configs
+dpu: por: stats: unfolding: 8 threads created
+dpu: por: stats: unfolding: 6 process slots used
+dpu: por: stats: unfolding: 9577 events (aprox. 1M of memory)
+dpu: por: stats: unfolding: t0: 4776 events (979K, 49.9%)
+dpu: por: stats: unfolding: t1: 238 events (48K, 2.5%)
+dpu: por: stats: unfolding: t2: 262 events (53K, 2.7%)
+dpu: por: stats: unfolding: t3: 262 events (53K, 2.7%)
+dpu: por: stats: unfolding: t4: 469 events (96K, 4.9%)
+dpu: por: stats: unfolding: t5: 3570 events (729K, 37.2%)
+dpu: por: stats: unfolding: 2M total allocated memory (303.8 bytes/event)
+dpu: por: stats: trees: depths: t0: min/max/avg=0/23/20.09 {depth=count/mass}={22=826/17.3%; 20=826/17.3%; 23=826/17.3%; 21=826/17.3%; (rest)=1472/30.8%}
+dpu: por: stats: trees: depths: t1: min/max/avg=0/3/1.99 {depth=count/mass}={1=79/33.2%; 3=79/33.2%; 2=79/33.2%; 0=1/0.4%}
+dpu: por: stats: trees: depths: t2: min/max/avg=0/3/1.99 {depth=count/mass}={1=87/33.2%; 3=87/33.2%; 2=87/33.2%; 0=1/0.4%}
+dpu: por: stats: trees: depths: t3: min/max/avg=0/3/1.99 {depth=count/mass}={1=87/33.2%; 3=87/33.2%; 2=87/33.2%; 0=1/0.4%}
+dpu: por: stats: trees: depths: t4: min/max/avg=0/3/2.00 {depth=count/mass}={1=156/33.3%; 3=156/33.3%; 2=156/33.3%; 0=1/0.2%}
+dpu: por: stats: trees: depths: t5: min/max/avg=0/29/24.47 {depth=count/mass}={29=470/13.2%; 27=470/13.2%; 28=470/13.2%; 25=376/10.5%; (rest)=1784/50.0%}
+dpu: por: stats: trees: depths: 0x2aff9d1bb6d0: min/max/avg=0/29/24.20 {depth=count/mass}={28=470/11.8%; 26=470/11.8%; 29=470/11.8%; 27=470/11.8%; (rest)=2110/52.9%}
+dpu: por: stats: trees: depths: 0x2aff9d1bb710: min/max/avg=0/7/2.78 {depth=count/mass}={2=128/24.3%; 3=128/24.3%; 5=74/14.1%; 4=74/14.1%; (rest)=122/23.2%}
+dpu: por: stats: trees: depths: 0x2aff9d1bb738: min/max/avg=0/7/2.44 {depth=count/mass}={2=153/27.5%; 3=153/27.5%; 0=69/12.4%; 1=69/12.4%; (rest)=112/20.1%}
+dpu: por: stats: trees: depths: 0x2aff9d1bb760: min/max/avg=0/7/2.44 {depth=count/mass}={2=153/27.5%; 3=153/27.5%; 0=69/12.4%; 1=69/12.4%; (rest)=112/20.1%}
+dpu: por: stats: trees: depths: 0x2aff9d1bb788: min/max/avg=0/7/2.76 {depth=count/mass}={2=256/24.6%; 3=256/24.6%; 5=142/13.7%; 4=142/13.7%; (rest)=244/23.5%}
+dpu: por: stats: trees: branch-out: t0: size/nc=4776/4; min/max/avg=0/5/1.00; {factor=count/mass}={1=3440/72.0%; 0=826/17.3%; 2=405/8.5%; 5=105/2.2%}
+dpu: por: stats: trees: branch-out: t1: size/nc=238/3; min/max/avg=0/79/1.00; {factor=count/mass}={1=158/66.4%; 0=79/33.2%; 79=1/0.4%}
+dpu: por: stats: trees: branch-out: t2: size/nc=262/3; min/max/avg=0/87/1.00; {factor=count/mass}={1=174/66.4%; 0=87/33.2%; 87=1/0.4%}
+dpu: por: stats: trees: branch-out: t3: size/nc=262/3; min/max/avg=0/87/1.00; {factor=count/mass}={1=174/66.4%; 0=87/33.2%; 87=1/0.4%}
+dpu: por: stats: trees: branch-out: t4: size/nc=469/3; min/max/avg=0/156/1.00; {factor=count/mass}={1=312/66.5%; 0=156/33.3%; 156=1/0.2%}
+dpu: por: stats: trees: branch-out: t5: size/nc=3570/3; min/max/avg=0/2/1.00; {factor=count/mass}={1=2631/73.7%; 0=470/13.2%; 2=469/13.1%}
+dpu: por: stats: trees: branch-out: 0x2aff9d1bb6d0: size/nc=3990/4; min/max/avg=0/4/1.00; {factor=count/mass}={1=3150/78.9%; 0=470/11.8%; 2=321/8.0%; 4=49/1.2%}
+dpu: por: stats: trees: branch-out: 0x2aff9d1bb710: size/nc=526/6; min/max/avg=0/52/0.90; {factor=count/mass}={1=349/66.3%; 0=162/30.8%; 2=8/1.5%; 9=4/0.8%; (rest)=3/0.6%}
+dpu: por: stats: trees: branch-out: 0x2aff9d1bb738: size/nc=556/6; min/max/avg=0/68/0.88; {factor=count/mass}={1=373/67.1%; 0=170/30.6%; 2=9/1.6%; 9=2/0.4%; (rest)=2/0.4%}
+dpu: por: stats: trees: branch-out: 0x2aff9d1bb760: size/nc=556/6; min/max/avg=0/68/0.88; {factor=count/mass}={1=373/67.1%; 0=170/30.6%; 2=9/1.6%; 9=2/0.4%; (rest)=2/0.4%}
+dpu: por: stats: trees: branch-out: 0x2aff9d1bb788: size/nc=1040/7; min/max/avg=0/105/0.90; {factor=count/mass}={1=656/63.1%; 0=324/31.2%; 2=38/3.7%; 3=18/1.7%; (rest)=4/0.4%}
+dpu: por: stats: events: pthread_create: 109 (1.1%)
+dpu: por: stats: events: pthread_join: 930 (9.7%)
+dpu: por: stats: events: pthread_mutex_lock: 3334 (34.8%)
+dpu: por: stats: events: pthread_mutex_unlock: 3334 (34.8%)
+dpu: por: stats: events: (thread start): 110 (1.1%)
+dpu: por: stats: events: pthread_exit: 1760 (18.4%)
+dpu: por: stats: <: on events:
+dpu: por: stats: <:   29740 calls
+dpu: por: stats: <:   25946 trivial (87.2%), solved by null/eq/invdep 5394/7434/13118 checks
+dpu: por: stats: <:   3794 non-trivial (12.8%)
+dpu: por: stats: <: on sequential trees:
+dpu: por: stats: <:   max depth: size/nc=3794/7; min/max/avg=9/20/14.73; {depth=count/mass}={19=990/26.1%; 9=672/17.7%; 10=672/17.7%; 20=664/17.5%; 17=324/8.5%; (rest)=472/12.4%}
+dpu: por: stats: <:   depth diff: size/nc=3794/4; min/max/avg=1/10/2.45; {diff=count/mass}={1=1336/35.2%; 2=1336/35.2%; 4=990/26.1%; 10=132/3.5%}
+dpu: por: stats: #: on events (e#e):
+dpu: por: stats: #:   2774 calls
+dpu: por: stats: #:   0 trivial (0.0%), solved by eq/empty 0/0 checks
+dpu: por: stats: #:   2774 non-trivial (100.0%)
+dpu: por: stats: #: on event-config (e#C):
+dpu: por: stats: #:   64918 calls, all non-trivial
+dpu: por: stats: #: on sequential trees:
+dpu: por: stats: #:   77058 calls
+dpu: por: stats: #:   6805 trivial (8.8%), solved by eq (depth) checks
+dpu: por: stats: #:   70253 non-trivial (91.2%)
+dpu: por: stats: #:   max depth: size/nc=70253/26; min/max/avg=1/29/23.36; {depth=count/mass}={27=16532/23.5%; 25=15737/22.4%; 23=11149/15.9%; 29=9925/14.1%; 21=6262/8.9%; (rest)=10648/15.2%}
+dpu: por: stats: #:   depth diff: size/nc=70253/29; min/max/avg=1/29/6.59; {diff=count/mass}={2=17788/25.3%; 4=13923/19.8%; 6=9518/13.5%; 8=7083/10.1%; 10=4208/6.0%; 14=3401/4.8%; 12=3381/4.8%; 1=3228/4.6%; 16=2028/2.9%; 18=1631/2.3%; 20=910/1.3%; 9=414/0.6%; 3=414/0.6%; 22=412/0.6%; 7=330/0.5%; 24=316/0.4%; 5=270/0.4%; 17=178/0.3%; 26=154/0.2%; 13=128/0.2%; 15=110/0.2%; 11=108/0.2%; 19=70/0.1%; 23=66/0.1%; 25=53/0.1%; 27=43/0.1%; 28=38/0.1%; 21=30/0.0%; 29=20/0.0%}
+dpu: por: stats: </#: steps: size/nc=74047/11; min/max/avg=0/10/2.95; {steps=count/mass}={1=19303/26.1%; 3=18250/24.6%; 4=9522/12.9%; 5=8775/11.9%; 2=6173/8.3%; 0=4564/6.2%; (rest)=7460/10.1%}
+dpu: por: stats: por: 826 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 70.0 average ev/trail
+dpu: por: stats: por: alt: 19554 calls
+dpu: por: stats: por: alt: 6937 calls built a comb (35.5%)
+dpu: por: stats: por: alt: 1720 calls explored a comb (8.8%)
+dpu: por: stats: por: |comb|: size/nc=1720/3; min/max/avg=1/3/1.73; {size=count/mass}={2=1145/66.6%; 1=523/30.4%; 3=52/3.0%}
+dpu: por: stats: por: |comb.spike| (unfilt): size/nc=10660/42; min/max/avg=0/105/12.90; {size=count/mass}={0=3763/35.3%; 1=3100/29.1%; 2=794/7.4%; 52=402/3.8%; 55=346/3.2%; 8=268/2.5%; (rest)=1987/18.6%}
+dpu: por: stats: por: |comb.spike| (filtrd): size/nc=2969/27; min/max/avg=1/51/1.71; {size=count/mass}={1=2530/85.2%; 2=151/5.1%; 5=51/1.7%; 3=41/1.4%; 4=39/1.3%; 7=38/1.3%; (rest)=119/4.0%}
+dpu: por: stats: resources: 0.441 s wall time
+dpu: por: stats: resources: 0.487 s cpu time
+dpu: por: stats: resources: 61M max RSS
+dpu: por: stats: perf: 1872 executions/sec
+dpu: por: stats: perf: 21714 ev/sec
+dpu: por: summary: 0 defects, 826 max-configs, 0 SSBs, 9577 events, 0.441 sec, 61M
+
+stderr:
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/sec6.2-fig3-trees/dpu-stats-dist/bin/dpu dispatch-serv4_reqs3.i -k0 --mem 128M --stack 6M -O1 -v"
+	User time (seconds): 0.53
+	System time (seconds): 0.15
+	Percent of CPU this job got: 131%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.52
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 62840
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25634
+	Voluntary context switches: 13813
+	Involuntary context switches: 99
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 176
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
