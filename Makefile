@@ -49,6 +49,9 @@ compile-dpu:
 	$(DPU)/dist/bin/dpu --version | head -n1
 	cp -Rv $(DPU)/dist dist/dpu
 
+sec6.1-table1:
+	./scripts/run-table1.sh
+
 sec6.2-compile-dpu:
 	rm -Rf $(DPU)
 	cd tools/dpu/; unzip dpu-*.zip
@@ -59,3 +62,5 @@ sec6.2-compile-dpu:
 
 sec6.2-gen-csv:
 	./scripts/run-sec6.2-gen-csv.sh
+
+.PHONY: sec6.1-table1
