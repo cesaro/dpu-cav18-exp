@@ -7,12 +7,9 @@ TIMEOUT=8m
 
 # ==== END CONFIGURATION VARIABLES ====
 
-
 # select the right installation depending on the machine
 
-DPU=../../../dist/bin/dpu
-NIDHUGGBIN=../../../dist/bin/nidhugg
-NIDHUGG="${NIDHUGGBIN} --c -sc -extfun-no-race=printf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow"
+#DPU=../dist/bin/dpu
 
 # utilitary functions to run benchmarks
 source runlib.sh
@@ -120,30 +117,6 @@ runall_dpu ()
          run_dpu
       done
    done
-
-   # Already include in Table 1:
-   ## computing pi
-   #preprocess_family $R/pi/pth_pi_mutex.c pi "threads" "1 2 3 4 5 6" "iters" "`seq -w 1000 2000 9000`"
-   #for i in pi-threads*.i; do
-   #   N=`echo "$i" | sed s/.i$//`
-   #   LOG=${N}.log
-   #   CMD="$DPU $i $OPTS -- $N"
-   #   run_dpu
-   #done
-}
-
-dump_latex ()
-{
-   # in a loop, scan all .i files in $R
-   # for each .i determine the lowest K such that DPU was optimal
-   # using that file determine the number of configurations and events
-   # the DPU columns will be from that file
-   # the nidhugg columns will be from the _nidhug.log file
-
-   # how to format data with fixed-size columns:
-   #ROW=$(printf '%6s & %6s & %6s' $WALLTIME $SSBS $EVENTS)
-
-   echo TODO
 }
 
 usage ()
@@ -162,11 +135,6 @@ test_can_run ()
    $DPU --version
 
    echo
-   echo "$NIDHUGG --help"
-   $NIDHUGG --help
-   $NIDHUGG --version
-
-   echo
    echo If you see error messages above this line,
    echo then check that you understand what you are doing.
    echo
@@ -176,20 +144,18 @@ main ()
 {
    print_date "Starting the script"
    test_can_run
-   compile_bench
-   print_date "Running tool DPU"
-   runall_dpu
-   print_date "Generating latex tables"
-   dump_latex
-   print_date "Finished"
+   #compile_bench
+   #print_date "Running tool DPU"
+   #runall_dpu
+   #print_date "Finished"
 }
 
 
-R=table2.$(date -R | sed -e 's/ /_/g' -e 's/[,+]//g' -e 's/:/-/g')
-rm -Rf $R latest.table2
-mkdir $R
-ln -s $R latest.table2
-cd $R
+#R=table2.$(date -R | sed -e 's/ /_/g' -e 's/[,+]//g' -e 's/:/-/g')
+#rm -Rf $R latest.table2
+#mkdir $R
+#ln -s $R latest.table2
+#cd $R
 
 R=..
 main 2>&1 | tee XXX.log
