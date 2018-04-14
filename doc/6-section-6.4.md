@@ -71,43 +71,42 @@ Many other minor functions are inlined.
 ### Claim 1: Program executing time
 
 DPU spends between 30% and 90% (average 65%) of the run time executing the program
-To execute a program, *dpu* first loads bitcode
-Profiling the benchmarks, we get the table below on program executing time:
 
 | Benchmarks  |  stid::Executor::run() (%)|
-| ------------| --------|
-| DISP (5,3)  |  4.33   |
-| DISP (5,4)  |  6.76   |
-| MPC(3,5)    |  7      |
-| PI(5)       |  0.15   |
-| MPAT()      |  1.54   |
-| SPAT        |  1.3    |
-| POL(10,3)   |	5.33 	|
+| ------------ | --------  |
+| DISP (5,3)  |  47.09   |
+| MPC(3,5)   |  60.10   |
+| PI(6)           |  64.34   |
+| MPAT(6)     |  54.97   |
+| POL(7,3)    |	34.4	     |
 
-What's the problem???
+
 We cannot say: "This supports what we mention in Section 6.4 of the paper about program executing time."
 
 ### Claim 2:  Computing alternatives
 
+Add events to event structure (15% - 30%)
+Computing conicting extensions (less than 5%).
+
 | Benchmarks  |  Add events | Compute conflicting extension |
-| ------------| ----------- | ------------------------------|
-| DISP (5,3)  |    13.83    |	1.74             |
-| DISP (5,4)  |    21.61    |	3                |
-| MPC(3,5)    |     5.47    |   1.5		 |
-| PI(5)       |             |                  |
-| MPAT()      |             |
-| SPAT        |             |
+| ----------------| -------------- | ------------------------------------|
+| DISP (5,3)  |    13.83         |	    < 5%          |
+| MPC(3,5)   |     5.47          |      1.5	        |
+| PI(5)           |       20.56      |      8.94           |
+| MPAT()       |    14.21         |      2.94           |
+| POL(7,3)    |        61.88     |      02.16         |
 
 
 
 ### Claim 3: Building and Exploring combs.
+Building the spikes of a new comb (1% to 50%)
+Searching for solutions in the comb (less than 5%),
+
 | Benchmarks  |  Buidl comb | Explore comb |
 | --------------- | -------------- | --------------------|
-| DISP (5,2)      |                      |
-| DISP (5,3)      |                       |
-| DISP (5,4)      |                        |
-| MPC()            |                        |
-| PI(5)               |                      |
-| MPAT()           |                     |
-| SPAT              |                       |
+| DISP (5,3)      |   19.28          |  < 1%       |
+| MPC()            |      1.04         |  < 1%       |
+| PI(5)               |      0.36         |  <1%        |
+| MPAT()           |     5.95          |  <5%        |
+| POL(7,3)        |  24.02            |  < 5%      |
 
