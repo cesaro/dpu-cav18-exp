@@ -161,7 +161,7 @@ Unclick on ![](img/icon-rel.png) to display the time of functions relative to ov
 the image above. `dpu::Primecon::in_cfl_with()` takes 2.74% while  `dpu::C15unfolder::explore()` takes 24.53%
 of the overall run time that means `dpu::Primecon::in_cfl_with()`  counts for `2.74/24.53 = 11.17% ` the time of
 `dpu::C15unfolder::explore()`. Similarly, we can compute that `Comb::add_spike()` takes `1.04/24.53 = 4.24%`.
-Building a comb totally takes around 15.41%.
+Hence, building a comb takes around 15.41% in total.
 
 Do the same for the rest, we get the table below:
 
