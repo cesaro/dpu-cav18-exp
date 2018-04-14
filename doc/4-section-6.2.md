@@ -33,22 +33,63 @@ instructions how to generate the data.
 
 ### Benchmarks
 
-To prove this claims we use the following bencH
+We have used the following instances of the benchmarks used in Table 1 of the
+paper. All files are available in the [benchmarks](../benchmarks/) folder.
 
-- LIST with instactiation of parameters
+| Instance   | Benchmark                      | Parameters
+| -----------|--------------------------------| ------------------------
+| Disp(4,3)  | `benchmarks/dispatcher.c`      | `PARAM1=4 PARAM2=3`
+| Disp(4,4)  | `benchmarks/dispatcher.c`      | `PARAM1=4 PARAM2=4`
+| Disp(4,5)  | `benchmarks/dispatcher.c`      | `PARAM1=4 PARAM2=5`
+| Mpat(4)    | `benchmarks/mpat.c`            | `PARAM1=4`
+| Mpat(5)    | `benchmarks/mpat.c`            | `PARAM1=5`
+| Mpat(6)    | `benchmarks/mpat.c`            | `PARAM1=6`
+| Mpc(3,4)   | `benchmarks/multiprodcon.c`    | `PARAM1=3 PARAM2=4`
+| Mpc(4,4)   | `benchmarks/multiprodcon.c`    | `PARAM1=4 PARAM2=4`
+| Pi(6,2000) | `benchmarks/pi/pth_pi_mutex.c` | `PARAM1=6 PARAM2=2000`
+| Pi(7,2000) | `benchmarks/pi/pth_pi_mutex.c` | `PARAM1=7 PARAM2=2000`
+| Pi(8,2000) | `benchmarks/pi/pth_pi_mutex.c` | `PARAM1=8 PARAM2=2000`
+| Pol(10,3)  | `benchmarks/poke.c`            | `PARAM1=10 PARAM2=3`
+| Pol(11,3)  | `benchmarks/poke.c`            | `PARAM1=11 PARAM2=3`
+| Pol(12,3)  | `benchmarks/poke.c`            | `PARAM1=12 PARAM2=3`
+| Pol(13,3)  | `benchmarks/poke.c`            | `PARAM1=13 PARAM2=3`
+
 
 ### The Data
-THe resulting data is available in the spreadsheet file XXX.
 
-There are four tabs:
+We executed DPU on the benchmarks above. We then parsed the output logs and
+generated a spreadsheet that allowed us to make the six claims above and
+construct the plots and histograms of Fig. 3.
 
-- 1. Explain columns. Show hwo the data proves the claims.
+The data: [tree-stats.xlsx](../sec6.2-fig3-trees/tree-stats.xlsx).
 
-- 2
+The spreadsheet contains four tabs. We now explain how the data in these tabs
+proves our claims. Later we will show how to generate the data in these tabs.
 
-3
+#### Tab 1: Tree-depth raw data (claims 1, 2, 3)
 
-4
+For each of the benchmarks above we ran DPU and generate a log file (1st column).
+DPU built an unfolding with multiple trees. Each tree in that unfolding
+corresponded to a mutex or a thread (2nd column). For that tree the table
+reports the number of nodes (3th column), the depth of the tree (4th column) and
+the average depth of the nodes in the tree (5th column).
+
+From these columns we compute the data that supports our **claims 1, 2, and 3**,
+marked in red in the spreadsheet:
+
+FIXME pic
+
+#### Tab 2: Tree-depth plots
+
+Bla
+
+#### Tab 3: Causality queries
+
+Bla
+
+#### Tab 4: Conflict queries
+
+Bla
 
 ### Generating the Data Above
 
