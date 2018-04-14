@@ -14,7 +14,7 @@ WANT_DPU_ALT2=n
 WANT_DPU_ALT3=n
 WANT_DPU_ALT4=n
 
-DPU_OPTS="-O1"
+DPU_OPTS="--mem 128M --stack 6M -O1 -v"
 
 # ==== END CONFIGURATION VARIABLES ====
 
@@ -40,21 +40,20 @@ runall_dpu ()
    # $TIMEOUT - a timeout specification valid for timeout(1)
    # $DPU     - path to the dpu tool to run
 
-   OPTS="--mem 128M --stack 6M $DPU_OPTS"
    for i in *.i; do
       N=`echo "$i" | sed s/.i$//`
 
       if test $WANT_DPU_ALT_SDPOR = y; then
          # -k-1
          LOG=${N}_dpu_alt-1.txt
-         CMD="$DPU $i -k-1 $OPTS"
+         CMD="$DPU $i -k-1 $DPU_OPTS"
          run_dpu
       fi
 
       if test $WANT_DPU_ALT0 = y; then
          # -k0
          LOG=${N}_dpu_alt0.txt
-         CMD="$DPU $i -k0 $OPTS"
+         CMD="$DPU $i -k0 $DPU_OPTS"
          run_dpu
 
          # if we got TO on -k0, surely we will also get it on -kX with X!=0
@@ -70,7 +69,7 @@ runall_dpu ()
          4) if test $WANT_DPU_ALT4 = n; then continue; fi;;
          esac
          LOG=${N}_dpu_alt${a}.txt
-         CMD="$DPU $i -k$a $OPTS"
+         CMD="$DPU $i -k$a $DPU_OPTS"
          run_dpu
 
          # if we got 0 SSBs we skip higher -k
@@ -98,7 +97,6 @@ main ()
    echo ::
    echo
    generate_bench_skiplist 2>&1 | quote
-   exit 0
 
    h1_date "Running tool DPU"
    echo ::
