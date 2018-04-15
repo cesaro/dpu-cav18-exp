@@ -55,7 +55,7 @@ If the output sum equals the sum provided in Easychair, this guarantees that:
 
 ### Dependencies
 
-For the artiact evaluation of cav18 this section is irrelevant, as all the dependencies are satisfied in the virtual machine that we provide. This section is here for information purpose. 
+For the artifact evaluation of cav18 this section is irrelevant, as all the dependencies are satisfied in the virtual machine that we provide. This section is here for information purpose. 
 
 the virtual machine provided is running Ubuntu 14.4. 
 This replicacbility package can also be used with minor modifications in Debian
