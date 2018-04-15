@@ -315,13 +315,13 @@ dump_latex ()
       fi
       MAXCONFS=$(head -n1 <<< "$MAXCONFS" | awk '{print $2}')
 
-      # check that all -aX runs of DPU agree on the number threads
-      NUMTHREADS=$(cat ${i}_dpu* | grep '^dpu: stats: unfolding: .* threads created$' | sort -u)
+      # check that all -kX runs of DPU agree on the number threads
+      NUMTHREADS=$(cat ${i}_dpu* | grep '^dpu: por: stats: unfolding: .* threads created$' | sort -u)
       NUM=$(wc -l <<< "$NUMTHREADS")
       if test "$NUM" -gt 1; then
          echo "WARNING: $i: dpu reports != number of threads on different runs"
       fi
-      NUMTHREADS=$(head -n1 <<< "$NUMTHREADS" | awk '{print $4}')
+      NUMTHREADS=$(head -n1 <<< "$NUMTHREADS" | awk '{print $5}')
 
       # check that all executions of dpu agree on the number of events
       EVENTS=$(cat ${i}_dpu* ${i}_nidhugg* | grep '^events ' | sort -u | grep -v 'events *-$')
