@@ -83,10 +83,7 @@ For example, for the benchmark `dispatcher.c` with 5 servers and 2 requesters, w
 * dispatch-serv5_reqs2_nidhugg.txt
 
 In the same folder, we also find a *LOG.rst* file which stores all details about running the scripts as we see
-on the screen and a TABLE.tex which puts all the data in LaTex table.
-
-To produce those results, in fie ``runtable1.sh``, you could find the we first generate a selection
-of benchmarks varied by parameters using one of `generate_bench_*` functions.....
+on the screen and a TABLE.tex which puts all the data in LaTex table (the same as Table 1 in the table).
 
 Although run times and memory consumption sizes are not identical to those
 shown in the paper, observe that the variations are usually quite small.
