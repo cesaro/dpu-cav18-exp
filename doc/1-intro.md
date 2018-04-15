@@ -44,8 +44,8 @@ then:
 
 ```sh
 $ make sha1sum
-
-FIXME example output
+Computing the SHA1 sum... This can take a while.
+SHA1 sum: 589d7cc10ac595d4ec2ffd135202bb6704fe2b67
 ```
 
 If the output sum equals the sum provided in Easychair, this guarantees that:
@@ -57,8 +57,8 @@ If the output sum equals the sum provided in Easychair, this guarantees that:
 
 For the artifact evaluation of cav18 this section is irrelevant, as all the dependencies are satisfied in the virtual machine that we provide. This section is here for information purpose. 
 
-the virtual machine provided is running Ubuntu 14.4. 
-This replicacbility package can also be used with minor modifications in Debian
+The virtual machine provided is running Ubuntu 14.4. 
+This replicability package can also be used with minor modifications in Debian
 9.4 or Ubuntu 16, with the exception of the experiments with Maple, which depend
 on kernel 3.x.
 
