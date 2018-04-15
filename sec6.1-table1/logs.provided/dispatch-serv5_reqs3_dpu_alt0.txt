@@ -1,0 +1,73 @@
+name      dispatch-serv5_reqs3
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu dispatch-serv5_reqs3.i -k0 --mem 128M --stack 6M -O1
+
+exitcode  0
+defects   0
+walltime  0.771
+maxrss    66M
+maxconfs  1482
+SSBs      0
+events    17594
+
+
+stdout:
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.0DQF.dispatch-serv5_reqs3.i.opt.bc -- 'dispatch-serv5_reqs3.i'
+llvm-link-6.0 /tmp/dpu.0DQF.dispatch-serv5_reqs3.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.0DQF.dispatch-serv5_reqs3.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.0DQF.dispatch-serv5_reqs3.i.bc -k0 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 22799
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: unf: loading bitcode
+dpu: unf: O1-optimization + jitting...
+dpu: por: starting POR analysis ...
+dpu: por: finished POR analysis
+dpu: por: stats: unfolding: 1482 max-configs
+dpu: por: stats: unfolding: 9 threads created
+dpu: por: stats: unfolding: 7 process slots used
+dpu: por: stats: unfolding: 17594 events (aprox. 3M of memory)
+dpu: por: stats: unfolding: t0: 8331 events (1M, 47.4%)
+dpu: por: stats: unfolding: t1: 355 events (73K, 2.0%)
+dpu: por: stats: unfolding: t2: 385 events (79K, 2.2%)
+dpu: por: stats: unfolding: t3: 385 events (79K, 2.2%)
+dpu: por: stats: unfolding: t4: 385 events (79K, 2.2%)
+dpu: por: stats: unfolding: t5: 703 events (144K, 4.0%)
+dpu: por: stats: unfolding: t6: 7050 events (1M, 39.9%)
+dpu: por: stats: por: 1482 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 81.0 average ev/trail
+dpu: por: stats: por: alt: 39186 calls
+dpu: por: stats: por: alt: 14242 calls built a comb (36.3%)
+dpu: por: stats: por: alt: 3555 calls explored a comb (9.1%)
+dpu: por: stats: por: |comb|: size/nc=3555/3; min/max/avg=1/3/1.78; {size=count/mass}={2=2496/70.2%; 1=928/26.1%; 3=131/3.7%}
+dpu: por: stats: resources: 0.688 s wall time
+dpu: por: stats: resources: 0.660 s cpu time
+dpu: por: stats: resources: 66M max RSS
+dpu: por: stats: perf: 2154 executions/sec
+dpu: por: stats: perf: 25581 ev/sec
+dpu: por: summary: 0 defects, 1482 max-configs, 0 SSBs, 17594 events, 0.688 sec, 66M
+
+stderr:
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu dispatch-serv5_reqs3.i -k0 --mem 128M --stack 6M -O1"
+	User time (seconds): 0.71
+	System time (seconds): 0.39
+	Percent of CPU this job got: 144%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 68132
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25952
+	Voluntary context switches: 28818
+	Involuntary context switches: 159
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 160
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

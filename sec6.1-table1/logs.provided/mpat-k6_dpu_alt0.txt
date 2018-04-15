@@ -1,0 +1,79 @@
+name      mpat-k6
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu mpat-k6.i -k0 --mem 128M --stack 6M -O1
+
+exitcode  0
+defects   0
+walltime  61.121
+maxrss    257M
+maxconfs  46080
+SSBs      0
+events    455876
+
+
+stdout:
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.hEKP.mpat-k6.i.opt.bc -- 'mpat-k6.i'
+llvm-link-6.0 /tmp/dpu.hEKP.mpat-k6.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.hEKP.mpat-k6.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.hEKP.mpat-k6.i.bc -k0 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 8759
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: unf: loading bitcode
+dpu: unf: O1-optimization + jitting...
+dpu: por: starting POR analysis ...
+dpu: por: finished POR analysis
+dpu: por: stats: unfolding: 46080 max-configs
+dpu: por: stats: unfolding: 13 threads created
+dpu: por: stats: unfolding: 13 process slots used
+dpu: por: stats: unfolding: 455876 events (aprox. 91M of memory)
+dpu: por: stats: unfolding: t0: 14 events (2K, 0.0%)
+dpu: por: stats: unfolding: t1: 18997 events (3M, 4.2%)
+dpu: por: stats: unfolding: t2: 56980 events (11M, 12.5%)
+dpu: por: stats: unfolding: t3: 18997 events (3M, 4.2%)
+dpu: por: stats: unfolding: t4: 56980 events (11M, 12.5%)
+dpu: por: stats: unfolding: t5: 18997 events (3M, 4.2%)
+dpu: por: stats: unfolding: t6: 56980 events (11M, 12.5%)
+dpu: por: stats: unfolding: t7: 18997 events (3M, 4.2%)
+dpu: por: stats: unfolding: t8: 56980 events (11M, 12.5%)
+dpu: por: stats: unfolding: t9: 18997 events (3M, 4.2%)
+dpu: por: stats: unfolding: t10: 56980 events (11M, 12.5%)
+dpu: por: stats: unfolding: t11: 18997 events (3M, 4.2%)
+dpu: por: stats: unfolding: t12: 56980 events (11M, 12.5%)
+dpu: por: stats: por: 46080 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 74.0 average ev/trail
+dpu: por: stats: por: alt: 1133924 calls
+dpu: por: stats: por: alt: 329867 calls built a comb (29.1%)
+dpu: por: stats: por: alt: 46079 calls explored a comb (4.1%)
+dpu: por: stats: por: |comb|: size/nc=46079/8; min/max/avg=1/8/2.12; {size=count/mass}={2=15983/34.7%; 1=15599/33.9%; 3=9733/21.1%; (rest)=4764/10.3%}
+dpu: por: stats: resources: 61.038 s wall time (1min 1.038sec)
+dpu: por: stats: resources: 65.191 s cpu time
+dpu: por: stats: resources: 256M max RSS
+dpu: por: stats: perf: 754 executions/sec
+dpu: por: stats: perf: 7468 ev/sec
+dpu: por: summary: 0 defects, 46080 max-configs, 0 SSBs, 455876 events, 61.038 sec, 256M
+
+stderr:
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu mpat-k6.i -k0 --mem 128M --stack 6M -O1"
+	User time (seconds): 65.23
+	System time (seconds): 14.15
+	Percent of CPU this job got: 129%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:01.11
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 263304
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 50969
+	Voluntary context switches: 1704378
+	Involuntary context switches: 9383
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 160
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

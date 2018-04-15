@@ -1,0 +1,76 @@
+name      multipc-prods4_workers5
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu multipc-prods4_workers5.i -k0 --mem 128M --stack 6M -O1
+
+exitcode  0
+defects   0
+walltime  222.429
+maxrss    279M
+maxconfs  314064
+SSBs      0
+events    578835
+
+
+stdout:
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.Q2jV.multipc-prods4_workers5.i.opt.bc -- 'multipc-prods4_workers5.i'
+llvm-link-6.0 /tmp/dpu.Q2jV.multipc-prods4_workers5.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.Q2jV.multipc-prods4_workers5.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.Q2jV.multipc-prods4_workers5.i.bc -k0 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 27536
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: unf: loading bitcode
+dpu: unf: O1-optimization + jitting...
+dpu: por: starting POR analysis ...
+dpu: por: finished POR analysis
+dpu: por: stats: unfolding: 314064 max-configs
+dpu: por: stats: unfolding: 10 threads created
+dpu: por: stats: unfolding: 10 process slots used
+dpu: por: stats: unfolding: 578835 events (aprox. 116M of memory)
+dpu: por: stats: unfolding: t0: 11 events (2K, 0.0%)
+dpu: por: stats: unfolding: t1: 91406 events (18M, 15.7%)
+dpu: por: stats: unfolding: t2: 25244 events (5M, 4.3%)
+dpu: por: stats: unfolding: t3: 19100 events (3M, 3.3%)
+dpu: por: stats: unfolding: t4: 33522 events (6M, 5.8%)
+dpu: por: stats: unfolding: t5: 32480 events (6M, 5.6%)
+dpu: por: stats: unfolding: t6: 95219 events (19M, 16.5%)
+dpu: por: stats: unfolding: t7: 95351 events (19M, 16.5%)
+dpu: por: stats: unfolding: t8: 92561 events (18M, 16.0%)
+dpu: por: stats: unfolding: t9: 93941 events (18M, 16.3%)
+dpu: por: stats: por: 314064 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 72.7 average ev/trail
+dpu: por: stats: por: alt: 5802488 calls
+dpu: por: stats: por: alt: 1736926 calls built a comb (29.9%)
+dpu: por: stats: por: alt: 340571 calls explored a comb (5.9%)
+dpu: por: stats: por: |comb|: size/nc=340571/4; min/max/avg=1/4/1.28; {size=count/mass}={1=260418/76.5%; 2=65674/19.3%; 3=12850/3.8%; (rest)=1629/0.5%}
+dpu: por: stats: resources: 222.336 s wall time (3min 42.336sec)
+dpu: por: stats: resources: 208.008 s cpu time
+dpu: por: stats: resources: 279M max RSS
+dpu: por: stats: perf: 1412 executions/sec
+dpu: por: stats: perf: 2603 ev/sec
+dpu: por: summary: 0 defects, 314064 max-configs, 0 SSBs, 578835 events, 222.336 sec, 279M
+
+stderr:
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu multipc-prods4_workers5.i -k0 --mem 128M --stack 6M -O1"
+	User time (seconds): 208.06
+	System time (seconds): 104.69
+	Percent of CPU this job got: 140%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:42.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 286444
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 50934
+	Voluntary context switches: 9688427
+	Involuntary context switches: 39804
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 168
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
