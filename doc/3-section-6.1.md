@@ -85,8 +85,6 @@ For example, for the benchmark `dispatcher.c` with 5 servers and 2 requesters, w
 In the same folder, we also find a *LOG.rst* file which stores all details about running the scripts as we see
 on the screen and a TABLE.tex which puts all the data in LaTex table.
 
-****Note: Path to dpu is wrong, so it can not produce files as expected.
-
 To produce those results, in fie ``runtable1.sh``, you could find the we first generate a selection
 of benchmarks varied by parameters using one of `generate_bench_*` functions.....
 
