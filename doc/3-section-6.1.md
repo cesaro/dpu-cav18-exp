@@ -64,29 +64,31 @@ All the input files for the benchmarks are stored in the `benchmarks` directory.
 ### Generating Table 1
 
 In order to build Table 1 from the paper (shown below), just run from the top directory::
-
+```sh
 make sec6.1-table1
+```
+This will execute the script ``run-table1.sh`` in the folder `script/`, which in turn will
+generate a folder  `logs.XXXXX` (XXXXX is the date time of running moment) inside of the
+folder ``sec6.1-table1`` with multiple log files.  It also creates a folder `logs` with files
+linked to those in the latest folder `logs.XXXXX`.
+In the folder `logs`, for each benchmarks with a pair of parameters, we will find one information
+files (file .i), multiple .txt files where each corresponds one DPU running of the benchmark with a
+k-partial algorithm (k=0,1,2,3) and one .txt file for Nidhugg running on the benchmark.
+For example, for the benchmark `dispatcher.c` with 5 servers and 2 requesters, we have these files:
+* dispatch-serv5_reqs2.i
+* dispatch-serv5_reqs2_dpu_alt0.txt
+* dispatch-serv5_reqs2_dpu_alt1.txt
+* dispatch-serv5_reqs2_dpu_alt2.txt
+* dispatch-serv5_reqs2_dpu_alt3.txt
+* dispatch-serv5_reqs2_nidhugg.txt
 
-This will execute the script ``run-table1.sh``, which in turn will
-generate a folder inside of the folder ``table1`` with multiple log files.
+In the same folder, we also find a *LOG.rst* file which stores all details about running the scripts as we see
+on the screen and a TABLE.tex which puts all the data in LaTex table.
 
-- FIXME: the explanation below needs to be extended (see how I did it for
-  section 6.2) and corrected. The logs are now stored in a differnt folder and
-  have different names.
+****Note: Path to dpu is wrong, so it can not produce files as expected.
 
-In fie ``runtable1.sh``, we first generate a selection of benchmarks varied
-by parameters using one of `generate_bench_*` functions. On the benchmarks,
-we execute both `dpu` and `Nidhugg`, then dump he output data into log files
-in `table1` folder:
-
-- ``table1/logs/OUTPUT.rst``: the main log.
-- ``table1/logs/TABLE.tex``: a LaTeX table generated out of the log.
-
-As a sample, we include these two files as generated in the same machine where
-we have run the experiments for the paper:
-
-- `<table1/OUTPUT.rst>`__
-- `<table1/TABLE.tex>`__
+To produce those results, in fie ``runtable1.sh``, you could find the we first generate a selection
+of benchmarks varied by parameters using one of `generate_bench_*` functions.....
 
 Although run times and memory consumption sizes are not identical to those
 shown in the paper, observe that the variations are usually quite small.
