@@ -19,7 +19,7 @@ A **Sleep-Set Blocked** (SSB) execution is BLA. FIXME.
 
 ### Benchmarks
 
-All the input files for the benchmarks are stored in the `benchmarks` directory.
+All the input files for the benchmarks are stored in the `benchmarks/` directory.
 
 
 | Instance   | Benchmark                      | Parameters
@@ -67,10 +67,9 @@ In order to build Table 1 from the paper (shown below), just run from the top di
 ```sh
 make sec6.1-table1
 ```
-This will execute the script ``run-table1.sh`` in the folder `script/`, which in turn will
-generate a folder  `logs.XXXXX` (XXXXX is the date time of running moment) inside of the
-folder ``sec6.1-table1`` with multiple log files.  It also creates a folder `logs` with files
-linked to those in the latest folder `logs.XXXXX`.
+This will execute the script `script/run-table1.sh` , which in turn will generate a folder  `logs.XXXXX`
+(XXXXX is the date time of running moment) inside of the folder `sec6.1-table1` with multiple log files.
+It also creates a folder `logs` with files linked to those in the latest folder `logs.XXXXX`.
 In the folder `logs`, for each benchmarks with a pair of parameters, we will find one information
 files (file `.i`), multiple `.txt` files where each corresponds one DPU running of the benchmark with a
 *k-partial algorithm* (k=0,1,2,3) and one `.txt` file for Nidhugg running on the benchmark.
@@ -86,11 +85,16 @@ For example, for the benchmark `dispatcher.c` with 5 servers and 2 requesters, w
 In the same folder, we also find a `LOG.rst` file which stores all details about running the scripts as we see
 on the screen and a `TABLE.tex` which puts all the data in LaTex table (the same as Table 1 in the table).
 
-To produce those results, in file `runtable1.sh`, we first preprocess the benchmarks by one of
-`generate_bench_*()` functions, e.g `generate_bench_selection()` for Table 1 above, in which
-we set up the parameters them. Next, we run tools DPU by function `runall_dpu()` and NIDHUGG
-by `runall_nidhugg()` on the benchmarks. After running the two tools, we generate LaTex table
-with the function `dump_latex()` and finally create log files in corresponding folders.
+To produce those results, in script file `runtable1.sh`, we use pre-compiled version of DPU (available at `dist/dpu/bin/dpu`)
+to perform the following task:
+1. **Preproceed benchmarks** by one of `generate_bench_*()` functions, e.g `generate_bench_selection()` for Table 1 above,
+in which we call `cpp` on the benchmarks with suitable -D macros to instantiate the parametric benchmarks.
+2. **Run DPU** by function `runall_dpu()`, then generate log `.txt` files with the output of DPU.
+3. **Run NIDHUGG** by `runall_nidhugg()` on the benchmarks and generate a log file, e.g `dispatcher-serv5_reqs2_nidhugg.txt`
+in the example above, in log folders.
+4. ** Parse log files** and **generate LaTex table** in `TABLE.tex` with the function `dump_latex()` which is displayed as follows:
+
+FIXME: Result Table here
 
 Although run times and memory consumption sizes are not identical to those
 shown in the paper, observe that the variations are usually quite small.
