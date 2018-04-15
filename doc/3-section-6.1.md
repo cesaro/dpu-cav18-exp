@@ -19,9 +19,41 @@ A **Sleep-Set Blocked** (SSB) execution is BLA. FIXME.
 
 ### Benchmarks
 
+All the input files for the benchmarks are stored in the `benchmarks` directory.
+
+
+| Instance   | Benchmark                      | Parameters
+| -----------|--------------------------------| ------------------------
+| Disp(5,2)  | `benchmarks/dispatcher.c`      | `PARAM1=5 PARAM2=2`
+| Disp(5,3)  | `benchmarks/dispatcher.c`      | `PARAM1=5 PARAM2=3`
+| Disp(5,4)  | `benchmarks/dispatcher.c`      | `PARAM1=5 PARAM2=4`
+| Disp(5,5)  | `benchmarks/dispatcher.c`      | `PARAM1=5 PARAM2=5`
+| Disp(5,6)  | `benchmarks/dispatcher.c`      | `PARAM1=5 PARAM2=6`
+| Mpat(4)    | `benchmarks/mpat.c`            | `PARAM1=4`
+| Mpat(5)    | `benchmarks/mpat.c`            | `PARAM1=5`
+| Mpat(6)    | `benchmarks/mpat.c`            | `PARAM1=6`
+| Mpat(7)    | `benchmarks/mpat.c`            | `PARAM1=7`
+| Mpat(8)    | `benchmarks/mpat.c`            | `PARAM1=8`
+| Mpc(2,5)   | `benchmarks/multiprodcon.c`    | `PARAM1=2 PARAM2=2`
+| Mpc(3,5)   | `benchmarks/multiprodcon.c`    | `PARAM1=3 PARAM2=3`
+| Mpc(4,5)   | `benchmarks/multiprodcon.c`    | `PARAM1=4 PARAM2=4`
+| Mpc(5,5)   | `benchmarks/multiprodcon.c`    | `PARAM1=5 PARAM2=5`
+| Pi(5,2000) | `benchmarks/pi/pth_pi_mutex.c` | `PARAM1=5 PARAM2=2000`
+| Pi(6,2000) | `benchmarks/pi/pth_pi_mutex.c` | `PARAM1=6 PARAM2=2000`
+| Pi(7,2000) | `benchmarks/pi/pth_pi_mutex.c` | `PARAM1=7 PARAM2=2000`
+| Pi(8,2000) | `benchmarks/pi/pth_pi_mutex.c` | `PARAM1=8 PARAM2=2000`
+| Pol(7,3)  | `benchmarks/poke.c`            | `PARAM1=7 PARAM2=3`
+| Pol(8,3)  | `benchmarks/poke.c`            | `PARAM1=8 PARAM2=3`
+| Pol(9,3)  | `benchmarks/poke.c`            | `PARAM1=9 PARAM2=3`
+| Pol(10,3)  | `benchmarks/poke.c`            | `PARAM1=10 PARAM2=3`
+| Pol(11,3)  | `benchmarks/poke.c`            | `PARAM1=11 PARAM2=3`
+| Pol(12,3)  | `benchmarks/poke.c`            | `PARAM1=12 PARAM2=3`
+
+
 - say where are the benchmarks (sees how I did it for section 6.2).
 - put a table similar to the one I have used in section 6.2, explaining how
   parameters are passed to `cpp` to instantiate the benchmark.
+- FIXME: done, I need to check with the scripts
 
 ### The tools
 
