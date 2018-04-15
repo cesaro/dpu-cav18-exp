@@ -85,6 +85,12 @@ For example, for the benchmark `dispatcher.c` with 5 servers and 2 requesters, w
 In the same folder, we also find a *LOG.rst* file which stores all details about running the scripts as we see
 on the screen and a TABLE.tex which puts all the data in LaTex table (the same as Table 1 in the table).
 
+To produce those results, in fie ``runtable1.sh``, we first preprocess the benchmarks by one of
+`generate_bench_*` functions, e.g `generate_bench_selection` for Table 1 above, in which
+we set up the parameters them. Next, we run tools DPU by `runall_dpu` and NIDHUGG
+by `runall_nidhugg` on the benchmarks. After running the two tools, we generate LaTex table
+with the function `dump_latex` and finally create log files in corresponding folders.
+
 Although run times and memory consumption sizes are not identical to those
 shown in the paper, observe that the variations are usually quite small.
 For the record, the table as presented in the paper looked like this:
