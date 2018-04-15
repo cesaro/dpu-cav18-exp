@@ -102,6 +102,8 @@ For the record, the table as presented in the paper looked like this:
 
 ![table 1 in the paper](img/table1.png)
 
+The set of experiments executes in about 4h15 with no errors. 
+
 ### Running the Tools by Hand
 
 - Give the command line to invoke DPU or nidhugg by hand on a simple example.

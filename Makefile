@@ -2,6 +2,7 @@
 NIDHUGG=tools/nidhugg/nidhugg-375c554fdb208e2c50f35c618ed22cb2096ce4da
 DPU=tools/dpu/dpu-0.5.2
 MAPLE=tools/maple/sctbench
+ALLFILES = $(shell find . -type f )
 
 all:
 	@echo Please specify a goal, perhaps read this Makefile to know which one!
@@ -64,6 +65,7 @@ sec6.2-gen-csv:
 	./scripts/run-sec6.2-gen-csv.sh
 
 sha1sums:
-	echo FIXME
+#	@git pull
+	./scripts/compute_sha1.sh
 
-.PHONY: sec6.1-table1
+.PHONY: sec6.1-table1 sha1sums
