@@ -2,18 +2,19 @@
 NIDHUGG=tools/nidhugg/nidhugg-375c554fdb208e2c50f35c618ed22cb2096ce4da
 DPU=tools/dpu/dpu-0.5.2
 MAPLE=tools/maple/sctbench
-ALLFILES = $(shell find . -type f )
 
 all:
 	@echo Please specify a goal, perhaps read this Makefile to know which one!
 
 install-dependencies:
 	# llvm apt sources
+	(apt-cache policy | grep 'ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu') || \
+		sudo apt-add-repository 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu trusty main'
 	(apt-cache policy | grep 'http://apt.* llvm-toolchain-xenial-6.0/main') || \
 		sudo apt-add-repository 'deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main'
 	sudo apt-get update
-	# wget and webfs
-	sudo apt-get install ca-certificates wget webfs
+	# wget
+	sudo apt-get install ca-certificates wget
 	# devel tools
 	sudo apt-get install bc git time make python
 	# llvm-4.0 (for nidhugg)
@@ -65,7 +66,6 @@ sec6.2-gen-csv:
 	./scripts/run-sec6.2-gen-csv.sh
 
 sha1sums:
-#	@git pull
-	./scripts/compute_sha1.sh
+	./scripts/compute-sha1.sh
 
 .PHONY: sec6.1-table1 sha1sums
