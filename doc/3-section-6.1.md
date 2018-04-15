@@ -60,9 +60,7 @@ Although run times and memory consumption sizes are not identical to those
 shown in the paper, observe that the variations are usually quite small.
 For the record, the table as presented in the paper looked like this:
 
-.. image:: table1/table1.png
-
-FIXME: this link is broken.
+![table 1 in the paper](/img/table1.png)
 
 ### Running the Tools by Hand
 
