@@ -85,7 +85,7 @@ For example, for the benchmark `dispatcher.c` with 5 servers and 2 requesters, w
 In the same folder, we also find a *LOG.rst* file which stores all details about running the scripts as we see
 on the screen and a TABLE.tex which puts all the data in LaTex table.
 
-To produce those results, in fie ``runtable1.sh``, you could find the we first generate a selection
+To produce those results, in file ``run-table1.sh``, you could find the we first generate a selection
 of benchmarks varied by parameters using one of `generate_bench_*` functions.....
 
 Although run times and memory consumption sizes are not identical to those
@@ -102,13 +102,13 @@ For the record, the table as presented in the paper looked like this:
 The binary tools are located in subfolders of the `dist` directory.
 
 The documentation of the command-line interface of DPU is given by:
-```
-$ ./dist/dpu/bin/dpu --help
+```sh
+./dist/dpu/bin/dpu --help
 Usage: dpu FILE.{c,i,bc,ll} ANALYZEROPTS -- PROGRAMOPTS
 ```
 
 For instance :
-```
+```sh
 ./dist/dpu/bin/dpu benchmarks/dispatcher.c
 ```
 
@@ -118,14 +118,16 @@ An interesting parameter here is the k parameter (`-k N`): it provides how close
 
 In a similar way, the documentation of the command-line interface of Nidhugg is given by:
 
-```
-$ ./dist/nidhugg/bin/nidhuggc --help
+```sh
+./dist/nidhugg/bin/nidhuggc --help
 Usage: ./dist/nidhugg/bin/nidhuggc [[COMPILER/NIDHUGGC OPTIONS --] NIDHUGG/NIDHUGGC OPTIONS] FILE [-- [PROGRAM ARGUMENTS]]
 ```
 
 In particular, Nidhugg needs to be provided a memory model. For instance, it can run with:
 
-`$ ./dist/nidhugg/bin/nidhuggc --c -sc benchmarks/dispatcher.c`
+```sh
+./dist/nidhugg/bin/nidhuggc --c -sc benchmarks/dispatcher.c
+```
 
 ### Compiling the Tools by Hand
 

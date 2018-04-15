@@ -55,21 +55,16 @@ If the output sum equals the sum provided in Easychair, this guarantees that:
 
 ### Dependencies
 
-Point to the reviewer that all dependencies are already installed in the machine
-and that thei don't need to do anything here, this is just for information.
+For the artiact evaluation of cav18 this section is irrelevant, as all the dependencies are satisfied in the virtual machine that we provide. This section is here for information purpose. 
 
-This is for the image provided, Ubuntu 14
-
-- for the artiact evaluation of cav18 this section is irrelevat, as all
-  dependencies are satisfied in the virtual machine that we provide
-- These experiments can be repeated with Ubuntu 16 or Debian 9.4
-- make install-dependencies
-
+the virtual machine provided is running Ubuntu 14.4. 
 This replicacbility package can also be used with minor modifications in Debian
 9.4 or Ubuntu 16, with the exception of the experiments with Maple, which depend
 on kernel 3.x.
 
-Point to the `make install-dependencies`
+The Makefile provided in the top directory has a target that will install all the dependencies needed by the artifact. However, for this artifact evaluation it is not relevant because all the dependencies have already been installed on the virtual machine.
 
-FIXMEEEEEEEEEEEEEEE
+```sh
+$ make install-dependencies
+```
 
