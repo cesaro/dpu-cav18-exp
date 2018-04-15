@@ -17,22 +17,30 @@ program beginning to end.
 
 A **Sleep-Set Blocked** (SSB) execution is BLA. FIXME.
 
+### Benchmarks
 
-- where are the bench
-- how to run the script
-- explain the script
-- interpreting the output
+- say where are the benchmarks (sees how I did it for section 6.2).
+- put a table similar to the one I have used in section 6.2, explaining how
+  parameters are passed to `cpp` to instantiate the benchmark.
 
-- how to run by hand dpu or nidhugg on one of the benchmarks
+### The tools
 
-All the benchmarks for Table 1 is in .... folder
+- Precompiled binaries are made available to the reviewersr
+- Say where are the binaries and display the command and console output if you
+  run them with `--version`.
+
+### Generating Table 1
 
 In order to build Table 1 from the paper (shown below), just run::
 
-make table1
+make sec6.1-table1
 
 This will execute the script ``runtable1.sh``, which in turn will
 generate a folder inside of the folder ``table1`` with multiple log files.
+
+- FIXME: the explanation below needs to be extended (see how I did it for
+  section 6.2) and corrected. The logs are now stored in a differnt folder and
+  have different names.
 
 In fie ``runtable1.sh``, we first generate a selection of benchmarks varied
 by parameters using one of `generate_bench_*` functions. On the benchmarks,
@@ -53,3 +61,14 @@ shown in the paper, observe that the variations are usually quite small.
 For the record, the table as presented in the paper looked like this:
 
 .. image:: table1/table1.png
+
+FIXME: this link is broken.
+
+### Running the Tools by Hand
+
+- Give the command line to invoke DPU or nidhugg by hand on a simple example.
+- Explain briefly the output.
+
+### Compiling the Tools by Hand
+
+- Send the reader to the previous section

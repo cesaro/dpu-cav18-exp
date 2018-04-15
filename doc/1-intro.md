@@ -3,11 +3,14 @@ CAV'18 Experiments with DPU: Replicability Guide
 
 ## Introduction
 
-- overall description of goals of the tool and this document
-- indication that the latest version of this document is always located at
-  https://github.com/cesaro/dpu-cav18-exp/blob/master/doc/1-intro.md, and that
-  it's easier to read from there
+- Overall description of goals of the DPU tool and this document: guiding the
+  reviewer to replicate our experiments.
 
+- Indication that the latest version of this document is always located at
+  https://github.com/cesaro/dpu-cav18-exp/blob/master/doc/1-intro.md, and that
+  it's easier to read from there. See the section below SHA1 sums to check how
+  it is guaranteed that we won't be able to touch the Github repository without
+  being noticed.
 
 ## Index
 
@@ -29,9 +32,31 @@ CAV'18 Experiments with DPU: Replicability Guide
 
 ## SHA1 Sums
 
-- sha1sums
+Each reviewer has received in Easychair a SHA1 sum describing the files
+installed in their account. This sum is computed as a hash of the following:
+
+* All files in the repository, including the `.git` folder.
+* All commits avilable in the repository in Github,
+  (https://github.com/cesaro/dpu-cav18-exp)
+
+You can re-compute this sum like this. Do a `cd` to the root of the repository,
+then:
+
+```sh
+$ make sha1sum
+
+FIXME example output
+```
+
+If the output sum equals the sum provided in Easychair, this guarantees that:
+
+* No file in your account has been modified since we gave you access to it.
+* No content in https://github.com/cesaro/dpu-cav18-exp has been modified.
 
 ### Dependencies
+
+Point to the reviewer that all dependencies are already installed in the machine
+and that thei don't need to do anything here, this is just for information.
 
 This is for the image provided, Ubuntu 14
 
@@ -44,5 +69,7 @@ This replicacbility package can also be used with minor modifications in Debian
 9.4 or Ubuntu 16, with the exception of the experiments with Maple, which depend
 on kernel 3.x.
 
-apt-get install valgrind kcachegrind
+Point to the `make install-dependencies`
+
+FIXMEEEEEEEEEEEEEEE
 

@@ -6,10 +6,7 @@ Navigation: [Table of contents], [Previous section], [Next section]
 [Previous section]: 1-intro.md
 [Next section]: 3-section-6.1.md
 
-
-FIXME:
-- comment on patch for DPU
-- Maple
+FIXME Maple and pin
 
 The sources of both DPU and Nidhugg are contained in the folder `tools/`:
 

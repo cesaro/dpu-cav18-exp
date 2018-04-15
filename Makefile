@@ -63,4 +63,7 @@ sec6.2-compile-dpu:
 sec6.2-gen-csv:
 	./scripts/run-sec6.2-gen-csv.sh
 
+sha1sums:
+	echo FIXME
+
 .PHONY: sec6.1-table1
