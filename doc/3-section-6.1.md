@@ -75,6 +75,7 @@ In the folder `logs`, for each benchmarks with a pair of parameters, we will fin
 files (file `.i`), multiple `.txt` files where each corresponds one DPU running of the benchmark with a
 *k-partial algorithm* (k=0,1,2,3) and one `.txt` file for Nidhugg running on the benchmark.
 For example, for the benchmark `dispatcher.c` with 5 servers and 2 requesters, we have these files:
+
 * `dispatch-serv5_reqs2.i`
 * `dispatch-serv5_reqs2_dpu_alt0.txt`
 * `dispatch-serv5_reqs2_dpu_alt1.txt`
@@ -105,13 +106,13 @@ For the record, the table as presented in the paper looked like this:
 The binary tools are located in subfolders of the `dist` directory.
 
 The documentation of the command-line interface of DPU is given by:
-```
-$ ./dist/dpu/bin/dpu --help
+```sh
+./dist/dpu/bin/dpu --help
 Usage: dpu FILE.{c,i,bc,ll} ANALYZEROPTS -- PROGRAMOPTS
 ```
 
 For instance :
-```
+```sh
 ./dist/dpu/bin/dpu benchmarks/dispatcher.c
 ```
 
@@ -121,14 +122,16 @@ An interesting parameter here is the k parameter (`-k N`): it provides how close
 
 In a similar way, the documentation of the command-line interface of Nidhugg is given by:
 
-```
-$ ./dist/nidhugg/bin/nidhuggc --help
+```sh
+./dist/nidhugg/bin/nidhuggc --help
 Usage: ./dist/nidhugg/bin/nidhuggc [[COMPILER/NIDHUGGC OPTIONS --] NIDHUGG/NIDHUGGC OPTIONS] FILE [-- [PROGRAM ARGUMENTS]]
 ```
 
 In particular, Nidhugg needs to be provided a memory model. For instance, it can run with:
 
-`$ ./dist/nidhugg/bin/nidhuggc --c -sc benchmarks/dispatcher.c`
+```sh
+./dist/nidhugg/bin/nidhuggc --c -sc benchmarks/dispatcher.c
+```
 
 ### Compiling the Tools by Hand
 
