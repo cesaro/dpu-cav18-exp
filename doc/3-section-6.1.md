@@ -72,24 +72,25 @@ generate a folder  `logs.XXXXX` (XXXXX is the date time of running moment) insid
 folder ``sec6.1-table1`` with multiple log files.  It also creates a folder `logs` with files
 linked to those in the latest folder `logs.XXXXX`.
 In the folder `logs`, for each benchmarks with a pair of parameters, we will find one information
-files (file .i), multiple .txt files where each corresponds one DPU running of the benchmark with a
-k-partial algorithm (k=0,1,2,3) and one .txt file for Nidhugg running on the benchmark.
+files (file `.i`), multiple `.txt` files where each corresponds one DPU running of the benchmark with a
+*k-partial algorithm* (k=0,1,2,3) and one `.txt` file for Nidhugg running on the benchmark.
 For example, for the benchmark `dispatcher.c` with 5 servers and 2 requesters, we have these files:
-* dispatch-serv5_reqs2.i
-* dispatch-serv5_reqs2_dpu_alt0.txt
-* dispatch-serv5_reqs2_dpu_alt1.txt
-* dispatch-serv5_reqs2_dpu_alt2.txt
-* dispatch-serv5_reqs2_dpu_alt3.txt
-* dispatch-serv5_reqs2_nidhugg.txt
 
-In the same folder, we also find a *LOG.rst* file which stores all details about running the scripts as we see
-on the screen and a TABLE.tex which puts all the data in LaTex table (the same as Table 1 in the table).
+* `dispatch-serv5_reqs2.i`
+* `dispatch-serv5_reqs2_dpu_alt0.txt`
+* `dispatch-serv5_reqs2_dpu_alt1.txt`
+* `dispatch-serv5_reqs2_dpu_alt2.txt`
+* `dispatch-serv5_reqs2_dpu_alt3.txt`
+* `dispatch-serv5_reqs2_nidhugg.txt`
 
-To produce those results, in file ``run-table1.sh``, we first preprocess the benchmarks by one of
-`generate_bench_*` functions, e.g `generate_bench_selection` for Table 1 above, in which
-we set up the parameters them. Next, we run tools DPU by `runall_dpu` and NIDHUGG
-by `runall_nidhugg` on the benchmarks. After running the two tools, we generate LaTex table
-with the function `dump_latex` and finally create log files in corresponding folders.
+In the same folder, we also find a `LOG.rst` file which stores all details about running the scripts as we see
+on the screen and a `TABLE.tex` which puts all the data in LaTex table (the same as Table 1 in the table).
+
+To produce those results, in file `runtable1.sh`, we first preprocess the benchmarks by one of
+`generate_bench_*()` functions, e.g `generate_bench_selection()` for Table 1 above, in which
+we set up the parameters them. Next, we run tools DPU by function `runall_dpu()` and NIDHUGG
+by `runall_nidhugg()` on the benchmarks. After running the two tools, we generate LaTex table
+with the function `dump_latex()` and finally create log files in corresponding folders.
 
 Although run times and memory consumption sizes are not identical to those
 shown in the paper, observe that the variations are usually quite small.
