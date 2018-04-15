@@ -102,12 +102,14 @@ For the record, the table as presented in the paper looked like this:
 The binary tools are located in subfolders of the `dist` directory.
 
 The documentation of the command-line interface of DPU is given by:
-```$ ./dist/dpu/bin/dpu --help
+```
+$ ./dist/dpu/bin/dpu --help
 Usage: dpu FILE.{c,i,bc,ll} ANALYZEROPTS -- PROGRAMOPTS
 ```
 
 For instance :
-```./dist/dpu/bin/dpu benchmarks/dispatcher.c
+```
+./dist/dpu/bin/dpu benchmarks/dispatcher.c
 ```
 
 The parameters are passed as pre-compiler options, e.g. `-DPARAM1=5`.
@@ -116,7 +118,8 @@ An interesting parameter here is the k parameter (`-k N`): it provides how close
 
 In a similar way, the documentation of the command-line interface of Nidhugg is given by:
 
-```$ ./dist/nidhugg/bin/nidhuggc --help
+```
+$ ./dist/nidhugg/bin/nidhuggc --help
 Usage: ./dist/nidhugg/bin/nidhuggc [[COMPILER/NIDHUGGC OPTIONS --] NIDHUGG/NIDHUGGC OPTIONS] FILE [-- [PROGRAM ARGUMENTS]]
 ```
 
