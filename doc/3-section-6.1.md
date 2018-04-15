@@ -63,11 +63,11 @@ All the input files for the benchmarks are stored in the `benchmarks` directory.
 
 ### Generating Table 1
 
-In order to build Table 1 from the paper (shown below), just run::
+In order to build Table 1 from the paper (shown below), just run from the top directory::
 
 make sec6.1-table1
 
-This will execute the script ``runtable1.sh``, which in turn will
+This will execute the script ``run-table1.sh``, which in turn will
 generate a folder inside of the folder ``table1`` with multiple log files.
 
 - FIXME: the explanation below needs to be extended (see how I did it for
@@ -98,6 +98,27 @@ For the record, the table as presented in the paper looked like this:
 
 - Give the command line to invoke DPU or nidhugg by hand on a simple example.
 - Explain briefly the output.
+
+The binary tools are located in subfolders of the `dist` directory.
+
+The documentation of the command-line interface of DPU is given by:
+$ ./dist/dpu/bin/dpu --help
+Usage: dpu FILE.{c,i,bc,ll} ANALYZEROPTS -- PROGRAMOPTS`
+`
+
+For instance :
+`./dist/dpu/bin/dpu benchmarks/dispatcher.c`
+
+The parameters are passed as pre-compiler options, e.g. `-DPARAM1=5`.
+
+An interesting parameter here is the k parameter (`-k N`): it provides how close to optimal POR the tool will be. If N=0, DPU will run optimal DPO, otherwise if will use N-partial alternatives. 
+
+In a similar way, the documentation of the command-line interface of Nidhugg is given by:
+`$ ./dist/nidhugg/bin/nidhuggc --help
+Usage: ./dist/nidhugg/bin/nidhuggc [[COMPILER/NIDHUGGC OPTIONS --] NIDHUGG/NIDHUGGC OPTIONS] FILE [-- [PROGRAM ARGUMENTS]]`
+
+In particular, Nidhugg needs to be provided a memory model. For instance, it can run with: 
+`$ ./dist/nidhugg/bin/nidhuggc --c -sc benchmarks/dispatcher.c`
 
 ### Compiling the Tools by Hand
 
