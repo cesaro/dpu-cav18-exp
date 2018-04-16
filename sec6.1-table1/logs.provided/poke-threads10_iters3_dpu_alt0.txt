@@ -1,0 +1,79 @@
+name      poke-threads10_iters3
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu poke-threads10_iters3.i -k0 --mem 128M --stack 6M -O1
+
+exitcode  0
+defects   0
+walltime  5.862
+maxrss    166M
+maxconfs  7384
+SSBs      0
+events    185975
+
+
+stdout:
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.UX3e.poke-threads10_iters3.i.opt.bc -- 'poke-threads10_iters3.i'
+llvm-link-6.0 /tmp/dpu.UX3e.poke-threads10_iters3.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.UX3e.poke-threads10_iters3.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.UX3e.poke-threads10_iters3.i.bc -k0 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 9773
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: unf: loading bitcode
+dpu: unf: O1-optimization + jitting...
+dpu: por: starting POR analysis ...
+dpu: por: finished POR analysis
+dpu: por: stats: unfolding: 7384 max-configs
+dpu: por: stats: unfolding: 17 threads created
+dpu: por: stats: unfolding: 13 process slots used
+dpu: por: stats: unfolding: 185975 events (aprox. 37M of memory)
+dpu: por: stats: unfolding: t0: 93961 events (18M, 50.4%)
+dpu: por: stats: unfolding: t1: 7 events (1496B, 0.0%)
+dpu: por: stats: unfolding: t2: 1120 events (230K, 0.6%)
+dpu: por: stats: unfolding: t3: 1120 events (230K, 0.6%)
+dpu: por: stats: unfolding: t4: 1120 events (230K, 0.6%)
+dpu: por: stats: unfolding: t5: 1120 events (230K, 0.6%)
+dpu: por: stats: unfolding: t6: 1120 events (230K, 0.6%)
+dpu: por: stats: unfolding: t7: 1120 events (230K, 0.6%)
+dpu: por: stats: unfolding: t8: 1120 events (230K, 0.6%)
+dpu: por: stats: unfolding: t9: 1120 events (230K, 0.6%)
+dpu: por: stats: unfolding: t10: 2125 events (437K, 1.2%)
+dpu: por: stats: unfolding: t11: 48119 events (9M, 25.8%)
+dpu: por: stats: unfolding: t12: 32803 events (6M, 17.8%)
+dpu: por: stats: por: 7384 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 152.0 average ev/trail
+dpu: por: stats: por: alt: 388387 calls
+dpu: por: stats: por: alt: 107486 calls built a comb (27.7%)
+dpu: por: stats: por: alt: 26089 calls explored a comb (6.7%)
+dpu: por: stats: por: |comb|: size/nc=26089/4; min/max/avg=1/4/1.87; {size=count/mass}={2=20355/78.0%; 1=4558/17.5%; 3=1161/4.5%; (rest)=15/0.1%}
+dpu: por: stats: resources: 5.773 s wall time
+dpu: por: stats: resources: 5.045 s cpu time
+dpu: por: stats: resources: 166M max RSS
+dpu: por: stats: perf: 1279 executions/sec
+dpu: por: stats: perf: 32214 ev/sec
+dpu: por: summary: 0 defects, 7384 max-configs, 0 SSBs, 185975 events, 5.773 sec, 166M
+
+stderr:
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu poke-threads10_iters3.i -k0 --mem 128M --stack 6M -O1"
+	User time (seconds): 5.09
+	System time (seconds): 4.00
+	Percent of CPU this job got: 155%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.85
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 170328
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 36120
+	Voluntary context switches: 252861
+	Involuntary context switches: 1723
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 160
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

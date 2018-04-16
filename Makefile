@@ -8,11 +8,13 @@ all:
 
 install-dependencies:
 	# llvm apt sources
+	(apt-cache policy | grep 'ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu') || \
+		sudo apt-add-repository 'deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu trusty main'
 	(apt-cache policy | grep 'http://apt.* llvm-toolchain-xenial-6.0/main') || \
 		sudo apt-add-repository 'deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial-6.0 main'
 	sudo apt-get update
-	# wget and webfs
-	sudo apt-get install ca-certificates wget webfs
+	# wget
+	sudo apt-get install ca-certificates wget
 	# devel tools
 	sudo apt-get install bc git time make python
 	# llvm-4.0 (for nidhugg)
@@ -63,7 +65,11 @@ sec6.2-compile-dpu:
 sec6.2-gen-csv:
 	./scripts/run-sec6.2-gen-csv.sh
 
-sha1sums:
-	echo FIXME
+sec6.3-table2-dpu:
+	./scripts/run-table2-dpu.sh
 
-.PHONY: sec6.1-table1
+sha1sums:
+	git pull
+	./scripts/compute-sha1.sh
+
+.PHONY: sec6.1-table1 sha1sums

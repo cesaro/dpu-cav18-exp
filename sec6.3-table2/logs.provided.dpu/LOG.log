@@ -1,0 +1,223 @@
+=======
+Starting the script
+Date: Mon, 16 Apr 2018 08:36:35 +0000
+=======
+
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu --help
+Usage: dpu FILE.{c,i,bc,ll} ANALYZEROPTS -- PROGRAMOPTS
+
+where ANALYZEROPTS are options for DPU and PROGRAMOPTS is the command-line
+(the value of argv) that the program under analysis will receive. Note that
+PROGRAMOPTS shall include argv[0], usually the program name.
+
+Options in ANALYZEROPTS can be:
+
+General:
+ -h, --help
+   Show this message.
+ -V, --version
+   Display version information.
+ -v [N], --verb=N
+   Increment verbosity level by optional parameter N (1 to 3). Can be repeated.
+ --gdb
+   Runs dpu in a gdb session.
+ --callgrind
+   Runs dpu in a callgrind session.
+
+Analysis:
+ -a A, --analysis=A
+   Perform one of the following dynamic analyses (default 'por'):
+   * A = por : Partial-order reduction
+   * A = dr  : Partial-order reduction followed by data-race detection
+ -k N, --altbound=N
+   Use N-partial alternatives during POR exploration (default 1). Valid values are:
+   * N = -1 : Source DPOR. This is slighly different and less powerful than N=1. FIXME
+   * N = 0  : Optimal DPOR
+   * N >= 1 : Quasi-Optimal POR using N-partial alternatives
+ -x N, --maxcts N
+   Prune POR tree beyond N context switches (default: no limit).
+ --strace
+   Print strace(1)-like info on program execution (default 0).
+ --dosleep
+   Make sleep(3) not to return EINTR immediately (default 0).
+ --timeout N
+   Abort exploration after N seconds.
+ --dot=PATH
+   Store in PATH a DOT digraph representing the full unfolding.
+ --drfreq=N
+   Use N% of the Mazurkiewicz traces found during POR analysis for
+   data-race detection (default 10).
+
+Execution environment:
+ -D MACRO
+   Define a preprocessor macro.
+ -O N
+   Set the optimization level (0 to 3) to N (default 1).
+ -m N, --mem=N
+   Set the guest memory, in MB (default 128M).
+ -s N, --stack=N
+   Set default size for thread stacks, in MB (default 1M).
+ --dump-instr=FILE.ll
+   Dump instrumented LLVM bytecode to FILE.ll.
+dpu v0.5.2 (c5df6e5, dirty), compiled Sat, 14 Apr 2018 21:20:08 +0000
+Build type: release
+Features: -detailed-stats 
+Event structure: 29 slots, up to 1290555 events/slot, 256M memory per slot, 7G total memory, aligned to 8G, skip-step 4
+Trace buffer size: 1.0 Mevents
+Maximum verbosity level: 2
+Compilation: clang++-6.0 -Wall -std=c++11 -O3 -I ./src -I/usr/lib/llvm-6.0/include   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -I ./lib/steroids/include/  -c -o config.h config.mk
+
+If you see error messages above this line,
+then check that you understand what you are doing.
+
+make[1]: Entering directory `/home/ubuntu/cesar/dpu-cav18-exp/benchmarks/debian/mafft-7.123/core'
+make[1]: `addsingle' is up to date.
+make[1]: `dndpre' is up to date.
+make[1]: `makedirectionlist' is up to date.
+make[1]: `mccaskillwrap' is up to date.
+make[1]: `pairlocalalign' is up to date.
+make[1]: Leaving directory `/home/ubuntu/cesar/dpu-cav18-exp/benchmarks/debian/mafft-7.123/core'
+make[1]: Entering directory `/home/ubuntu/cesar/dpu-cav18-exp/benchmarks/debian/blktrace-1.0.5/blkiomon'
+gcc -MM -Wall -O2 -g -W -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 *.c 1> .depend
+make[1]: Leaving directory `/home/ubuntu/cesar/dpu-cav18-exp/benchmarks/debian/blktrace-1.0.5/blkiomon'
+=======
+Running tool DPU
+Date: Mon, 16 Apr 2018 08:36:37 +0000
+=======
+total 9.3M
+-rw-rw-r-- 1 ubuntu ubuntu  13K Apr 16 08:36 1ped.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 2.3K Apr 16 08:36 2seq.aln.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 2.3K Apr 16 08:36 2seq.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 3.5K Apr 16 08:36 3seq.aln.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 3.5K Apr 16 08:36 3seq.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 4.7K Apr 16 08:36 4seq.aln.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 4.6K Apr 16 08:36 4seq.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 5.8K Apr 16 08:36 5seq.aln.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 5.7K Apr 16 08:36 5seq.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 7.0K Apr 16 08:36 6seq.aln.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 6.9K Apr 16 08:36 6seq.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 8.3K Apr 16 08:36 7seq.aln.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 8.0K Apr 16 08:36 7seq.fasta
+-rw-rw-r-- 1 ubuntu ubuntu 2.1M Apr 16 08:36 addsingle.bc
+-rw-rw-r-- 1 ubuntu ubuntu  92K Apr 16 08:36 blkiomon.bc
+-rw-rw-r-- 1 ubuntu ubuntu 945K Apr 16 08:36 dndpre.bc
+-rw-rw-r-- 1 ubuntu ubuntu   79 Apr 16 08:36 hat2.2seq
+-rw-rw-r-- 1 ubuntu ubuntu  122 Apr 16 08:36 hat2.3seq
+-rw-rw-r-- 1 ubuntu ubuntu  166 Apr 16 08:36 hat2.4seq
+-rw-rw-r-- 1 ubuntu ubuntu  216 Apr 16 08:36 hat2.5seq
+-rw-rw-r-- 1 ubuntu ubuntu  268 Apr 16 08:36 hat2.6seq
+-rw-rw-r-- 1 ubuntu ubuntu  335 Apr 16 08:36 hat2.7seq
+-rw-rw-r-- 1 ubuntu ubuntu 6.6K Apr 16 08:36 hat2.sample36
+-rw-rw-r-- 1 ubuntu ubuntu   68 Apr 16 08:36 hat3.2seq
+-rw-rw-r-- 1 ubuntu ubuntu  344 Apr 16 08:36 hat3.3seq
+-rw-rw-r-- 1 ubuntu ubuntu  847 Apr 16 08:36 hat3.4seq
+-rw-rw-r-- 1 ubuntu ubuntu 1.6K Apr 16 08:36 hat3.5seq
+-rw-rw-r-- 1 ubuntu ubuntu 2.5K Apr 16 08:36 hat3.6seq
+-rw-rw-r-- 1 ubuntu ubuntu 6.5K Apr 16 08:36 hat3.7seq
+-rw-rw-r-- 1 ubuntu ubuntu 276K Apr 16 08:36 hat3.sample36
+-rw-rw-r-- 1 ubuntu ubuntu  38K Apr 16 08:36 input1.dat
+-rw-rw-r-- 1 ubuntu ubuntu 4.5K Apr 16 08:36 input2.dat
+-rw-rw-r-- 1 ubuntu ubuntu 3.4K Apr 16 08:36 LOG.log
+-rw-rw-r-- 1 ubuntu ubuntu 2.0M Apr 16 08:36 makedirectionlist.bc
+-rw-rw-r-- 1 ubuntu ubuntu 959K Apr 16 08:36 mccaskillwrap.bc
+-rwxrwxr-x 1 ubuntu ubuntu 816K Apr 16 08:36 mxscarnamod
+-rw-rw-r-- 1 ubuntu ubuntu 2.1M Apr 16 08:36 pairlocalalign.bc
+-rw-rw-r-- 1 ubuntu ubuntu  29K Apr 16 08:36 sample36.aln.fasta
+-rw-rw-r-- 1 ubuntu ubuntu  17K Apr 16 08:36 sample36.fasta
+-rw-rw-r-- 1 ubuntu ubuntu  17K Apr 16 08:36 sample.fasta
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/addsingle.bc -k0 --mem 350M --stack 2M -O2 -- addsingle -C 2 -K -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/3seq.aln.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+addsingle_threads2_seq3.log,                                            12.263,     418,       2,       0,      23,       1,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/addsingle.bc -k0 --mem 350M --stack 2M -O2 -- addsingle -C 4 -K -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/3seq.aln.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+addsingle_threads4_seq3.log,                                            13.217,     425,      24,       0,     311,       5,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/addsingle.bc -k0 --mem 350M --stack 2M -O2 -- addsingle -C 6 -K -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/3seq.aln.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+addsingle_threads6_seq3.log,                                            36.785,     434,     720,       0,   10221,       5,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/addsingle.bc -k0 --mem 350M --stack 2M -O2 -- addsingle -C 8 -K -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/3seq.aln.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+addsingle_threads8_seq3.log,                                                TO,     473,       -,       -,       -,       -,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/blkiomon.bc -k0 --mem 350M --stack 2M -O2 -- blkiomon -I 1 -x 5 -y 5 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/input1.dat
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+blkiomon_x5_y5_input1.log,                                               0.648,      49,       1,       0,      13,       0,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/blkiomon.bc -k0 --mem 350M --stack 2M -O2 -- blkiomon -I 1 -x 15 -y 5 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/input1.dat
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+blkiomon_x15_y5_input1.log,                                              0.653,      47,       5,       0,      59,       0,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/blkiomon.bc -k0 --mem 350M --stack 2M -O2 -- blkiomon -I 1 -x 18 -y 5 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/input1.dat
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+blkiomon_x18_y5_input1.log,                                              0.694,      47,     180,       0,    1841,       0,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/blkiomon.bc -k0 --mem 350M --stack 2M -O2 -- blkiomon -I 1 -x 20 -y 5 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/input1.dat
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+blkiomon_x20_y5_input1.log,                                              0.878,      47,    1147,       0,   11223,       0,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/blkiomon.bc -k0 --mem 350M --stack 2M -O2 -- blkiomon -I 1 -x 22 -y 5 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/input1.dat
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+blkiomon_x22_y5_input1.log,                                              1.861,      57,    5424,       0,   52185,       0,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/blkiomon.bc -k0 --mem 350M --stack 2M -O2 -- blkiomon -I 1 -x 24 -y 5 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/input1.dat
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+blkiomon_x24_y5_input1.log,                                              5.281,     105,   20372,       0,  196483,       0,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/dndpre.bc -k0 --mem 350M --stack 2M -O2 -- dndpre -C 2 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+dndpre_threads_seq.log,                                                  8.125,     361,      80,       0,     945,       5,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/dndpre.bc -k0 --mem 350M --stack 2M -O2 -- dndpre -C 4 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/2seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+dndpre_threads_seq.log,                                                  8.252,     349,      96,       0,    1225,       0,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/dndpre.bc -k0 --mem 350M --stack 2M -O2 -- dndpre -C 4 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+dndpre_threads_seq.log,                                                     TO,     396,       -,       -,       -,       -,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/dndpre.bc -k0 --mem 350M --stack 2M -O2 -- dndpre -C 6 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/2seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+dndpre_threads_seq.log,                                                141.961,     360,    4320,       0,   61273,       0,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/makedirectionlist.bc -k0 --mem 350M --stack 2M -O2 -- makedirectionlist -m -I 0 -t 0.01 -C 1 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+makedirectionlist_threads_seq.log,                                      11.898,     428,       1,       0,      58,       2,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/makedirectionlist.bc -k0 --mem 350M --stack 2M -O2 -- makedirectionlist -m -I 0 -t 0.01 -C 2 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/2seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+makedirectionlist_threads_seq.log,                                      12.218,     406,       9,       0,     138,       4,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/makedirectionlist.bc -k0 --mem 350M --stack 2M -O2 -- makedirectionlist -m -I 0 -t 0.01 -C 2 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/3seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+makedirectionlist_threads_seq.log,                                      31.887,     426,     576,       0,    7945,       5,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/makedirectionlist.bc -k0 --mem 350M --stack 2M -O2 -- makedirectionlist -m -I 0 -t 0.01 -C 3 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/2seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+makedirectionlist_threads_seq.log,                                      20.138,     413,     256,       0,    3266,       5,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/makedirectionlist.bc -k0 --mem 350M --stack 2M -O2 -- makedirectionlist -m -I 0 -t 0.01 -C 4 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/3seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+makedirectionlist_threads_seq.log,                                          TO,     474,       -,       -,       -,       -,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 1 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/5seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+pairlocalalign_threads1_seq5.log,                                       15.934,     441,       1,       0,      24,       1,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 2 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+pairlocalalign_threads2_seq4.log,                                      222.070,     448,      80,       0,     945,       5,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 4 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/3seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+pairlocalalign_threads4_seq3.log,                                           TO,     454,       -,       -,       -,       -,
+
+# /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 6 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/3seq.fasta
+LOG,                                                                     WTIME,  MAXRSS,  MAXCON,    SSBS,  EVENTS, DEFECTS,
+pairlocalalign_threads6_seq3.log,                                           TO,     445,       -,       -,       -,       -,
+
+=======
+Finished
+Date: Mon, 16 Apr 2018 09:25:42 +0000
+=======

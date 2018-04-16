@@ -17,35 +17,6 @@ Specifically we include:
 * The [benchmarks](benchmarks/) used in the paper.
 * Documentation providing [guided steps](doc/1-intro.md) to repeat the experiments.
 
-If you want to repeat the experiments, please continue reading the
-[guided steps](doc/1-intro.md).
+If you want to repeat the experiments, please continue reading the file
+`doc/1-intro.md`, available [here](doc/1-intro.md).
 
-<!--
-Makefile
-- build the tools
-- compute a copy of the file SHA1SUMS and run a diff
-
-doc/1-main.md
-doc/2-compiling-tools.md
-doc/3-section-6.1.md
-doc/4-section-6.2.md
-doc/5-section-6.3.md
-doc/6-section-6.4.md
-doc/img
-
-dist/bin
-dist/lib
-dist/...
-
-tools/dpu
-tools/nidhugg
-tools/maple
-
-sec6.1-table1-dpu-vs-nidhugg
-sec6.2-fig3-trees
-sec6.3-table2-debian-packages
-sec6.4-profiling
-
-benchmarks/paper
-benchmarks/debian
--->
