@@ -94,7 +94,7 @@ in which we call `cpp` on the benchmarks with suitable -D macros to instantiate 
 in the example above, in log folders.
 4. **Parse log files** and **generate LaTex table** in `TABLE.tex` with the function `dump_latex()` which is displayed as follows:
 
-![](img/table1_runtable1.png)
+![](img/table1-runtable1.png)
 
 Although run times and memory consumption sizes are not identical to those
 shown in the paper, observe that the variations are usually quite small.
