@@ -105,8 +105,8 @@ events in another set.
 conflicting extensions to event structure when it finds.
 * __Exploring the comb__: corresponds to `dpu::C15unfolder::enumerate_combination()` which enumerates all possible combinations
 over a comb to find out a qualified one.
-* __Reset the comb__: `Comb::clear()` sets the comb to empty.
-* __Taking out event from spike__: `Spike::pop_back()` pops out one event from a spike.
+* __Resetting the comb__: `Comb::clear()` sets the comb to empty.
+* __Popping event from spike__: `Spike::pop_back()` pops out one event from a spike.
 
 ### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
 Running DPU under `callgrind` for all the benchmarks, we select some representative one for each benchmark
