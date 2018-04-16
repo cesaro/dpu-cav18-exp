@@ -29,8 +29,7 @@ These files can also be generated using the following commands.  From the root
 of the project type:
 
 ```sh
-dpu benchmarks/multiprodcon.c -DPARAM1=FIXME -DPARAM2=FIXME -k 0 --callgrind
-FIXMEEEEEEEEEEEEE
+./dist/dpu/bin/dpu ./benchmarks/multiprodcon.c -DPARAM1=3 -DPARAM2=5 -k 0 --callgrind
 ```
 
 [Callgrind]: http://valgrind.org/docs/manual/cl-manual.html
