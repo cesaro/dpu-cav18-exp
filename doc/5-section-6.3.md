@@ -38,5 +38,4 @@ There are two parts in this experiment:
    ```
 
    This creates a directory `benchmarks/__results` with two folders. Now grep
-   for: `finished execution` and `execution time`.
-     
+   for the strings `finished execution` and `execution time`.
