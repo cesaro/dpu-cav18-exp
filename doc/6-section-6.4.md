@@ -1,6 +1,6 @@
 ## Reproducing Section 6.4: Profiling DPU
 
-Navigation: [Table of contents], [Previous section]
+Navigation: [[Table of contents]], [[Previous section]], [[Next section]]
 
 [Table of contents]: 1-intro.md#index
 [Previous section]: 5-section-6.3.md
