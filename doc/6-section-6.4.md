@@ -56,7 +56,8 @@ kcachegrind sec6.4-profiling/callgrind.out/callgrind.out.mpc3_5
 ```
 
 This will take few seconds to launch (alternatively you could install
-KCachegrind in your own machine and visualize the `callgrind.out.*` files).
+KCachegrind in your own machine and visualize the `callgrind.out.*` files
+locally).
 The first screen presents a list of all the profiled procedures as the image
 below:
 

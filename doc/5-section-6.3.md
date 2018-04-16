@@ -26,7 +26,7 @@ There are two parts in this experiment:
    previous run in `sec6.3-table2/logs.provided`, also
    [available here](../sec6.3-table2/logs.provided/).
 
-   The script will take around 1h 30min to finish, perhaps less.
+   The script will take around 50 min to finsh.
 
    The main log file in that folder is `LOG.log`, an example can be found
    [here](../sec6.3-table2/logs.provided/LOG.log).

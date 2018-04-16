@@ -13,7 +13,7 @@ But if the reviewer wants to recompile DPU or Nidhugg, their sources are
 contained in the folder `tools/`:
 
 ```sh
-$ find tools | grep zip
+$ find tools | grep zip$
 tools/dpu/dpu-0.5.2.zip
 tools/nidhugg/nidhugg-375c554fdb208e2c50f35c618ed22cb2096ce4da.zip
 ```
@@ -44,10 +44,5 @@ make compile-nidhugg
 make compile-dpu
 ```
 
-After compiling the tools you may wish to install the binaries in the `dist/`
-folder, overwritting the already provided binaries:
-
-```sh
-make install-nidhugg
-make install-dpu
-```
+This will compile and install these two tools in the `dist/` folder (thus
+overwriting the binaries we provided there).
