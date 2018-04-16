@@ -29,7 +29,12 @@ These files can also be generated using the following commands.  From the root
 of the project type:
 
 ```sh
+./dist/dpu/bin/dpu benchmarks/dispatcher.c -DPARAM1=5 -DPARAM2=3 -k 0 --callgrind
 ./dist/dpu/bin/dpu benchmarks/multiprodcon.c -DPARAM1=3 -DPARAM2=5 -k 0 --callgrind
+./dist/dpu/bin/dpu benchmarks/pi/pth_pi_mutex.c -DPARAM1=5 -DPARAM2=40000 -k 0 --callgrind
+./dist/dpu/bin/dpu benchmarks/mpat.c -DPARAM1=6  -k 0 --callgrind
+./dist/dpu/bin/dpu benchmarks/poke.c -DPARAM1=7 -DPARAM2=3 -k 0 --callgrind
+
 ```
 
 [Callgrind]: http://valgrind.org/docs/manual/cl-manual.html
