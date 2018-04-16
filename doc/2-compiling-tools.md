@@ -6,9 +6,11 @@ Navigation: [Table of contents], [Previous section], [Next section]
 [Previous section]: 1-intro.md
 [Next section]: 3-section-6.1.md
 
-FIXME Maple and pin
+Precompiled binaries of the tools used in these experiments are included in the
+folder `dist/`. Therefore there is no need to manually compile any tool.
 
-The sources of both DPU and Nidhugg are contained in the folder `tools/`:
+But if the reviewer wants to recompile DPU or Nidhugg, their sources are
+contained in the folder `tools/`:
 
 ```sh
 $ find tools | grep zip
