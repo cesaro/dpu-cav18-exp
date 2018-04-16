@@ -73,14 +73,14 @@ The `make` command above executes the script `script/run-table1.sh`, which in
 turn generates the folder `sec6.1-table1/logs.XXXXX` (where XXXXX is the
 date/time at which you call the script). The script puts all its outputs and
 intermediate files in this folder.  We provide an en example of this folder in
-`sec6.1-table1/logs.provided/`, also [available here](sec6.1-table1/logs.provided/).
+`sec6.1-table1/logs.provided/`, also [available here](../sec6.1-table1/logs.provided/).
 
 The outputs in this folder include:
 
 * File `LOG.rst`: this is the execution log of the script.
-  Example output [here](sec6.1-table1/logs.provided/LOG.rst).
+  Example output [here](../sec6.1-table1/logs.provided/LOG.rst).
 * File `TABLE.tex`: the LaTeX source of Table 1, automatically generated from the output logs.
-  Example output [here](sec6.1-table1/logs.provided/TABLE.rst).
+  Example output [here](../sec6.1-table1/logs.provided/TABLE.tex).
 
 The folder also contains a number of intermediate files.  For each instantiation
 of the parameters of a parametric benchmark, the folder contains the
@@ -124,8 +124,7 @@ this algorithm, is regarded as redundant.
 
 ### How the Script Works
 
-The script `scripts/run-table1.sh` works in XXX phases.
-
+The script `scripts/run-table1.sh` works in 4 phases.
 
 1. After printing a number of debugging informations (memory of the machine,
    versions of the tools), it **preprocesses** (using `cpp`)
@@ -166,39 +165,42 @@ into this:
 
 ### Running the Tools by Hand
 
-- Give the command line to invoke DPU or nidhugg by hand on a simple example.
-- Explain briefly the output.
+Here are a couple of examples how to run DPU and Nidhugg on some benchmarks of
+Table 1:
 
-The binary tools are located in subfolders of the `dist` directory.
+```sh
+$ dist/dpu/bin/dpu benchmarks/dispatcher.c -DPARAM1=5 -DPARAM2=2 --mem 128M --stack 6M -O1 -k1
+```
+
+This will run DPU on the benchmark `Disp(5,2)` in the table, with the following
+parameters:
+
+* `-DPARAMX=Y`: these are macros that DPU will directly pass to the `clang`.
+* `--mem 128M`: the benchmark will be executed in a restricted environment of
+  128M of RAM memory.
+* `--stack 6M`: the stack size of the threads created by the benchmark will have,
+  by default, 6M.
+* `-O1`: DPU will compile the benchmark with `clang -O1` before executing it
+* `-k1`: use 1-partial alternatives (described in the paper)
 
 The documentation of the command-line interface of DPU is given by:
 ```sh
 ./dist/dpu/bin/dpu --help
 Usage: dpu FILE.{c,i,bc,ll} ANALYZEROPTS -- PROGRAMOPTS
+[...]
 ```
 
-For instance :
-```sh
-./dist/dpu/bin/dpu benchmarks/dispatcher.c
-```
-
-The parameters are passed as pre-compiler options, e.g. `-DPARAM1=5`.
-
-An interesting parameter here is the k parameter (`-k N`): it provides how close to optimal POR the tool will be. If N=0, DPU will run optimal DPO, otherwise if will use N-partial alternatives. 
-
-In a similar way, the documentation of the command-line interface of Nidhugg is given by:
+Another example:
 
 ```sh
-./dist/nidhugg/bin/nidhuggc --help
-Usage: ./dist/nidhugg/bin/nidhuggc [[COMPILER/NIDHUGGC OPTIONS --] NIDHUGG/NIDHUGGC OPTIONS] FILE [-- [PROGRAM ARGUMENTS]]
+$ cpp benchmarks/dispatcher.c -DPARAM1=5 -DPARAM2=2 -o /tmp/disp_5_2.i
+$ dist/nidhugg/bin/nidhuggc --c -sc -extfun-no-race=printf /tmp/disp_5_2.i
 ```
 
-In particular, Nidhugg needs to be provided a memory model. For instance, it can run with:
-
-```sh
-./dist/nidhugg/bin/nidhuggc --c -sc benchmarks/dispatcher.c
-```
+The first command runs the pre-processor on the benchmark. The second one runs
+Nidhugg.
 
 ### Compiling the Tools by Hand
 
-Documentation on how to compile the tools is given in the [Previous section].
+Documentation on how to compile the tools is given in the
+[previous section](2-compiling-tools.md)
