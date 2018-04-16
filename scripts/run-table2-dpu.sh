@@ -140,5 +140,5 @@ ln -s $LOGS $R/sec6.3-table2/logs
 
 cd $LOGS
 
-main 2>&1 | tee XXX.log
+main 2>&1 | tee LOG.log
 
