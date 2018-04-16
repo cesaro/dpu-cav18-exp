@@ -175,7 +175,7 @@ $ dist/dpu/bin/dpu benchmarks/dispatcher.c -DPARAM1=5 -DPARAM2=2 --mem 128M --st
 This will run DPU on the benchmark `Disp(5,2)` in the table, with the following
 parameters:
 
-* `-DPARAMX=Y`: these are macros that DPU will directly pass to the `clang`.
+* `-DPARAMX=Y`: these are macros that DPU will use to preprocess the `.c` file.
 * `--mem 128M`: the benchmark will be executed in a restricted environment of
   128M of RAM memory.
 * `--stack 6M`: the stack size of the threads created by the benchmark will have,

@@ -65,7 +65,11 @@ sec6.2-compile-dpu:
 sec6.2-gen-csv:
 	./scripts/run-sec6.2-gen-csv.sh
 
+sec6.3-table2-dpu:
+	./scripts/run-table2-dpu.sh
+
 sha1sums:
+	git pull
 	./scripts/compute-sha1.sh
 
 .PHONY: sec6.1-table1 sha1sums

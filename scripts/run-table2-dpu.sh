@@ -7,14 +7,8 @@ TIMEOUT=8m
 
 # ==== END CONFIGURATION VARIABLES ====
 
-# select the right installation depending on the machine
-
-DPU=../dist/dpu/bin/dpu
-B=../benchmarks
-O=obj-dpu
-
 # utilitary functions to run benchmarks
-source runlib.sh
+source scripts/runlib.sh
 
 compile_bench ()
 {
@@ -68,8 +62,6 @@ runall_dpu ()
          run_dpu
       done
    done
-
-exit 0
 
    # blktrace - blkiomon
    N=blkiomon
@@ -135,15 +127,18 @@ main ()
    print_date "Finished"
 }
 
-rm -Rf $O
-mkdir $O
+R=$PWD
+DPU=$R/dist/dpu/bin/dpu
+B=$R/benchmarks
+LOGS=$R/sec6.3-table2/logs.$(date +%F_%a_%T)
+O=$LOGS
 
-# R=table2-dpu.$(date -R | sed -e 's/ /_/g' -e 's/[,+]//g' -e 's/:/-/g')
-# rm -Rf $R latest.table2-dpu
-# mkdir $R
-# ln -s $R latest.table2-dpu
-# cd $R
-# 
-# R=..
+rm -Rf $LOGS
+mkdir -p $LOGS
+rm -f $R/sec6.3-table2/logs
+ln -s $LOGS $R/sec6.3-table2/logs
+
+cd $LOGS
+
 main 2>&1 | tee XXX.log
 
