@@ -29,7 +29,7 @@ These files can also be generated using the following commands.  From the root
 of the project type:
 
 ```sh
-./dist/dpu/bin/dpu ./benchmarks/multiprodcon.c -DPARAM1=3 -DPARAM2=5 -k 0 --callgrind
+./dist/dpu/bin/dpu benchmarks/multiprodcon.c -DPARAM1=3 -DPARAM2=5 -k 0 --callgrind
 ```
 
 [Callgrind]: http://valgrind.org/docs/manual/cl-manual.html
@@ -68,37 +68,37 @@ performance in term of percentage or the number of instruction fetch cost (Click
 ![](img/icon-per.png) to switch the display choice).  In our example above, you see the functions'
 run time in percentage as we chose the icon. We witness three sub-functions : `stid::Executor::run()` takes 60.10%,
 `dpu::C15unfolder::stream_to_events()` takes 13.54% and
-`dpu::C15unfolder::find_alternative()` takes 18.86% the run time of their parent of
+`dpu::C15unfolder::find_alternative()` takes 18.86% of the run time of their parent
 `dpu::C15unfolder::explore()`.
 In Call Graph, you can choose to display the percentage of a function relative to its parent or relative
-to overall run time by click or unclick on the icon ![](img/icon-rel.png) in the tool bar.  In this example,
-it is relative to that of functions' parents.
+to overall run time by clicking/unclicking on the icon ![](img/icon-rel.png) in the tool bar.  In this example,
+it is relative to that of function' parents.
 Many other minor functions are skipped, but you can find some of them in the list in *All Callees* tab
-or just do a search in the left panel. For example, we found in this image below the function
-`dpu::C15unfolder::enumerate_combination()` with only 0.44% of
-`dpu::C15unfolder::explore()` 's run time which is not displayed in Call Graph.
+or just do a search in the left panel. For example, we found in the image below the function
+`dpu::C15unfolder::enumerate_combination()` with only 0.44% of the run time of
+`dpu::C15unfolder::explore()` which is not displayed in Call Graph.
 
 ![](img/explore-allcalles.png)
 
 ### The most relevant C++ functions
 In the sections below, we will refer to various tasks such as executing program under analysis, computing alternatives, etc.
 In this section, we explain the correspondence between these tasks and the C++ functions implementing them in DPU.
-* _Main procedure of DPU_: corresponds to function `dpu::C15unfolder::explore()`.  It directly works on
+* __Main procedure of DPU__: corresponds to function `dpu::C15unfolder::explore()`.  It directly works on
 the program under analysis including executing the program, building event structure, computing alternatives, etc.
-* _Running the program under analysis_: corresponds to function `stid::Executor::run()` which calls the front end Steroids
+* __Running the program under analysis__: corresponds to function `stid::Executor::run()` which calls the front end Steroids
 to execute the target program as a C multithreaded program and produces a stream of actions.
-* _Adding events to event structure_: corresponds to function `dpu::C15unfolder::stream_to_events()` which converts the
+* __Adding events to event structure__: corresponds to function `dpu::C15unfolder::stream_to_events()` which converts the
 stream of actions achieved from `stid::Executor::run()` into events in event structure called a _maximal configuration_.
-* _Adding spikes to the comb_: corresponds to `Comb::add_spike()` which builds the comb by adding appropriate
+* __Adding spikes to the comb__: corresponds to `Comb::add_spike()` which builds the comb by adding appropriate
 events in spikes.
-* _Checking conflict_: Function `dpu::Primecon::in_cfl_with()`  checks the conflict between each event in spikes with
+* __Checking conflict__: Function `dpu::Primecon::in_cfl_with()`  checks the conflict between each event in spikes with
 events in another set.
-* _Computing conflicting extensions_: Function `dpu::C15unfolder::compute_cex()` adds a set of events called
+* __Computing conflicting extensions__: Function `dpu::C15unfolder::compute_cex()` adds a set of events called
 conflicting extensions to event structure when it finds.
-* _Exploring the comb_: corresponds to `dpu::C15unfolder::enumerate_combination()` which enumerates all possible combinations
+* __Exploring the comb__: corresponds to `dpu::C15unfolder::enumerate_combination()` which enumerates all possible combinations
 over a comb to find out a qualified one.
-* _Reset the comb_: `Comb::clear()` sets the comb to empty.
-* _Taking out event from spike_: `Spike::pop_back()` pops out one event from a spike.
+* __Reset the comb__: `Comb::clear()` sets the comb to empty.
+* __Taking out event from spike__: `Spike::pop_back()` pops out one event from a spike.
 
 ### Claim 1:  DPU spends between 30% and 90% of the time running the program under anlaysis.
 Running DPU under `callgrind` for all the benchmarks, we select some representative one for each benchmark
@@ -155,13 +155,13 @@ Hence, building a comb takes around 15.41% in total.
 
 Do the same for the rest, we get the table below:
 
-| Benchmarks  | Add spike (%)| Check conflict (%) | Build comb (%) |
-| --------------- | -------------- | ----------------------- | ----------------- |
-| DISP (5,3)      |    6.94          |      11.22                    |       18.16       |
-| MPC()            |    4.24           |      11.17                  |      15.41           |
-| PI(5,40000)    |     0.16          |       0                        |     0.16           |
-| MPAT()           |    5.94           |        4.6                    |    10.54         |
-| POL(7,3)        |     7.66         |       19.7                   |    27.36         |
+| Benchmarks  | Add spike (%) | Check conflict (%) | Build comb (%) |
+| --------------- | -----------------| --------------------- | ------------------ |
+| DISP (5,3)      |    6.94              |      11.22                |       18.16           |
+| MPC()            |    4.24              |      11.17                |      15.41            |
+| PI(5,40000)    |    0.16              |       0                      |     0.16               |
+| MPAT()           |    5.94              |        4.6                  |    10.54              |
+| POL(7,3)        |    7.66              |       19.7                 |    27.36              |
 
 Except benchmark PI, all the others gives us the time of building a new comb in the range of 1% to 50%.
 
@@ -171,12 +171,12 @@ The time of solving the comb is the time of `dpu::C15unfolder::enumerate_combina
 as shown in the table below. They are even not greater than 1% in this representative selection of benchmarks.
 
 Benchmarks  |   Explore comb (%) |
-| -------------- |  --------------- |
-| DISP (5,3)    |    1                 |
-| MPC()          |     0.5             |
-| PI(5,40000)  |     0.2             |
-| MPAT()         |     0.74           |
-| POL(7,3)      |     1                |
+| -------------  |  ----------------------|
+| DISP (5,3)    |    1                           |
+| MPC()          |     0.5                       |
+| PI(5,40000)  |     0.2                       |
+| MPAT()         |     0.74                     |
+| POL(7,3)      |     1                          |
 
 ### Claim 6: DPU spends less than 5% of the time computing conflicting extensions
 
@@ -184,11 +184,11 @@ The run time of `dpu::C15unfolder::compute_cex()` is also small, conforming to t
 See the table below for more details
 
 | Benchmarks  |  Compute conflicting extension (%) |
-| ---------------- | --------------------------------------- |
-| DISP (5,3)      |    3.9              |
-| MPC(3,5)       |   3.55             |
-| PI(5,40000)    |   0.97             |
-| MPAT()           |   3.4               |
-| POL(7,3)        |   2.67             |
+| --------------- | ----------------------------------------  |
+| DISP (5,3)      |                 3.9                                     |
+| MPC(3,5)       |                 3.55                                   |
+| PI(5,40000)    |                 0.97                                   |
+| MPAT()           |                 3.4                                     |
+| POL(7,3)        |                 2.67                                   |
 
 
