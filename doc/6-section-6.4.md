@@ -55,8 +55,10 @@ From the root of the repository, run
 kcachegrind sec6.4-profiling/callgrind.out/callgrind.out.mpc3_5
 ```
 
-This will take few seconds to launch.  The first screen presents a list of all
-the profiled procedures as the image below:
+This will take few seconds to launch (alternatively you could install
+KCachegrind in your own machine and visualize the `callgrind.out.*` files).
+The first screen presents a list of all the profiled procedures as the image
+below:
 
 ![](img/main-screen.png)
 
