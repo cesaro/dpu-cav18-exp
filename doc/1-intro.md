@@ -3,17 +3,15 @@ CAV'18 Experiments with DPU: Replicability Guide
 
 ## Introduction
 
-The documents in this folder provide guided steps to replicate the experimental
-results of our CAV'18 paper.
-
-This document contains images and links, and it is easier to read online, please
-point your browser to:
+This tutorial provides guided steps to replicate the experimental results of our
+CAV'18 paper.  The tutorial contains images and links, and it is easier to read
+online, please point your browser to:
 
 https://github.com/cesaro/dpu-cav18-exp/blob/master/doc/1-intro.md
 
 The online version is identical to the one installed in the virtual machine that
 we provide, as the SHA1 sum that we provided in Easychair also covers the Gihub
-repository linked above (more on this below).
+repository hosting the link above (more on this below).
 
 ## Index
 
@@ -41,7 +39,7 @@ Each reviewer has received in Easychair a SHA1 signature of the files
 installed in their account. This sum is computed as a hash of the following:
 
 * All files in the repository.
-* All content avilable in the repository in Github,
+* All content avilable in the repository in Github
   (https://github.com/cesaro/dpu-cav18-exp)
 
 You can re-compute this hash like this. In your console, `cd` to the root of the
@@ -81,14 +79,8 @@ root of the repository, typing:
 make install-dependencies
 ```
 
-The dependencies installed there are tunnedThe virtual machine provided is running Ubuntu 14.4. 
-This replicability package can also be used with minor modifications in Debian
-9.4 or Ubuntu 16, with the exception of the experiments with Maple, which depend
-on kernel 3.x.
-
-The Makefile provided in the top directory has a target that will install all the dependencies needed by the artifact. However, for this artifact evaluation it is not relevant because all the dependencies have already been installed on the virtual machine.
-
-```sh
-$ make install-dependencies
-```
+The dependencies installed there are specific for Ubuntu 14.  This replicability
+package can also be used with minor modifications in Debian 9.4 or Ubuntu 16,
+with the exception of the experiments with Maple, which depend on kernel 3.x,
+and more recent version of Debian or Ubuntu depend on kernels 4.x.
 
