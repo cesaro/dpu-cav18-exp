@@ -11,10 +11,10 @@ events    -
 
 
 stdout:
-clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.0tM2.multipc-prods5_workers5.i.opt.bc -- 'multipc-prods5_workers5.i'
-llvm-link-6.0 /tmp/dpu.0tM2.multipc-prods5_workers5.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.0tM2.multipc-prods5_workers5.i.bc
-/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.0tM2.multipc-prods5_workers5.i.bc -k0 --mem 128M --stack 6M -O1
-dpu v0.5.2 running, pid 10903
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.elfF.multipc-prods5_workers5.i.opt.bc -- 'multipc-prods5_workers5.i'
+llvm-link-6.0 /tmp/dpu.elfF.multipc-prods5_workers5.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.elfF.multipc-prods5_workers5.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.elfF.multipc-prods5_workers5.i.bc -k0 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 24316
 dpu: performing the following analyses:
 dpu: - POR: checking for assertion violations + deadlocks
 dpu: por: using 'optimal' alternatives
@@ -26,20 +26,20 @@ stderr:
 Terminated
 Command exited with non-zero status 124
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu multipc-prods5_workers5.i -k0 --mem 128M --stack 6M -O1"
-	User time (seconds): 500.43
-	System time (seconds): 22.57
-	Percent of CPU this job got: 108%
+	User time (seconds): 499.89
+	System time (seconds): 23.57
+	Percent of CPU this job got: 109%
 	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:00.00
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 907680
+	Maximum resident set size (kbytes): 907840
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 120892
-	Voluntary context switches: 3870871
-	Involuntary context switches: 61843
+	Minor (reclaiming a frame) page faults: 120922
+	Voluntary context switches: 3879908
+	Involuntary context switches: 62008
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 168

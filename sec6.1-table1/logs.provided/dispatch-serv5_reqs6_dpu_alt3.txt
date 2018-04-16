@@ -11,10 +11,10 @@ events    -
 
 
 stdout:
-clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.8JE8.dispatch-serv5_reqs6.i.opt.bc -- 'dispatch-serv5_reqs6.i'
-llvm-link-6.0 /tmp/dpu.8JE8.dispatch-serv5_reqs6.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.8JE8.dispatch-serv5_reqs6.i.bc
-/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.8JE8.dispatch-serv5_reqs6.i.bc -k3 --mem 128M --stack 6M -O1
-dpu v0.5.2 running, pid 395
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.Xv86.dispatch-serv5_reqs6.i.opt.bc -- 'dispatch-serv5_reqs6.i'
+llvm-link-6.0 /tmp/dpu.Xv86.dispatch-serv5_reqs6.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.Xv86.dispatch-serv5_reqs6.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.Xv86.dispatch-serv5_reqs6.i.bc -k3 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 9555
 dpu: performing the following analyses:
 dpu: - POR: checking for assertion violations + deadlocks
 dpu: por: using '3-partial' alternatives
@@ -27,20 +27,20 @@ dpu: aborting!
 stderr:
 Command exited with non-zero status 1
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu dispatch-serv5_reqs6.i -k3 --mem 128M --stack 6M -O1"
-	User time (seconds): 412.28
-	System time (seconds): 32.78
+	User time (seconds): 407.54
+	System time (seconds): 34.59
 	Percent of CPU this job got: 117%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:19.34
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:15.69
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 1127436
+	Maximum resident set size (kbytes): 1127952
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 150814
-	Voluntary context switches: 6119705
-	Involuntary context switches: 44254
+	Minor (reclaiming a frame) page faults: 150724
+	Voluntary context switches: 6140126
+	Involuntary context switches: 39429
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 168

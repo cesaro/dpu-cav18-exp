@@ -11,16 +11,16 @@ SSBs      -
 stdout:
 
 stderr:
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmp0kz027gf/tmphs5uah9d.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpa24penqg/tmpb2nyugqu.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmp0kz027gf/tmphs5uah9d.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpa24penqg/tmpb2nyugqu.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmp0kz027gf/tmphs5uah9d.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpa24penqg/tmpb2nyugqu.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
 Command exited with non-zero status 124
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow dispatch-serv5_reqs5.i"
-	User time (seconds): 0.04
-	System time (seconds): 0.03
+	User time (seconds): 0.06
+	System time (seconds): 0.02
 	Percent of CPU this job got: 0%
 	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:00.00
 	Average shared text size (kbytes): 0
@@ -30,9 +30,9 @@ Command exited with non-zero status 124
 	Maximum resident set size (kbytes): 21584
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 16206
+	Minor (reclaiming a frame) page faults: 16190
 	Voluntary context switches: 15
-	Involuntary context switches: 7
+	Involuntary context switches: 13
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 144

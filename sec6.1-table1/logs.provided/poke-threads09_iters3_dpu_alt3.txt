@@ -3,18 +3,18 @@ cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/
 
 exitcode  0
 defects   0
-walltime  3.840
-maxrss    138M
+walltime  3.831
+maxrss    140M
 maxconfs  5332
 SSBs      15
 events    126755
 
 
 stdout:
-clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.V9pJ.poke-threads09_iters3.i.opt.bc -- 'poke-threads09_iters3.i'
-llvm-link-6.0 /tmp/dpu.V9pJ.poke-threads09_iters3.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.V9pJ.poke-threads09_iters3.i.bc
-/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.V9pJ.poke-threads09_iters3.i.bc -k3 --mem 128M --stack 6M -O1
-dpu v0.5.2 running, pid 8715
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.tvEn.poke-threads09_iters3.i.opt.bc -- 'poke-threads09_iters3.i'
+llvm-link-6.0 /tmp/dpu.tvEn.poke-threads09_iters3.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.tvEn.poke-threads09_iters3.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.tvEn.poke-threads09_iters3.i.bc -k3 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 26644
 dpu: performing the following analyses:
 dpu: - POR: checking for assertion violations + deadlocks
 dpu: por: using '3-partial' alternatives
@@ -45,30 +45,30 @@ dpu: por: stats: por: alt: 260838 calls
 dpu: por: stats: por: alt: 71589 calls built a comb (27.4%)
 dpu: por: stats: por: alt: 5908 calls explored a comb (2.3%)
 dpu: por: stats: por: |comb|: size/nc=5908/4; min/max/avg=1/4/1.63; {size=count/mass}={1=3266/55.3%; 2=1565/26.5%; 3=1062/18.0%; (rest)=15/0.3%}
-dpu: por: stats: resources: 3.754 s wall time
-dpu: por: stats: resources: 3.185 s cpu time
-dpu: por: stats: resources: 138M max RSS
-dpu: por: stats: perf: 1424 executions/sec
-dpu: por: stats: perf: 1420 max-confs/sec
-dpu: por: stats: perf: 33761 ev/sec
-dpu: por: summary: 0 defects, 5332 max-configs, 15 SSBs, 126755 events, 3.754 sec, 138M
+dpu: por: stats: resources: 3.742 s wall time
+dpu: por: stats: resources: 3.027 s cpu time
+dpu: por: stats: resources: 140M max RSS
+dpu: por: stats: perf: 1428 executions/sec
+dpu: por: stats: perf: 1424 max-confs/sec
+dpu: por: stats: perf: 33871 ev/sec
+dpu: por: summary: 0 defects, 5332 max-configs, 15 SSBs, 126755 events, 3.742 sec, 140M
 
 stderr:
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu poke-threads09_iters3.i -k3 --mem 128M --stack 6M -O1"
-	User time (seconds): 3.23
-	System time (seconds): 2.78
+	User time (seconds): 3.07
+	System time (seconds): 2.93
 	Percent of CPU this job got: 156%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.83
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.82
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 141760
+	Maximum resident set size (kbytes): 143820
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 32533
-	Voluntary context switches: 171098
-	Involuntary context switches: 1039
+	Minor (reclaiming a frame) page faults: 32579
+	Voluntary context switches: 171131
+	Involuntary context switches: 1169
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 160
