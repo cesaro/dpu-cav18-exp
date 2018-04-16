@@ -24,12 +24,12 @@ There are two parts in this experiment:
    This will run the script `./scripts/run-table2-dpu.sh`, which in turn will
    output logs to `sec6.3-table2/logs.<DATE>`. We provide example logs from a
    previous run in `sec6.3-table2/logs.provided`, also
-   [available here](../sec6.3-table2/logs.provided/).
+   [available here](../sec6.3-table2/logs.provided.dpu/).
 
    The script will take around 50 min to finsh.
 
    The main log file in that folder is `LOG.log`, an example can be found
-   [here](../sec6.3-table2/logs.provided/LOG.log).
+   [here](../sec6.3-table2/logs.provided.dpu/LOG.log).
 
  
 2. Generating the results with MAPLE.  From the root of this project do as
