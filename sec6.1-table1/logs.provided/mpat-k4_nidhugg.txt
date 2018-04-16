@@ -2,7 +2,7 @@ name      mpat-k4
 cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow mpat-k4.i
 
 exitcode  0
-walltime  0.263
+walltime  0.268
 maxrss    20M
 maxconfs  384
 SSBs      0
@@ -11,17 +11,17 @@ SSBs      0
 stdout:
 Trace count: 384 (also 0 sleepset blocked)
 No errors were detected.
-* Nidhuggc: $ /usr/bin/clang-4.0 -o /tmp/tmpqr_q494d/tmp6b0ezoad.ll -S -emit-llvm -g mpat-k4.i
-* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg -transform /tmp/tmpqr_q494d/tmp66w1qi90.ll /tmp/tmpqr_q494d/tmp6b0ezoad.ll
-* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg /tmp/tmpqr_q494d/tmp66w1qi90.ll -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow
+* Nidhuggc: $ /usr/bin/clang-4.0 -o /tmp/tmpx1eaetzp/tmpi0_9o80e.ll -S -emit-llvm -g mpat-k4.i
+* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg -transform /tmp/tmpx1eaetzp/tmpyoor9hab.ll /tmp/tmpx1eaetzp/tmpi0_9o80e.ll
+* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg /tmp/tmpx1eaetzp/tmpyoor9hab.ll -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow
 Total wall-clock time: 0.22 s
 
 stderr:
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpqr_q494d/tmp6b0ezoad.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpx1eaetzp/tmpi0_9o80e.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpqr_q494d/tmp6b0ezoad.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpx1eaetzp/tmpi0_9o80e.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpqr_q494d/tmp6b0ezoad.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpx1eaetzp/tmpi0_9o80e.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow mpat-k4.i"
 	User time (seconds): 0.23
@@ -32,12 +32,12 @@ warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/t
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 21272
+	Maximum resident set size (kbytes): 21276
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 20653
+	Minor (reclaiming a frame) page faults: 20651
 	Voluntary context switches: 15
-	Involuntary context switches: 24
+	Involuntary context switches: 20
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 104

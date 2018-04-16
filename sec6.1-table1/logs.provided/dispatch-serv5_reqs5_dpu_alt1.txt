@@ -11,10 +11,10 @@ events    -
 
 
 stdout:
-clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.2uUu.dispatch-serv5_reqs5.i.opt.bc -- 'dispatch-serv5_reqs5.i'
-llvm-link-6.0 /tmp/dpu.2uUu.dispatch-serv5_reqs5.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.2uUu.dispatch-serv5_reqs5.i.bc
-/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.2uUu.dispatch-serv5_reqs5.i.bc -k1 --mem 128M --stack 6M -O1
-dpu v0.5.2 running, pid 3367
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.3SSE.dispatch-serv5_reqs5.i.opt.bc -- 'dispatch-serv5_reqs5.i'
+llvm-link-6.0 /tmp/dpu.3SSE.dispatch-serv5_reqs5.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.3SSE.dispatch-serv5_reqs5.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.3SSE.dispatch-serv5_reqs5.i.bc -k1 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 5632
 dpu: performing the following analyses:
 dpu: - POR: checking for assertion violations + deadlocks
 dpu: por: using 'only-last' (1-partial) alternatives
@@ -26,20 +26,20 @@ stderr:
 Terminated
 Command exited with non-zero status 124
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu dispatch-serv5_reqs5.i -k1 --mem 128M --stack 6M -O1"
-	User time (seconds): 272.33
-	System time (seconds): 477.23
-	Percent of CPU this job got: 156%
+	User time (seconds): 269.37
+	System time (seconds): 475.84
+	Percent of CPU this job got: 155%
 	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:00.02
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 704560
+	Maximum resident set size (kbytes): 704564
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 99924
-	Voluntary context switches: 26581068
-	Involuntary context switches: 105374
+	Minor (reclaiming a frame) page faults: 99860
+	Voluntary context switches: 26465305
+	Involuntary context switches: 96858
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 168

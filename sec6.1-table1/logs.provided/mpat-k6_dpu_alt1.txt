@@ -3,7 +3,7 @@ cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/
 
 exitcode  0
 defects   0
-walltime  36.216
+walltime  36.925
 maxrss    256M
 maxconfs  46080
 SSBs      0
@@ -11,10 +11,10 @@ events    455876
 
 
 stdout:
-clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.h3QV.mpat-k6.i.opt.bc -- 'mpat-k6.i'
-llvm-link-6.0 /tmp/dpu.h3QV.mpat-k6.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.h3QV.mpat-k6.i.bc
-/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.h3QV.mpat-k6.i.bc -k1 --mem 128M --stack 6M -O1
-dpu v0.5.2 running, pid 11852
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.Ant5.mpat-k6.i.opt.bc -- 'mpat-k6.i'
+llvm-link-6.0 /tmp/dpu.Ant5.mpat-k6.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.Ant5.mpat-k6.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.Ant5.mpat-k6.i.bc -k1 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 21537
 dpu: performing the following analyses:
 dpu: - POR: checking for assertion violations + deadlocks
 dpu: por: using 'only-last' (1-partial) alternatives
@@ -46,29 +46,29 @@ dpu: por: stats: por: alt: 921492 calls
 dpu: por: stats: por: alt: 292181 calls built a comb (31.7%)
 dpu: por: stats: por: alt: 292181 calls explored a comb (31.7%)
 dpu: por: stats: por: |comb|: size/nc=292181/1; min/max/avg=1/1/1.00; {size=count/mass}={1=292181/100.0%}
-dpu: por: stats: resources: 36.137 s wall time
-dpu: por: stats: resources: 32.821 s cpu time
+dpu: por: stats: resources: 36.841 s wall time
+dpu: por: stats: resources: 32.270 s cpu time
 dpu: por: stats: resources: 256M max RSS
-dpu: por: stats: perf: 1275 executions/sec
-dpu: por: stats: perf: 12615 ev/sec
-dpu: por: summary: 0 defects, 46080 max-configs, 0 SSBs, 455876 events, 36.137 sec, 256M
+dpu: por: stats: perf: 1250 executions/sec
+dpu: por: stats: perf: 12374 ev/sec
+dpu: por: summary: 0 defects, 46080 max-configs, 0 SSBs, 455876 events, 36.841 sec, 256M
 
 stderr:
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu mpat-k6.i -k1 --mem 128M --stack 6M -O1"
-	User time (seconds): 32.85
-	System time (seconds): 21.09
+	User time (seconds): 32.30
+	System time (seconds): 22.63
 	Percent of CPU this job got: 148%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.21
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.92
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 262820
+	Maximum resident set size (kbytes): 262808
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 50838
-	Voluntary context switches: 1726640
-	Involuntary context switches: 7401
+	Minor (reclaiming a frame) page faults: 50843
+	Voluntary context switches: 1728615
+	Involuntary context switches: 7453
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 160

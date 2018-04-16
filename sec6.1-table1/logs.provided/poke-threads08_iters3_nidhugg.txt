@@ -2,7 +2,7 @@ name      poke-threads08_iters3
 cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow poke-threads08_iters3.i
 
 exitcode  0
-walltime  346.747
+walltime  359.263
 maxrss    21M
 maxconfs  3700
 SSBs      274828
@@ -11,23 +11,23 @@ SSBs      274828
 stdout:
 Trace count: 3700 (also 274828 sleepset blocked)
 No errors were detected.
-* Nidhuggc: $ /usr/bin/clang-4.0 -o /tmp/tmpndpdrfaa/tmpcfjrf0hp.ll -S -emit-llvm -g poke-threads08_iters3.i
-* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg -transform /tmp/tmpndpdrfaa/tmp95uhsp83.ll /tmp/tmpndpdrfaa/tmpcfjrf0hp.ll
-* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg /tmp/tmpndpdrfaa/tmp95uhsp83.ll -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow
-Total wall-clock time: 346.70 s
+* Nidhuggc: $ /usr/bin/clang-4.0 -o /tmp/tmpcgbhhpbg/tmp0t_gf0z7.ll -S -emit-llvm -g poke-threads08_iters3.i
+* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg -transform /tmp/tmpcgbhhpbg/tmp2cnttx6b.ll /tmp/tmpcgbhhpbg/tmp0t_gf0z7.ll
+* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg /tmp/tmpcgbhhpbg/tmp2cnttx6b.ll -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow
+Total wall-clock time: 359.22 s
 
 stderr:
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpndpdrfaa/tmpcfjrf0hp.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpcgbhhpbg/tmp0t_gf0z7.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpndpdrfaa/tmpcfjrf0hp.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpcgbhhpbg/tmp0t_gf0z7.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
-warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpndpdrfaa/tmpcfjrf0hp.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpcgbhhpbg/tmp0t_gf0z7.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
 
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow poke-threads08_iters3.i"
-	User time (seconds): 340.37
-	System time (seconds): 6.32
+	User time (seconds): 352.95
+	System time (seconds): 6.25
 	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:46.74
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:59.25
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
@@ -35,9 +35,9 @@ warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/t
 	Maximum resident set size (kbytes): 21652
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 22663
+	Minor (reclaiming a frame) page faults: 22667
 	Voluntary context switches: 17
-	Involuntary context switches: 3801
+	Involuntary context switches: 4884
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 168

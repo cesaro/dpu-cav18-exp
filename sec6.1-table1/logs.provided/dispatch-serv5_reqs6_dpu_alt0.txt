@@ -11,10 +11,10 @@ events    -
 
 
 stdout:
-clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.cWII.dispatch-serv5_reqs6.i.opt.bc -- 'dispatch-serv5_reqs6.i'
-llvm-link-6.0 /tmp/dpu.cWII.dispatch-serv5_reqs6.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.cWII.dispatch-serv5_reqs6.i.bc
-/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.cWII.dispatch-serv5_reqs6.i.bc -k0 --mem 128M --stack 6M -O1
-dpu v0.5.2 running, pid 24808
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.XjL5.dispatch-serv5_reqs6.i.opt.bc -- 'dispatch-serv5_reqs6.i'
+llvm-link-6.0 /tmp/dpu.XjL5.dispatch-serv5_reqs6.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.XjL5.dispatch-serv5_reqs6.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.XjL5.dispatch-serv5_reqs6.i.bc -k0 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 14678
 dpu: performing the following analyses:
 dpu: - POR: checking for assertion violations + deadlocks
 dpu: por: using 'optimal' alternatives
@@ -27,20 +27,20 @@ dpu: aborting!
 stderr:
 Command exited with non-zero status 1
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu dispatch-serv5_reqs6.i -k0 --mem 128M --stack 6M -O1"
-	User time (seconds): 390.26
-	System time (seconds): 33.73
-	Percent of CPU this job got: 118%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:58.99
+	User time (seconds): 424.33
+	System time (seconds): 33.34
+	Percent of CPU this job got: 116%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:32.38
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 1127756
+	Maximum resident set size (kbytes): 1127672
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 150811
-	Voluntary context switches: 6081403
-	Involuntary context switches: 39796
+	Minor (reclaiming a frame) page faults: 150791
+	Voluntary context switches: 6089569
+	Involuntary context switches: 42460
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 168

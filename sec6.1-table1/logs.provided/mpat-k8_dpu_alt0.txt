@@ -4,17 +4,17 @@ cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/
 exitcode  124
 defects   -
 walltime  TO
-maxrss    799M
+maxrss    809M
 maxconfs  -
 SSBs      -
 events    -
 
 
 stdout:
-clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.T4jM.mpat-k8.i.opt.bc -- 'mpat-k8.i'
-llvm-link-6.0 /tmp/dpu.T4jM.mpat-k8.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.T4jM.mpat-k8.i.bc
-/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.T4jM.mpat-k8.i.bc -k0 --mem 128M --stack 6M -O1
-dpu v0.5.2 running, pid 18420
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.rgFR.mpat-k8.i.opt.bc -- 'mpat-k8.i'
+llvm-link-6.0 /tmp/dpu.rgFR.mpat-k8.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.rgFR.mpat-k8.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.rgFR.mpat-k8.i.bc -k0 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 23723
 dpu: performing the following analyses:
 dpu: - POR: checking for assertion violations + deadlocks
 dpu: por: using 'optimal' alternatives
@@ -26,20 +26,20 @@ stderr:
 Terminated
 Command exited with non-zero status 124
 	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu mpat-k8.i -k0 --mem 128M --stack 6M -O1"
-	User time (seconds): 513.63
-	System time (seconds): 41.89
+	User time (seconds): 514.81
+	System time (seconds): 40.28
 	Percent of CPU this job got: 115%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:00.01
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:00.03
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 818176
+	Maximum resident set size (kbytes): 829160
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 130783
-	Voluntary context switches: 6619866
-	Involuntary context switches: 70544
+	Minor (reclaiming a frame) page faults: 132340
+	Voluntary context switches: 6703521
+	Involuntary context switches: 69819
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 160

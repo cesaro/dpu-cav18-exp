@@ -3,27 +3,27 @@
 % Benchmark                                                        DPU (k=1)              DUP (k=2)             DUP (k=3)             DUP (optimal)         Nidhugg
 % --------------------------------------------------------------- ---------------------- --------------------- --------------------- --------------------- ---------------------------------
 % Name                       LOC       Thrs      Confs     Events       Time       SSBs       Time       SSBs       Time       SSBs       Time        Mem        Time        Mem       SSBs
-dispatch-serv5_reqs2      &  LOC &        8 &      137 &     1603 &    0.608 &     1039 &    0.319 &       43 &    0.305 &        0 &    0.298 &      63M  &    1.490 &      21M &     1591 \newrow
-dispatch-serv5_reqs3      &  LOC &        9 &     1482 &    17594 &    4.790 &    11167 &    1.055 &      595 &    0.794 &        1 &    0.771 &      66M  &   15.951 &      21M &    13734 \newrow
-dispatch-serv5_reqs4      &  LOC &       10 &    15282 &   185330 &   52.343 &   105971 &   12.750 &     6353 &    8.662 &      213 &    8.410 &     126M  &  161.494 &      21M &   115614 \newrow
-dispatch-serv5_reqs5      &  LOC &       11 &   151032 &  1869116 &       TO &        - &  393.167 &    53658 &  240.403 &     2378 &  214.716 &     756M  &       TO &      21M &        - \newrow
+dispatch-serv5_reqs2      &  LOC &        8 &      137 &     1603 &    0.620 &     1039 &    0.318 &       43 &    0.297 &        0 &    0.302 &      63M  &    1.492 &      21M &     1591 \newrow
+dispatch-serv5_reqs3      &  LOC &        9 &     1482 &    17594 &    4.842 &    11167 &    1.038 &      595 &    0.772 &        1 &    1.040 &      66M  &   15.583 &      21M &    13734 \newrow
+dispatch-serv5_reqs4      &  LOC &       10 &    15282 &   185330 &   53.081 &   105971 &   12.972 &     6353 &    8.863 &      213 &    8.210 &     126M  &  164.915 &      21M &   115614 \newrow
+dispatch-serv5_reqs5      &  LOC &       11 &   151032 &  1869116 &       TO &        - &  390.746 &    53658 &  260.252 &     2378 &  226.664 &     756M  &       TO &      21M &        - \newrow
 dispatch-serv5_reqs6      &  LOC &          &          &          &       TO &        - &       TO &        - &       MO &        - &       MO &    1101M  &       TO &      21M &        - \newrow
-mpat-k4                   &  LOC &        9 &      384 &     3822 &    0.402 &        0 &          &          &          &          &    0.400 &      68M  &    0.263 &      20M &        0 \newrow
-mpat-k5                   &  LOC &       11 &     3840 &    38017 &    2.124 &        0 &          &          &          &          &    2.299 &      83M  &    2.246 &      20M &        0 \newrow
-mpat-k6                   &  LOC &       13 &    46080 &   455876 &   36.216 &        0 &          &          &          &          &   61.121 &     257M  &   29.826 &      20M &        0 \newrow
-mpat-k7                   &  LOC &          &          &          &          &          &          &          &          &          &       TO &     796M  &       TO &      20M &        - \newrow
-mpat-k8                   &  LOC &          &          &          &          &          &          &          &          &          &       TO &     799M  &       TO &      20M &        - \newrow
-multipc-prods2_workers5   &  LOC &        8 &       60 &      397 &    0.473 &      560 &    0.287 &        0 &          &          &    0.282 &      65M  &    2.750 &      21M &     2856 \newrow
-multipc-prods3_workers5   &  LOC &        9 &     2958 &     7832 &   23.866 &    50664 &    2.603 &     2578 &    1.447 &        0 &    1.454 &      69M  &   98.264 &      21M &    85737 \newrow
-multipc-prods4_workers5   &  LOC &       10 &   314064 &   578835 &       TO &        - &       TO &        - &  281.716 &    29597 &  222.429 &     279M  &       TO &      21M &        - \newrow
+mpat-k4                   &  LOC &        9 &      384 &     3822 &    0.398 &        0 &          &          &          &          &    0.394 &      68M  &    0.268 &      20M &        0 \newrow
+mpat-k5                   &  LOC &       11 &     3840 &    38017 &    2.131 &        0 &          &          &          &          &    2.306 &      83M  &    2.205 &      20M &        0 \newrow
+mpat-k6                   &  LOC &       13 &    46080 &   455876 &   36.925 &        0 &          &          &          &          &   60.773 &     257M  &   29.927 &      20M &        0 \newrow
+mpat-k7                   &  LOC &          &          &          &          &          &          &          &          &          &       TO &     795M  &       TO &      20M &        - \newrow
+mpat-k8                   &  LOC &          &          &          &          &          &          &          &          &          &       TO &     809M  &       TO &      20M &        - \newrow
+multipc-prods2_workers5   &  LOC &        8 &       60 &      397 &    0.461 &      560 &    0.280 &        0 &          &          &    0.280 &      65M  &    2.745 &      21M &     2856 \newrow
+multipc-prods3_workers5   &  LOC &        9 &     2958 &     7832 &   23.971 &    50664 &    2.615 &     2578 &    1.473 &        0 &    1.470 &      69M  &   98.575 &      21M &    85737 \newrow
+multipc-prods4_workers5   &  LOC &       10 &   314064 &   578835 &       TO &        - &       TO &        - &  283.969 &    29597 &  226.843 &     279M  &       TO &      21M &        - \newrow
 multipc-prods5_workers5   &  LOC &          &          &          &          &          &          &          &          &          &       TO &     886M  &       TO &      21M &        - \newrow
-pi-threads5_iters5000     &  LOC &        6 &      120 &     1623 &    0.323 &        0 &          &          &          &          &    0.326 &      58M  &   41.115 &     115M &        0 \newrow
-pi-threads6_iters5000     &  LOC &        7 &      720 &    10221 &    0.546 &        0 &          &          &          &          &    0.552 &      62M  &  245.424 &     117M &        0 \newrow
-pi-threads7_iters5000     &  LOC &        8 &     5040 &    75113 &    2.546 &        0 &          &          &          &          &    2.507 &      82M  &       TO &      21M &        - \newrow
-pi-threads8_iters5000     &  LOC &        9 &    40320 &   629787 &   36.150 &        0 &          &          &          &          &   35.720 &     290M  &       TO &      21M &        - \newrow
-poke-threads07_iters3     &  LOC &       14 &     2440 &    51317 &   43.913 &    72022 &    2.414 &     1271 &    1.598 &        6 &    1.585 &      98M  &  105.143 &      21M &    90072 \newrow
-poke-threads08_iters3     &  LOC &       15 &     3700 &    82819 &  141.308 &   214737 &    4.512 &     2771 &    2.497 &       10 &    2.523 &     112M  &  346.747 &      21M &   274828 \newrow
-poke-threads09_iters3     &  LOC &       16 &     5332 &   126755 &  413.737 &   592219 &    7.697 &     4659 &    3.840 &       15 &    3.813 &     138M  &       TO &      21M &        - \newrow
-poke-threads10_iters3     &  LOC &       17 &     7384 &   185975 &       TO &        - &   14.425 &     8518 &    5.836 &       21 &    5.759 &     166M  &       TO &      21M &        - \newrow
-poke-threads11_iters3     &  LOC &       18 &     9904 &   263617 &       TO &        - &   23.219 &    12461 &    8.586 &       28 &    8.622 &     207M  &       TO &      21M &        - \newrow
-poke-threads12_iters3     &  LOC &       19 &    12940 &   363107 &       TO &        - &   40.920 &    20441 &   12.491 &       36 &   12.547 &     254M  &       TO &      21M &        - \newrow
+pi-threads5_iters5000     &  LOC &        6 &      120 &     1623 &    0.332 &        0 &          &          &          &          &    0.324 &      58M  &   41.141 &     115M &        0 \newrow
+pi-threads6_iters5000     &  LOC &        7 &      720 &    10221 &    0.556 &        0 &          &          &          &          &    0.555 &      62M  &  244.476 &     118M &        0 \newrow
+pi-threads7_iters5000     &  LOC &        8 &     5040 &    75113 &    2.526 &        0 &          &          &          &          &    2.497 &      82M  &       TO &      21M &        - \newrow
+pi-threads8_iters5000     &  LOC &        9 &    40320 &   629787 &   35.996 &        0 &          &          &          &          &   35.791 &     290M  &       TO &      21M &        - \newrow
+poke-threads07_iters3     &  LOC &       14 &     2440 &    51317 &   44.272 &    72022 &    2.442 &     1271 &    1.656 &        6 &    1.610 &     100M  &  106.837 &      21M &    90072 \newrow
+poke-threads08_iters3     &  LOC &       15 &     3700 &    82819 &  141.699 &   214737 &    4.529 &     2771 &    2.527 &       10 &    2.496 &     112M  &  359.263 &      21M &   274828 \newrow
+poke-threads09_iters3     &  LOC &       16 &     5332 &   126755 &  416.167 &   592219 &    7.904 &     4659 &    3.831 &       15 &    3.750 &     138M  &       TO &      21M &        - \newrow
+poke-threads10_iters3     &  LOC &       17 &     7384 &   185975 &       TO &        - &   14.138 &     8518 &    5.926 &       21 &    5.862 &     166M  &       TO &      21M &        - \newrow
+poke-threads11_iters3     &  LOC &       18 &     9904 &   263617 &       TO &        - &   22.741 &    12461 &    8.635 &       28 &    8.522 &     207M  &       TO &      21M &        - \newrow
+poke-threads12_iters3     &  LOC &       19 &    12940 &   363107 &       TO &        - &   42.189 &    20441 &   12.768 &       36 &   12.562 &     254M  &       TO &      21M &        - \newrow
