@@ -15,12 +15,22 @@ The benchmarks for this experiments can be found in the directory `benchmarks/de
 
 There are two parts in this experiment:
 
-1. Generating the results with DPU.  From the root of the project do this:
+1. Generating the results with DPU.  From the root of the project type this:
 
    ```sh
-   cd scripts
-   ./run-table2-dpu.sh
+   make sec3-table2-dpu
    ```
+
+   This will run the script `./scripts/run-table2-dpu.sh`, which in turn will
+   output logs to `sec6.3-table2/logs.<DATE>`. We provide example logs from a
+   previous run in `sec6.3-table2/logs.provided`, also
+   [available here](../sec6.3-table2/logs.provided/).
+
+   The script will take around 1h 30min to finish, perhaps less.
+
+   The main log file in that folder is `LOG.log`, an example can be found
+   [here](../sec6.3-table2/logs.provided/LOG.log).
+
  
 2. Generating the results with MAPLE.  From the root of this project do as
    follows:
