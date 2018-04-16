@@ -17,6 +17,6 @@ Specifically we include:
 * The [benchmarks](benchmarks/) used in the paper.
 * Documentation providing [guided steps](doc/1-intro.md) to repeat the experiments.
 
-If you want to repeat the experiments, please continue reading the
-[guided steps](doc/1-intro.md).
+If you want to repeat the experiments, please continue reading the file
+`doc/1-intro.md`, available [here](doc/1-intro.md).
 
