@@ -21,15 +21,19 @@ tools/nidhugg/nidhugg-375c554fdb208e2c50f35c618ed22cb2096ce4da.zip
 The binary versions of both tools are contained in the folder `dist/`:
 
 ```sh
-$ find dist/ -type f
-dist/include/verifier.h
-dist/lib/dpu/dpu-backend
-dist/lib/dpu/rt.bc
-dist/bin/nidhuggc
-dist/bin/dpu
-dist/bin/nidhugg
-dist/share/doc/nidhugg/README
-dist/share/doc/nidhugg/manual.pdf
+$ find dist -type f
+dist/dpu/include/verifier.h
+dist/dpu/lib/dpu/dpu-backend
+dist/dpu/lib/dpu/rt.bc
+dist/dpu/bin/dpu
+dist/dpu-tree-stats/include/verifier.h
+dist/dpu-tree-stats/lib/dpu/dpu-backend
+dist/dpu-tree-stats/lib/dpu/rt.bc
+dist/dpu-tree-stats/bin/dpu
+dist/nidhugg/bin/nidhuggc
+dist/nidhugg/bin/nidhugg
+dist/nidhugg/share/doc/nidhugg/README
+dist/nidhugg/share/doc/nidhugg/manual.pdf
 ```
 
 If you want to compile these two tools, please use the `Makefile` in the root of
