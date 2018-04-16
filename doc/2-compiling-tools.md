@@ -7,7 +7,10 @@ Navigation: [Table of contents], [Previous section], [Next section]
 [Next section]: 3-section-6.1.md
 
 Precompiled binaries of the tools used in these experiments are included in the
-folder `dist/`. Therefore there is no need to manually compile any tool.
+folder `dist/`
+
+**Reviewers do not need to recompile the tools** (if they don't want to), the
+steps below are here just for informative purposes.
 
 But if the reviewer wants to recompile DPU or Nidhugg, their sources are
 contained in the folder `tools/`:
