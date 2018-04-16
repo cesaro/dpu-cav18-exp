@@ -49,4 +49,5 @@ There are two parts in this experiment:
 
    This will produce information regarding the number of executions, timing 
    information and generate a directory `benchmarks/__results` with the log
-   files. Inspect the files to identify which ones are safe or unsafe.
+   files. Inspect the files to identify which ones are safe or unsafe by
+   searching for "Assertion `0' failed".
