@@ -1,0 +1,4371 @@
+name      pi-threads6_iters5000
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow pi-threads6_iters5000.i
+
+exitcode  0
+walltime  245.424
+maxrss    117M
+maxconfs  720
+SSBs      0
+
+
+stdout:
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 2.026060e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.992309e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.474240e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.626661e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.522629e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.614060e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.465938e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.618001e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.474352e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.630661e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.387892e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.631532e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.567929e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.625490e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.425200e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.625080e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.494470e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.631570e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.439590e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.635480e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.433508e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.638629e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.364491e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.640658e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.509840e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.638341e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.440129e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.624470e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.430590e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.628771e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.425190e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.636121e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.432981e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.633909e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.362782e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.636932e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.440511e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.630158e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373811e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.631081e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375301e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.635730e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385770e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.642060e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381111e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.631858e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.386089e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.646991e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.597972e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607959e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385989e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608012e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.450379e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604040e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.387401e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606340e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.389802e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603789e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327019e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608591e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.512051e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604872e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388688e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606121e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.453362e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605248e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388071e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.615889e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.397700e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609981e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331310e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.615751e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.453969e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.614530e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.404600e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.618149e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.410680e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.623149e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.400318e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.620560e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.405540e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.620669e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.344109e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.619530e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.399491e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.622260e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.339669e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611130e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.339982e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.614039e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.341970e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613650e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.343882e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.620560e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.340899e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.614721e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.520622e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609311e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.394370e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609330e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.464200e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.615760e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.390350e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607771e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.436999e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605210e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330450e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603022e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.451821e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611681e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.393402e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.616881e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.443002e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603069e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380301e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604950e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383529e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609449e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326101e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605630e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.448431e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601679e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381691e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606781e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.391821e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607049e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388240e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604700e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381099e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598990e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322031e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602950e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.392701e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613500e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.333070e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611130e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329072e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608450e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330459e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609089e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329138e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609440e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331539e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608601e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.452839e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608939e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388602e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606460e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.387501e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611772e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388609e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602221e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.386030e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602459e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331460e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601379e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388922e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601570e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.393769e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610548e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388750e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603360e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.384389e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595762e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.399109e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612549e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.333230e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.618369e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.387329e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597841e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.391110e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595268e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.387570e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600201e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379941e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596920e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385021e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602619e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320200e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594660e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379540e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602371e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324379e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598599e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322260e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598990e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325428e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598470e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323869e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598508e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325579e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606719e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.391828e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611831e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324279e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599131e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321731e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598840e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325829e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603231e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331050e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609168e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.334000e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609690e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331758e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612430e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.339622e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.618900e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.357238e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612420e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377609e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604712e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.333821e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606278e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322830e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599650e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319051e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598330e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324859e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593280e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.334949e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603520e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322110e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602051e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328840e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599741e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.334999e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606948e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330101e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610680e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.333890e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613190e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323850e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604068e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326709e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603060e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327589e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607850e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330888e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607211e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.627262e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605251e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376750e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606231e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.443632e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601250e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.382341e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612170e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.386681e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605670e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322980e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609778e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.506898e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608689e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380050e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606081e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.439989e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601539e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.466811e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601779e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380470e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604860e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316772e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606212e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.437600e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612360e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383522e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.617119e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379380e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605241e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377389e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600051e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.369548e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596942e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.307220e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.632600e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371210e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597290e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310842e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602070e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.308510e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.590741e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325979e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597750e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.304340e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.588449e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.303771e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597090e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.552529e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593769e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.365781e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594751e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.446071e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597500e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372540e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600552e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372359e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598561e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.302810e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.588070e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.491029e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594739e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373000e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594081e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.436832e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600289e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375649e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.589820e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372180e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595612e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.307750e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594901e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.434050e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595731e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.374261e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607561e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.374831e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594801e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373730e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596990e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370571e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.589551e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314890e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592581e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375930e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595831e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.308858e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595359e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.312160e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592460e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.308670e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598449e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323650e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593659e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314700e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598570e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.503491e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593671e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.366558e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595790e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.439950e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604760e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.366808e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600990e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375639e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594262e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315629e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602061e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.442740e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602108e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375630e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606810e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.437938e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595001e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371100e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593001e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370509e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595521e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.307390e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597760e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.432521e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594980e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378908e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591001e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.488860e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.590559e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372950e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593490e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372070e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593759e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.309729e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594110e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370840e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599851e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.306691e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.590490e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310399e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597300e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310370e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592851e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310480e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595821e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321712e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592548e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.433270e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596880e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372519e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593659e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.366792e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596489e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.421671e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601210e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372721e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591561e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.306040e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593609e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371059e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597400e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372960e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601119e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376200e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602859e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378241e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602359e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375899e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606069e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313312e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599309e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385942e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604900e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378279e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602650e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.382310e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611981e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376469e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.589999e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.440701e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594691e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.309280e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594379e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371551e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591070e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313090e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596348e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317480e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604772e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.412890e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610098e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322680e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606071e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329510e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608469e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.389730e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606278e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328619e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608799e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325531e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.616809e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.333351e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596930e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327209e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610520e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318431e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597691e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319771e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.744771e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314120e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602330e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313930e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605358e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313300e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593142e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314380e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600330e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317339e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599190e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.344612e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596601e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316950e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596310e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315141e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610949e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316309e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596410e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314001e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599410e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.306520e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592789e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.308639e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594300e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315551e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593149e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.309741e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598091e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318998e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592379e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313632e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597562e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.309581e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600971e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.556029e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596811e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.363780e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599782e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.432400e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593859e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385040e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608021e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370790e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597331e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316881e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601369e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.498618e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607668e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376271e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611278e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.443789e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608839e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375742e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604731e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376321e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604781e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313310e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609340e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.439130e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605041e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380711e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609571e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378310e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613839e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377258e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599259e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376641e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606841e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.311600e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605020e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378040e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607649e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314008e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607008e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322029e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602581e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320791e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609612e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328142e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.616459e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322479e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609862e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.509922e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606221e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377628e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610010e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.444180e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605370e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381128e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607141e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378140e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602099e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317809e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613598e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.513600e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604800e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378350e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612020e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.436870e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601069e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.382680e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.615648e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380098e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601140e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317699e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609769e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.443920e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609230e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380360e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607409e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.386418e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610301e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388431e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599760e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379681e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605010e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322529e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606550e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.382580e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602941e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317179e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610060e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.347029e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593859e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316168e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593680e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316988e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599500e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310480e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597939e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.500049e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595409e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376729e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604240e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.431141e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592569e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370609e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595700e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373279e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599491e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.305060e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602030e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.434741e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597929e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.368911e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595821e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.435699e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599619e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375251e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598389e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.389749e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592109e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.306539e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594431e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.429858e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599648e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371291e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603010e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370201e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597869e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.374111e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596711e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372759e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593130e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310499e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599989e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371059e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598630e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.304832e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601140e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316350e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606102e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323271e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606879e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315489e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603541e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313632e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611910e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.621499e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611309e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380889e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599531e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373370e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598959e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375129e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604319e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377890e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601741e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.309612e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598911e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381721e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599810e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385851e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607192e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.382871e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601560e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377540e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602499e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380260e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604860e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317759e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599259e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378441e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597660e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.391480e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603079e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376488e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603529e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383049e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606500e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380398e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603780e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314149e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603038e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383960e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.614170e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313620e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599469e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317890e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607311e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323380e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602700e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327140e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.614940e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316421e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599391e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.390080e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606221e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323528e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610620e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327929e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607099e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326330e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606829e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316049e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601310e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315110e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600380e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320791e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.622200e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320601e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603971e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318331e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611180e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325111e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603248e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321340e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604390e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318359e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611378e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319349e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606948e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321599e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599760e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314299e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598129e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.312230e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608670e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318669e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601360e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323822e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607940e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320219e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600158e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316938e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601670e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317089e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596801e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320360e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600080e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319180e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600652e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316409e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596630e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.502371e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599281e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375070e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604888e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.443570e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611841e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375601e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599090e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377289e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.615250e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315980e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603839e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.443789e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610389e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.382020e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611900e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.438742e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606231e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378188e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607120e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.384039e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.615880e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319480e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606100e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.440661e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.616549e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.389141e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.619391e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.384888e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613691e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.387122e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607449e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.374531e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597240e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.312220e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598439e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370060e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602659e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323678e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603310e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319711e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598160e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315119e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596141e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316440e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596761e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.312771e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598699e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.442652e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600480e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373210e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600711e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.437881e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595390e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.369100e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596520e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.374731e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603370e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320629e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.619020e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.445110e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606872e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383150e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611681e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.446140e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612508e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.384552e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.614120e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.389771e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609061e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315160e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601670e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.434081e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603169e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370780e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607041e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.386089e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612852e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385632e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607380e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385038e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603911e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318209e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609170e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381671e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609950e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315670e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605000e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313601e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610510e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318810e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597700e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317620e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603270e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314650e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604621e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.441660e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599929e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372578e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609051e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.443791e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606619e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379659e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607511e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380420e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605608e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315329e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605310e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.434450e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599059e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377101e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607351e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.436520e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594450e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375029e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597180e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373770e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603460e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314349e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593890e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.564949e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597021e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372399e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593812e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377501e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596491e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373210e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591170e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379900e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595249e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.311080e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596441e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370049e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602659e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310699e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597528e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316190e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595659e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.309631e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594040e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320298e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605742e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319082e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609840e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.441889e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599970e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377590e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596081e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370661e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598339e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379650e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608300e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372652e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594021e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310780e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608272e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383610e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599519e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.384959e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606388e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372910e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600120e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377761e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591189e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371942e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595759e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.305652e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593850e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373188e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597610e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375511e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593239e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.365609e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599009e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380010e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596251e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.370511e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600890e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313570e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613450e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.401491e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592419e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.308560e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605210e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320131e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605461e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.307819e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.588800e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.307650e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592491e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.307781e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592999e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.375630e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592958e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316090e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600931e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316340e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598771e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319590e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605482e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319549e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613991e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330130e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606600e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321800e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602440e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.311510e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593010e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.312671e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594870e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314790e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593819e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.309721e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597500e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310041e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597250e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.312230e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599381e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316030e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593142e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318841e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593230e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313469e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597581e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315730e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599360e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319451e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599631e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.424880e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593111e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315598e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596789e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318400e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602380e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320570e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602881e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313360e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596990e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.313212e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592629e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.435330e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597099e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376910e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591341e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371450e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594489e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383789e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601870e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373739e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600990e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.310160e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595340e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376278e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.590929e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379068e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592150e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.374269e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593530e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381590e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595399e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377821e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593049e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314058e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597619e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379800e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605761e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.371701e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595230e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.384060e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601079e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383970e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613441e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385808e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597710e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317661e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599360e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385112e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597211e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316919e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594100e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321130e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603620e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326089e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603940e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322391e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594560e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315880e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598821e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376939e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599751e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380441e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592162e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377940e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598101e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378870e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597021e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379750e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603110e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325450e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602261e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377909e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600051e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380219e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603069e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372080e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604128e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380160e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613159e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.396501e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599350e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320419e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608789e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.392522e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599522e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385150e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604509e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378620e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598930e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378129e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601620e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379011e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597881e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317749e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599510e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.391108e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604371e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316810e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596930e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.311171e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599128e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319978e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599429e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315079e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600831e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316440e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599660e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.374841e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596060e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381650e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598570e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.373560e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596279e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372409e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591010e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372771e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600759e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.312618e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594920e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385639e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598639e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.436110e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593280e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381078e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596298e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376100e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595449e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376450e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592078e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314180e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594982e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376379e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599581e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.380112e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591990e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.376870e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596289e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381850e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593909e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379919e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598890e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320312e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595631e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.382530e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598020e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324720e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591220e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.314561e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601932e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323278e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594858e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323950e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599648e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324549e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.615410e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.389871e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.618369e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.390290e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608410e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383460e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599040e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.377280e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600389e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.379240e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592479e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315072e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601069e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.384170e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599960e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.381481e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602080e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.378789e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598542e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.384900e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595881e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385059e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603501e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319392e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597271e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.383469e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599450e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.397002e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612780e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.396871e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.609390e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.409719e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612680e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.386900e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611431e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325598e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612849e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.388299e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601160e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.316948e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596789e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319740e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596050e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328471e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596389e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323960e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602690e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324661e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601880e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.390309e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602418e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324019e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599629e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327441e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605880e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330402e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600089e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.332860e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604772e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.335008e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593251e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.429861e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608541e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322820e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594779e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328199e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600070e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326950e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593940e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322930e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595860e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.334279e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597729e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317949e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600080e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320519e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595159e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321139e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595690e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323268e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601119e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321790e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605330e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327190e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603930e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.332781e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601169e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331282e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600211e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.332760e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594679e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328609e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600790e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327200e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597950e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328292e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605802e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.385460e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598730e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319561e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593730e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321840e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.590731e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317711e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597722e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318541e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592669e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319139e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597109e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327050e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598959e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319549e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591332e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326182e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597631e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327791e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599770e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330421e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606991e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.332321e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599679e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327510e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611931e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331761e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600480e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328111e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602080e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321669e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597810e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323731e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612351e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325839e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596420e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318009e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593239e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321309e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.587200e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318951e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593351e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322620e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596239e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.315591e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593850e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325150e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596332e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317739e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595140e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.317232e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594882e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321630e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594431e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322219e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598680e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320889e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598852e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321831e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596332e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326029e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597719e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320889e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592729e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318820e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594260e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323218e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592679e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319592e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595671e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318018e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593449e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319950e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593158e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319470e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596990e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.318882e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598811e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328299e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601300e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.333449e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607690e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328211e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600170e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331739e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599820e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324899e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610441e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329172e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602421e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326530e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597910e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.344919e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606541e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328511e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598520e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322801e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597760e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326661e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598451e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327012e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597319e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327050e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596642e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331449e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603780e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.336200e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603119e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330769e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601000e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327701e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.612120e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.338110e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606369e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.338611e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.613441e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330581e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606269e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331990e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603081e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331222e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605759e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.372709e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605248e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.333020e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607590e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326439e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602001e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323380e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611979e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.335859e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.610820e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.333730e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605790e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.336350e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.611130e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.332281e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606569e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324971e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605418e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331980e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.604660e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331151e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.608820e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325421e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602988e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327679e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599560e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324770e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602440e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.334448e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603150e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327691e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595161e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329291e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599760e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.337039e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605392e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.351850e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602070e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329761e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596119e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329141e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.687181e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.337330e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596601e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326261e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598508e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328418e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599650e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.332610e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.600518e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330800e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593831e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331410e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597559e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324699e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592982e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.327701e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.605690e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324441e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596050e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328189e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594470e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328220e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598721e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326039e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.603191e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.328971e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599598e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329470e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601541e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.483841e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597610e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325319e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.602070e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.330011e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606700e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324799e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607602e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.341228e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.607010e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.340780e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.599851e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.324420e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601498e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.332350e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.592751e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323810e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593840e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323218e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.591630e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322770e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.590900e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.319759e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.597810e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320710e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601250e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322801e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.589260e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.325221e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.593161e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.320839e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.594071e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.321731e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.587300e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.326079e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.588709e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.323321e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.595440e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.322429e-01 seconds
+ Trace count: 720 (also 0 sleepset blocked)
+No errors were detected.
+  Single thread est  = 3.141392653591791
+The elapsed time is 1.592829e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.329670e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.598508e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331551e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.596010e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.334090e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.601090e-01 seconds
+                   pi = 3.141592653589793
+With n = 5000 terms,
+   Our estimate of pi = 3.141392573559785
+The elapsed time is 1.331170e-01 seconds
+   Single thread est  = 3.141392653591791
+The elapsed time is 1.606441e-01 seconds
+                   pi = 3.141592653589793
+* Nidhuggc: $ /usr/bin/clang-4.0 -o /tmp/tmpizlutryn/tmp9t_g48fu.ll -S -emit-llvm -g pi-threads6_iters5000.i
+* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg -transform /tmp/tmpizlutryn/tmpz90sic3k.ll /tmp/tmpizlutryn/tmp9t_g48fu.ll
+* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg /tmp/tmpizlutryn/tmpz90sic3k.ll -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow
+Total wall-clock time: 245.38 s
+
+stderr:
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpizlutryn/tmp9t_g48fu.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpizlutryn/tmp9t_g48fu.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpizlutryn/tmp9t_g48fu.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+
+WARNING: Calling unknown external function gettimeofday as blackbox.
+WARNING: Calling unknown external function printf as blackbox.
+WARNING: Calling unknown external function atan as blackbox.
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow pi-threads6_iters5000.i"
+	User time (seconds): 242.27
+	System time (seconds): 3.11
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:05.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 120764
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 47533
+	Voluntary context switches: 33
+	Involuntary context switches: 1942
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 528
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

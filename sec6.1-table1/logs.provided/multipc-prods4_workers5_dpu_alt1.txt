@@ -1,0 +1,50 @@
+name      multipc-prods4_workers5
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu multipc-prods4_workers5.i -k1 --mem 128M --stack 6M -O1
+
+exitcode  124
+defects   -
+walltime  TO
+maxrss    171M
+maxconfs  -
+SSBs      -
+events    -
+
+
+stdout:
+clang-6.0 -D__DPU__ -O3 -emit-llvm -c -o /tmp/dpu.TNFo.multipc-prods4_workers5.i.opt.bc -- 'multipc-prods4_workers5.i'
+llvm-link-6.0 /tmp/dpu.TNFo.multipc-prods4_workers5.i.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.TNFo.multipc-prods4_workers5.i.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.TNFo.multipc-prods4_workers5.i.bc -k1 --mem 128M --stack 6M -O1
+dpu v0.5.2 running, pid 7443
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'only-last' (1-partial) alternatives
+dpu: unf: loading bitcode
+dpu: unf: O1-optimization + jitting...
+dpu: por: starting POR analysis ...
+
+stderr:
+Terminated
+Command exited with non-zero status 124
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu multipc-prods4_workers5.i -k1 --mem 128M --stack 6M -O1"
+	User time (seconds): 326.06
+	System time (seconds): 402.67
+	Percent of CPU this job got: 151%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:00.00
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 175456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 38263
+	Voluntary context switches: 26335357
+	Involuntary context switches: 103679
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 168
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 124

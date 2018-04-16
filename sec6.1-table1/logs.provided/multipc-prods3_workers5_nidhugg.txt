@@ -1,0 +1,49 @@
+name      multipc-prods3_workers5
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow multipc-prods3_workers5.i
+
+exitcode  0
+walltime  98.264
+maxrss    21M
+maxconfs  2958
+SSBs      85737
+
+
+stdout:
+Trace count: 2958 (also 85737 sleepset blocked)
+No errors were detected.
+* Nidhuggc: $ /usr/bin/clang-4.0 -o /tmp/tmpbmf4b83y/tmp2yu8aiu9.ll -S -emit-llvm -g multipc-prods3_workers5.i
+* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg -transform /tmp/tmpbmf4b83y/tmpwx3vmxcl.ll /tmp/tmpbmf4b83y/tmp2yu8aiu9.ll
+* Nidhuggc: $ /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhugg /tmp/tmpbmf4b83y/tmpwx3vmxcl.ll -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow
+Total wall-clock time: 98.22 s
+
+stderr:
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpbmf4b83y/tmp2yu8aiu9.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpbmf4b83y/tmp2yu8aiu9.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+
+warning: Linking two modules of different data layouts: '' is '' whereas '/tmp/tmpbmf4b83y/tmp2yu8aiu9.ll' is 'e-m:e-i64:64-f80:128-n8:16:32:64-S128'
+
+WARNING: Calling unknown external function pow as blackbox.
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/nidhugg/bin/nidhuggc --c -sc -disable-mutex-init-requirement -extfun-no-race=printf -extfun-no-race=fprintf -extfun-no-race=write -extfun-no-race=exit -extfun-no-race=atoi -extfun-no-race=pow multipc-prods3_workers5.i"
+	User time (seconds): 96.20
+	System time (seconds): 2.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:38.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22164
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 21638
+	Voluntary context switches: 15
+	Involuntary context switches: 792
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 160
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
