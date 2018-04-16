@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo "Doing a 'git pull'..."
-git pull
+set -e
 
 echo "Computing the SHA1 sum... This can take a while."
 

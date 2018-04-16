@@ -12,8 +12,9 @@ paper.
 
 We use [Callgrind] and [KCachegrind] to validate our statements.
 Callgrind is a profiling tool. When a program is executed under Callgrind, it
-will generate a file `callgrind.out.<PID>` with profiling information.
-KCachegrind is just a visualization tool for the `callgrind.out.<PID>` file.
+will generate a file `callgrind.out.<PID>` with run time information of each
+function of the program.  KCachegrind is just a visualization tool for the
+file `callgrind.out.<PID>`.
 
 DPU comes with a handy commandline option `--callgrind` which, when passed to
 DPU, will run DPU under `callgrind`.

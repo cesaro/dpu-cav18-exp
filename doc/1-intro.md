@@ -47,12 +47,12 @@ repository, then:
 
 ```sh
 $ make sha1sums 
-./scripts/compute-sha1.sh
-Doing a 'git pull'...
+git pull
 Already up-to-date.
+./scripts/compute-sha1.sh
 Computing the SHA1 sum... This can take a while.
 
-SHA1 sum: e22e2bbef819105aa4b9e074375b9e00348de0b6
+SHA1 sum: 63a347df1c401e36a1716cac677fa325b68f825d
 ```
 
 If the output sum equals the sum provided in Easychair, this guarantees that:
