@@ -133,7 +133,7 @@ Based on results of running all benchmark with various parameters as shown in Ta
 | DISP (5,3)      |    23.00              |
 | MPC(3,5)       |    13.54              |
 | PI(5,40000)    |    6.60                |
-| MPAT()           |    24.52              |
+| MPAT(6)         |    24.52              |
 | POL(7,3)        |    27.76              |
 
 To the run time of `dpu::C15unfolder::explore()`, that of `dpu::C15unfolder::stream_to_events()`
@@ -164,9 +164,9 @@ Do the same for the rest, we get the table below:
 | Benchmarks  | Add spike (%) | Check conflict (%) | Build comb (%) |
 | --------------- | -----------------| --------------------- | ------------------ |
 | DISP (5,3)      |    6.94              |      11.22                |       18.16           |
-| MPC()            |    4.24              |      11.17                |      15.41            |
+| MPC(3,5)       |    4.24              |      11.17                |      15.41            |
 | PI(5,40000)    |    0.16              |       0                      |     0.16               |
-| MPAT()           |    5.94              |        4.6                  |    10.54              |
+| MPAT(6)         |    5.94              |        4.6                  |    10.54              |
 | POL(7,3)        |    7.66              |       19.7                 |    27.36              |
 
 Except benchmark PI, all the others gives us the time of building a new comb in the range of 1% to 50%.
@@ -179,9 +179,9 @@ as shown in the table below. They are even not greater than 1% in this represent
 Benchmarks  |   Explore comb (%) |
 | -------------  |  ----------------------|
 | DISP (5,3)    |    1                           |
-| MPC()          |     0.5                       |
+| MPC(3,5)     |     0.5                       |
 | PI(5,40000)  |     0.2                       |
-| MPAT()         |     0.74                     |
+| MPAT(6)       |     0.74                     |
 | POL(7,3)      |     1                          |
 
 ### Claim 6: DPU spends less than 5% of the time computing conflicting extensions
@@ -194,7 +194,7 @@ See the table below for more details
 | DISP (5,3)      |                 3.9                                     |
 | MPC(3,5)       |                 3.55                                   |
 | PI(5,40000)    |                 0.97                                   |
-| MPAT()           |                 3.4                                     |
+| MPAT(6)         |                 3.4                                     |
 | POL(7,3)        |                 2.67                                   |
 
 
