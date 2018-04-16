@@ -47,5 +47,6 @@ There are two parts in this experiment:
    ./run-table2-maple.sh 
    ```
 
-   This creates a directory `benchmarks/__results` with two folders. Now grep
-   for the strings `finished execution` and `execution time`.
+   This will produce information regarding the number of executions, timing 
+   information and generate a directory `benchmarks/__results` with the log
+   files. Inspect the files to identify which ones are safe or unsafe.
