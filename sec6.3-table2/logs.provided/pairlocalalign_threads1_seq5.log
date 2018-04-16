@@ -1,0 +1,89 @@
+name      pairlocalalign
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 1 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/5seq.fasta
+
+exitcode  0
+defects   1
+walltime  15.934
+maxrss    441M
+maxconfs  1
+SSBs      0
+events    24
+
+
+stdout:
+opt-6.0 -mem2reg '/home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc' -o /tmp/dpu.3l6f.pairlocalalign.bc.opt.bc
+llvm-link-6.0 /tmp/dpu.3l6f.pairlocalalign.bc.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.3l6f.pairlocalalign.bc.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.3l6f.pairlocalalign.bc.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 1 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/5seq.fasta
+dpu v0.5.2 running, pid 22358
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: unf: loading bitcode
+dpu: unf: O2-optimization + jitting...
+dpu: por: starting POR analysis ...
+out!!
+in!!
+nthread = 1
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/5seq.fasta
+    0 / 5 (by thread   0)     1 / 5 (by thread   0)     2 / 5 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 1: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 1: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+
+
+##### writing hat3
+dpu: por: finished POR analysis
+dpu: por: saving POR defects report to 'defects.por.yml'
+dpu: por: stats: unfolding: 1 max-configs
+dpu: por: stats: unfolding: 2 threads created
+dpu: por: stats: unfolding: 2 process slots used
+dpu: por: stats: unfolding: 24 events (aprox. 4K of memory)
+dpu: por: stats: unfolding: t0: 4 events (864B, 17.1%)
+dpu: por: stats: unfolding: t1: 20 events (4K, 82.9%)
+dpu: por: stats: por: 1 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 24.0 average ev/trail
+dpu: por: stats: por: alt: 24 calls
+dpu: por: stats: por: alt: 9 calls built a comb (37.5%)
+dpu: por: stats: por: alt: 0 calls explored a comb (0.0%)
+dpu: por: stats: por: |comb|: size/nc=0/0; min/max/avg=nan/nan/nan; {size=count/mass}={}
+dpu: por: stats: resources: 14.938 s wall time
+dpu: por: stats: resources: 14.789 s cpu time
+dpu: por: stats: resources: 441M max RSS
+dpu: por: stats: perf: 0 executions/sec
+dpu: por: stats: perf: 1 ev/sec
+dpu: por: summary: 1 defects, 1 max-configs, 0 SSBs, 24 events, 14.938 sec, 441M
+
+stderr:
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+1 thread(s)
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 1 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/5seq.fasta"
+	User time (seconds): 15.68
+	System time (seconds): 0.24
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:15.93
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 452468
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 77886
+	Voluntary context switches: 38
+	Involuntary context switches: 466
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 8448
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

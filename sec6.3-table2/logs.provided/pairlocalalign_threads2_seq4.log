@@ -1,0 +1,1414 @@
+name      pairlocalalign
+cmd       /usr/bin/time -v timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 2 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+
+exitcode  0
+defects   5
+walltime  222.070
+maxrss    448M
+maxconfs  80
+SSBs      0
+events    945
+
+
+stdout:
+opt-6.0 -mem2reg '/home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc' -o /tmp/dpu.gLdc.pairlocalalign.bc.opt.bc
+llvm-link-6.0 /tmp/dpu.gLdc.pairlocalalign.bc.opt.bc /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/rt.bc -o /tmp/dpu.gLdc.pairlocalalign.bc.bc
+/home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/../lib/dpu/dpu-backend /tmp/dpu.gLdc.pairlocalalign.bc.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 2 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+dpu v0.5.2 running, pid 22430
+dpu: performing the following analyses:
+dpu: - POR: checking for assertion violations + deadlocks
+dpu: por: using 'optimal' alternatives
+dpu: unf: loading bitcode
+dpu: unf: O2-optimization + jitting...
+dpu: por: starting POR analysis ...
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   0)     1 / 4 (by thread   1) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   0) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   0) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1)     2 / 4 (by thread   1) 
+
+##### writing hat3
+out!!
+in!!
+nthread = 2
+out!!
+in!!
+inputfile = /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta
+    0 / 4 (by thread   1)     1 / 4 (by thread   1) stid: rt: assert-fail: called!
+pairlocalalign.c:1960: void *athread(void *): Assertion `0' failed. Aborting.
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:29: _rt_abort: Thread 2: Function abort() was called, but current support for abort() is very limited
+/home/ubuntu/cesar/dpu-cav18-exp/tools/dpu/dpu-0.5.2/lib/steroids/rt/libc/proc.c:32: _rt_abort: Thread 2: calling pthread_exit() instead of exit(), you might experience unexpected errors from this point on
+    2 / 4 (by thread   0) 
+
+##### writing hat3
+dpu: por: finished POR analysis
+dpu: por: saving POR defects report to 'defects.por.yml'
+dpu: por: stats: unfolding: 80 max-configs
+dpu: por: stats: unfolding: 3 threads created
+dpu: por: stats: unfolding: 3 process slots used
+dpu: por: stats: unfolding: 945 events (aprox. 194K of memory)
+dpu: por: stats: unfolding: t0: 243 events (50K, 25.7%)
+dpu: por: stats: unfolding: t1: 399 events (81K, 42.0%)
+dpu: por: stats: unfolding: t2: 303 events (62K, 32.2%)
+dpu: por: stats: por: 80 executions
+dpu: por: stats: por: 0 SSBs
+dpu: por: stats: por: 26.0 average ev/trail
+dpu: por: stats: por: alt: 952 calls
+dpu: por: stats: por: alt: 270 calls built a comb (28.4%)
+dpu: por: stats: por: alt: 79 calls explored a comb (8.3%)
+dpu: por: stats: por: |comb|: size/nc=79/1; min/max/avg=1/1/1.00; {size=count/mass}={1=79/100.0%}
+dpu: por: stats: resources: 221.067 s wall time (3min 41.067sec)
+dpu: por: stats: resources: 220.868 s cpu time
+dpu: por: stats: resources: 448M max RSS
+dpu: por: stats: perf: 0 executions/sec
+dpu: por: stats: perf: 4 ev/sec
+dpu: por: summary: 5 defects, 80 max-configs, 0 SSBs, 945 events, 221.067 sec, 448M
+
+stderr:
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+lastonce = 0
+generating 200PAM scoring matrix for nucleotides ... done
+done
+done
+scoremtx = -1
+pairlocalalign (nuc) Version 7.123b alg=A, model=DNA200 (2),  1.530 ( 4.590),  0.123 ( 0.369)
+2 thread(s)
+	Command being timed: "timeout 8m /home/ubuntu/cesar/dpu-cav18-exp/dist/dpu/bin/dpu /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/pairlocalalign.bc -k0 --mem 350M --stack 2M -O2 -- pairlocalalign -C 2 -i /home/ubuntu/cesar/dpu-cav18-exp/sec6.3-table2/logs.2018-04-16_Mon_08:36:35/4seq.fasta"
+	User time (seconds): 221.77
+	System time (seconds): 0.26
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:42.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 459716
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 77026
+	Voluntary context switches: 625
+	Involuntary context switches: 4583
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 10576
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
