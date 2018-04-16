@@ -1,0 +1,1 @@
+cav18 addsingle310 0 0 -C 10 -K -i 3seq.aln.fasta

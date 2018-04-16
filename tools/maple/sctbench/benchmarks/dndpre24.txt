@@ -1,0 +1,1 @@
+cav18 dndpre24 0 0 -C 4 -i 2seq.fasta

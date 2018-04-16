@@ -5,8 +5,8 @@ O=../tools/maple/sctbench/benchmarks/cav18/obj
 D="$O/test-data"
 E="$O/bin"
 CC=gcc
-OUTS=../tools/maple/sctbench/benchmarks/cav18/cav-safe.txt
-OUTU=../tools/maple/sctbench/benchmarks/cav18/cav-unsafe.txt
+OUTS=../tools/maple/sctbench/benchmarks/cav-safe.txt
+OUTU=../tools/maple/sctbench/benchmarks/cav-unsafe.txt
 
 echo "populating $D ..."
 mkdir -p "$D"

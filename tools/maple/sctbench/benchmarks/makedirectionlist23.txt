@@ -1,0 +1,1 @@
+cav18 makedirectionlist23 0 0 -m -I 0 -t 0.01 -C 3 -i 2seq.fasta

@@ -1,0 +1,1 @@
+cav18 pairlocalalign36 0 0 -C 6 -i 3seq.fasta

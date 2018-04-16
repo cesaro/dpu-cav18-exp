@@ -1,0 +1,1 @@
+cav18 makedirectionlist41 0 0 -m -I 0 -t 0.01 -C 1 -i 4seq.fasta
