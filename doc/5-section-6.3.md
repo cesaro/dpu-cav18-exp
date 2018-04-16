@@ -40,8 +40,9 @@ There are two parts in this experiment:
    cp env.template env.sh
    ```
 
-   Now update the `ROOT` variable to point to the current directory. Next run
-   this:
+   Now update the `ROOT` variable to point to the current directory. 
+   For example, ROOT=$HOME/dpu-cav18-exp/tools/maple/sctbench.
+   Next, run:
 
    ```sh
    ./run-table2-maple.sh 
